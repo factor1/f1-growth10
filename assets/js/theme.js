@@ -1,4 +1,8 @@
-const Bowser = require("bowser");
+import Bowser from "Bowser";
+import MicroModal from "micromodal";
+
+// Modals
+MicroModal.init();
 
 jQuery(document).ready(function($) {
   // Inside of this function, $() will work as an alias for jQuery()

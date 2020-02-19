@@ -17,7 +17,8 @@ $alt = get_post_meta($image, '_wp_attachment_image_alt', true);
 $headline = get_field('landing_headline_text');
 $content = get_field('landing_content');
 $btnToggle = get_field('landing_button_toggle');
-$btn = get_field('landing_button');
+$btn = get_field('landing_button_text');
+$modal = get_field('landing_modal_content');
 
 get_header(); ?>
 
@@ -57,9 +58,7 @@ get_header(); ?>
         // Optional button
         if( $btnToggle && $btn ) : ?>
 
-          <a href="<?php echo esc_url($btn['url']); ?>" class="button button--ghost" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
-            <?php echo $btn['title']; ?>
-          </a>
+          <button class="button button--ghost" data-micromodal-trigger="landing-modal"><?php echo $btn; ?></button>
 
         <?php endif; ?>
 
@@ -68,4 +67,20 @@ get_header(); ?>
   </div>
 </section>
 
-<?php get_footer(); ?>
+<?php if( $btnToggle && $modal ) : ?>
+
+  <div class="modal micromodal-slide" id="landing-modal" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+
+        <div id="landing-modal-content">
+          <?php echo $modal; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<?php endif;
+
+get_footer(); ?>

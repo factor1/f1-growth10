@@ -23,6 +23,7 @@
     "fs-extra": "^8.1.0",
     "ginger-grid": "^2.2.0",
     "lodash": "^4.17.15",
+    "micromodal": "0.3.2",
     "path": "^0.12.7",
     "prompt": "^1.0.0",
     "replace": "^1.1.1",

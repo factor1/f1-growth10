@@ -2,6 +2,10 @@
   Buttons
 ----------------------------------------------------------------------------*/
 .button {
+  &--scooter {
+    @include button($scooter, transparent, $scooter, $scooter, $white);
+  }
+
   &--ghost {
     @include button($white, transparent, $white, $white, $scooter);
   }
