@@ -29,9 +29,13 @@
 @import "globals/typography";
 
 // Components
+@import "components/buttons";
 @import "components/social-menu";
 @import "components/header";
 @import "components/footer";
+
+// Templates
+@import "templates/landing";
 
 // Plugin Overrides
 @import "plugins/overrides";

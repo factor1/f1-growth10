@@ -17,3 +17,28 @@
     padding-top: ($height / $width) * 100%;
   }
 }
+
+// Buttons
+@mixin button($border, $bg, $color, $hoverBg, $hoverColor) {
+  display: inline-block;
+  padding: rem(20) rem(14);
+  border: rem(4) solid $border;
+  border-top-left-radius: rem(9);
+  border-bottom-right-radius: rem(9);
+  background-color: $bg;
+  font: 700 rem(18)/1.11 $cursive;
+  color: $color;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .4s ease;
+
+  &:focus,
+  &:hover {
+    background-color: $hoverBg;
+    color: $hoverColor;
+  }
+}
+
+@mixin iPhoneX() {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
