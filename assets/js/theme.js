@@ -20,4 +20,32 @@ jQuery(document).ready(function($) {
   } else if (browser.name === "Safari") {
     $("body").addClass("safari");
   }
+
+  // Landing hero rotating text
+  if( $(".landing-section .span--outer").length ) {
+    // Cycle first term in
+    $(".landing-section .span--inner").first().addClass("in");
+
+    // Start cycling through terms
+    setInterval(function() {
+
+      var out = $(".landing-section .span--inner.out");
+      var current = $(".landing-section .span--inner.in");
+
+      // grab next if it exists, otherwise first
+      if( current.next(".landing-section .span--inner")[0] ) {
+        // eslint-disable-next-line
+        var next = current.next(".landing-section .span--inner");
+      } else {
+        // eslint-disable-next-line
+        var next = $(".landing-section .span--inner").first();
+      }
+
+      // Reset out, move in out, and move next term in
+      out.removeClass("out");
+      current.removeClass("in").addClass("out");
+      next.addClass("in");
+
+    }, 1500);
+  }
 });
