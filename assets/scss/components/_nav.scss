@@ -107,3 +107,36 @@ nav {
     }
   }
 }
+
+// Footer nav
+.nav--footer {
+  margin-left: rem(50);
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  a {
+    padding: rem(10);
+    font: 400 rem(14)/1.47 $cursive;
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      color: $teal;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .nav--footer {
+    flex: 0 1 100%;
+    margin: rem(20) 0;
+
+    ul {
+      justify-content: center;
+    }
+  }
+}
