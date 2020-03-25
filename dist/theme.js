@@ -360,8 +360,15 @@ jQuery(document).ready(function ($) {
     $("body").addClass("ie-11");
   } else if (browser.name === "Safari") {
     $("body").addClass("safari");
-  } // Landing hero rotating text
+  } // Menu functions
 
+
+  $(".menu-icon").on("click", function () {
+    $("html").toggleClass("locked");
+    $("body").toggleClass("locked masked");
+    $(".menu-icon").toggleClass("active");
+    $(".mega-menu").slideToggle();
+  }); // Landing hero rotating text
 
   if ($(".landing-section .span--outer").length) {
     // Cycle first term in

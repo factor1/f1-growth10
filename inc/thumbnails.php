@@ -17,4 +17,5 @@ if( function_exists('prelude_features') ){
   // Use add_image_size below to add additional thumbnail sizes
   add_image_size( 'landing', 1920, 1200, array('center', 'center') );
   add_image_size( 'landing_logo', 680, 330, false );
+  add_image_size( 'category_icon', 200, 320, false );
 }

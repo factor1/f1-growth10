@@ -1,0 +1,109 @@
+/*------------------------------------------------------------------------------
+  Nav Menus
+------------------------------------------------------------------------------*/
+// General nav styles
+nav {
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Mega menu left
+.nav--left {
+  width: calc(100% + 20px);
+  margin: rem(40) rem(-10) rem(28);
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  li {
+    flex: 0 1 17%;
+    width: calc(17% - 20px);
+    min-width: rem(130);
+    margin: rem(10);
+    background-color: rgba($lightGray, 0.12);
+  }
+
+  a {
+    padding: rem(15) rem(10) rem(10);
+    font: 400 rem(18)/1 $cursive;
+    color: $blue;
+    text-decoration: none;
+
+    > div {
+      position: relative;
+      margin-bottom: rem(20);
+
+      img {
+        height: rem(60);
+        transition: all .4s ease;
+
+        &:last-of-type {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+    }
+
+    &:hover {
+      color: $scooter;
+
+      > div img {
+        &:first-of-type {
+          opacity: 0;
+        }
+
+        &:last-of-type {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// Mega menu right
+.nav--right {
+  padding: rem(10) 0;
+
+  ul {
+    flex-wrap: wrap;
+  }
+
+  li {
+    flex: 0 1 100%;
+  }
+
+  a {
+    padding: rem(10);
+    font: 400 rem(18)/1 $cursive;
+    color: $tundora;
+    text-decoration: none;
+
+    &:hover {
+      color: $teal;
+    }
+  }
+}

@@ -1790,6 +1790,164 @@ a {
     background-color: #fff;
     color: #2cbdbe; }
 
+/*------------------------------------------------------------------------------
+  Menu Icon
+------------------------------------------------------------------------------*/
+.menu-icon {
+  padding: 1.25rem 0.625rem;
+  background: transparent;
+  -webkit-appearance: none;
+  outline: none;
+  border: none; }
+  .menu-icon span {
+    position: relative; }
+    .menu-icon span:before {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      left: 0; }
+    .menu-icon span:after {
+      content: '';
+      position: absolute;
+      top: 0.5rem;
+      left: 0; }
+  .menu-icon span,
+  .menu-icon span:before,
+  .menu-icon span:after {
+    display: block;
+    width: 1.875rem;
+    height: 0.1875rem;
+    background-color: #fff;
+    transform-origin: -4% center;
+    transition: all .4s ease; }
+  .menu-icon:active span,
+  .menu-icon:active span:before,
+  .menu-icon:active span:after, .menu-icon:focus span,
+  .menu-icon:focus span:before,
+  .menu-icon:focus span:after, .menu-icon:hover span,
+  .menu-icon:hover span:before,
+  .menu-icon:hover span:after {
+    background-color: #2ab2b0; }
+  .menu-icon--blue span,
+  .menu-icon--blue span:before,
+  .menu-icon--blue span:after {
+    background-color: #0356a4; }
+  .menu-icon.active span {
+    background-color: transparent; }
+    .menu-icon.active span:before {
+      top: -0.6875rem;
+      left: 0.3125rem;
+      transform: rotate(45deg); }
+    .menu-icon.active span:after {
+      top: 0.6875rem;
+      left: 0.3125rem;
+      transform: rotate(-45deg); }
+
+/*------------------------------------------------------------------------------
+  Nav Menus
+------------------------------------------------------------------------------*/
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+nav li {
+  position: relative;
+  margin: 0;
+  padding: 0; }
+
+nav a {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.nav--left {
+  width: calc(100% + 20px);
+  margin: 2.5rem -0.625rem 1.75rem; }
+  .nav--left ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch; }
+  .nav--left li {
+    flex: 0 1 17%;
+    width: calc(17% - 20px);
+    min-width: 8.125rem;
+    margin: 0.625rem;
+    background-color: rgba(229, 229, 229, 0.12); }
+  .nav--left a {
+    padding: 0.9375rem 0.625rem 0.625rem;
+    font: 400 1.125rem/1 "Comfortaa", cursive;
+    color: #0356a4;
+    text-decoration: none; }
+    .nav--left a > div {
+      position: relative;
+      margin-bottom: 1.25rem; }
+      .nav--left a > div img {
+        height: 3.75rem;
+        transition: all .4s ease; }
+        .nav--left a > div img:last-of-type {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          opacity: 0;
+          z-index: -1; }
+    .nav--left a:hover {
+      color: #2cbdbe; }
+      .nav--left a:hover > div img:first-of-type {
+        opacity: 0; }
+      .nav--left a:hover > div img:last-of-type {
+        opacity: 1; }
+
+.nav--right {
+  padding: 0.625rem 0; }
+  .nav--right ul {
+    flex-wrap: wrap; }
+  .nav--right li {
+    flex: 0 1 100%; }
+  .nav--right a {
+    padding: 0.625rem;
+    font: 400 1.125rem/1 "Comfortaa", cursive;
+    color: #464646;
+    text-decoration: none; }
+    .nav--right a:hover {
+      color: #2ab2b0; }
+
+/*
+ * Mega Menu
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.mega-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  background-color: #fff;
+  z-index: 999; }
+  .mega-menu .container {
+    height: 100%;
+    padding: 1.25rem 0 3.125rem;
+    overflow-y: scroll; }
+  .mega-menu .col-12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .mega-menu .col-9 {
+    border-right: 0.0625rem solid #464646; }
+  .mega-menu__logo {
+    width: 11.875rem; }
+  .mega-menu .search-form {
+    width: calc(100% - 30px);
+    margin-bottom: 0.9375rem; }
+
 /*----------------------------------------------------------------------------
   WordPress Social Menu
   - make sure to include FontAwesome for this to work!
@@ -1849,6 +2007,43 @@ a {
 /*------------------------------------------------------------------------------
   Forms
 ------------------------------------------------------------------------------*/
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%; }
+  .search-form i {
+    margin-right: 1.25rem;
+    font-size: 2rem;
+    color: #0356a4; }
+  .search-form input[type="text"] {
+    flex: 1 1 100%;
+    padding: 0.5rem 1.875rem;
+    border: 0.0625rem solid transparent;
+    border-radius: 0;
+    background-color: #e5e5e5;
+    font: 400 1.125rem/1 "Comfortaa", cursive;
+    color: #464646;
+    transition: all .4s ease;
+    outline: none; }
+    .search-form input[type="text"]:active, .search-form input[type="text"]:focus {
+      border-color: #2ab2b0; }
+  .search-form button,
+  .search-form input[type="submit"] {
+    -webkit-appearance: none;
+    padding: 0.5625rem 1.75rem;
+    border: 0.0625rem solid transparent;
+    background-color: #2ab2b0;
+    font: 400 1.125rem/1 "Comfortaa", cursive;
+    color: #fff;
+    transition: all .4s ease;
+    outline: none; }
+    .search-form button:active, .search-form button:focus, .search-form button:hover,
+    .search-form input[type="submit"]:active,
+    .search-form input[type="submit"]:focus,
+    .search-form input[type="submit"]:hover {
+      background-color: #0356a4; }
+
 .gform_wrapper {
   margin: 0 !important; }
   .gform_wrapper form .gform_fields {
@@ -1969,6 +2164,40 @@ a {
 /*------------------------------------------------------------------------------
   Header
 ------------------------------------------------------------------------------*/
+html,
+body {
+  overflow-x: hidden; }
+  html.locked,
+  body.locked {
+    overflow-y: hidden; }
+
+body:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 998;
+  transition: all .4s ease; }
+
+body.masked:after {
+  background: rgba(0, 0, 0, 0.7);
+  pointer-events: auto; }
+
+.site-header {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  background-color: #0356a4; }
+  .site-header .container {
+    padding: 1.25rem 0 0.75rem; }
+  .site-header .col-12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .site-header__logo {
+    width: 11.875rem; }
+
 /*------------------------------------------------------------------------------
   Footer
 ------------------------------------------------------------------------------*/
