@@ -2,7 +2,9 @@
 </main>
 
 <?php // Site footer
-get_template_part('parts/global/site-footer');
+if( !is_page_template('templates/landing.php') ) :
+  get_template_part('parts/global/site-footer');
+endif;
 
 wp_footer(); ?>
 
