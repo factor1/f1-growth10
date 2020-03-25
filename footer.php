@@ -1,10 +1,12 @@
 <?php // Close main ?>
 </main>
 
-<footer>
+<?php // Site footer
+if( !is_page_template('templates/landing.php') ) :
+  get_template_part('parts/global/site-footer');
+endif;
 
-</footer>
+wp_footer(); ?>
 
-<?php wp_footer(); ?>
 </body>
 </html>

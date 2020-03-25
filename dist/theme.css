@@ -1915,6 +1915,26 @@ nav a {
     .nav--right a:hover {
       color: #2ab2b0; }
 
+.nav--footer {
+  margin-left: 3.125rem; }
+  .nav--footer ul {
+    flex-wrap: wrap;
+    justify-content: flex-end; }
+  .nav--footer a {
+    padding: 0.625rem;
+    font: 400 0.875rem/1.47 "Comfortaa", cursive;
+    color: #fff;
+    text-decoration: none; }
+    .nav--footer a:hover {
+      color: #2ab2b0; }
+
+@media screen and (max-width: 47.9375em) {
+  .nav--footer {
+    flex: 0 1 100%;
+    margin: 1.25rem 0; }
+    .nav--footer ul {
+      justify-content: center; } }
+
 /*
  * Mega Menu
  *
@@ -2201,6 +2221,36 @@ body.masked:after {
 /*------------------------------------------------------------------------------
   Footer
 ------------------------------------------------------------------------------*/
+.site-footer {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  background-color: #0356a4; }
+  .site-footer .container {
+    padding: 1.3125rem 0 1.125rem; }
+  .site-footer .col-12 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+    .site-footer .col-12 > div {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; }
+  .site-footer p {
+    margin: 0;
+    flex-grow: 3;
+    font-size: 0.875rem;
+    font-family: "Comfortaa", cursive;
+    color: #fff; }
+  .site-footer a {
+    text-decoration: none; }
+    .site-footer a:hover {
+      color: #2ab2b0; }
+
+@media screen and (max-width: 47.9375em) {
+  .site-footer .container > div {
+    flex: 0 1 100%; } }
+
 /*------------------------------------------------------------------------------
   Modals
 ------------------------------------------------------------------------------*/
