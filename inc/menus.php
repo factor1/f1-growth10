@@ -5,7 +5,7 @@
   function prelude_custom_menus() {
     register_nav_menus(
       array(
-        'primary' => 'Primary Menu',
+        'mega_right' => 'Mega Menu (right)',
         'footer'  => 'Footer Menu',
         'social'  => 'Social Menu',
       )

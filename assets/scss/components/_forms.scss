@@ -1,6 +1,54 @@
 /*------------------------------------------------------------------------------
   Forms
 ------------------------------------------------------------------------------*/
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  i {
+    margin-right: rem(20);
+    font-size: rem(32);
+    color: $blue;
+  }
+
+  input[type="text"] {
+    flex: 1 1 100%;
+    padding: rem(8) rem(30);
+    border: rem(1) solid transparent;
+    border-radius: 0;
+    background-color: $lightGray;
+    font: 400 rem(18)/1 $cursive;
+    color: $tundora;
+    transition: all .4s ease;
+    outline: none;
+
+    &:active,
+    &:focus {
+      border-color: $teal;
+    }
+  }
+
+  button,
+  input[type="submit"] {
+    -webkit-appearance: none;
+    padding: rem(9) rem(28);
+    border: rem(1) solid transparent;
+    background-color: $teal;
+    font: 400 rem(18)/1 $cursive;
+    color: $white;
+    transition: all .4s ease;
+    outline: none;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $blue;
+    }
+  }
+}
+
 .gform_wrapper {
   margin: 0 !important;
 

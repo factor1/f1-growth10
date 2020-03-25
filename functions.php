@@ -41,6 +41,11 @@
    */
   require get_template_directory() . '/inc/shortcodes.php';
 
+  /**
+   * Load ACF
+   */
+  require get_template_directory() . '/inc/acf.php';
+
    /**
    * Load Responsive Media Options
    */

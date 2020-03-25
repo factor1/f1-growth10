@@ -20,7 +20,8 @@ if (!(is_admin() )) {
 function prelude_theme_scripts() {
   // Fonts
   wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Comfortaa:400,700|Montserrat:400,700&display=swap', array(), THEME_VERSION );
-  
+  wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/c3fa898253.js', array(), THEME_VERSION );
+
   // CSS
   wp_enqueue_style('prelude-css', get_template_directory_uri() . '/dist/theme.css', array(), THEME_VERSION );
 

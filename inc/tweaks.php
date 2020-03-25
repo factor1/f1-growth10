@@ -31,7 +31,7 @@
     }
     add_action( 'after_setup_theme', 'prelude_features' );
   }
-  
+
   // Set the maximum content width for the theme
   function prelude_content_width() {
     $GLOBALS[ 'content_width' ] = apply_filters( 'prelude_content_width', 1200 );
@@ -127,3 +127,19 @@
     return $buttons;
   }
   add_filter("mce_buttons_3", "enable_more_buttons");
+
+  // Add async defer to font awesome script
+  function add_async_attribute($tag, $handle) {
+    if ( 'font-awesome' !== $handle )
+      return $tag;
+    return str_replace( ' src', ' async="async" src', $tag );
+  }
+  add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
+
+  // Hide ACF from everyone except factor1admin
+  $us = get_user_by('login', 'factor1admin');
+
+  // If the current logged-in user is not us, hide ACF
+  if(wp_get_current_user()->user_login !== $us->user_login) :
+    add_filter('acf/settings/show_admin', '__return_false');
+  endif;
