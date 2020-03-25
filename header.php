@@ -30,9 +30,17 @@
 <body <?php body_class(); ?>>
 
   <?php // Header ?>
-  <header>
-
-  </header>
+  <div class="container">
+  <div class="row">
+	  <div class="col-3 offset-1">
+	  	<img src="<?php echo get_template_directory_uri();?>/assets/img/Growth10Logo_Color.jpg" alt="Growth 10">
+	  </div>
+	  <div class="col-8">
+		  <h4 style="text-align: center; font-weight:100; margin-top: 60px"><!-- Site Coming Soon --></h4>
+	  </div>
+	  
+  </div>
+  </div>
 
   <?php // Main Content ?>
   <main>
