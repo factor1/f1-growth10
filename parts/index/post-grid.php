@@ -90,4 +90,16 @@ if( have_posts() ) : ?>
     </div>
   </section>
 
+<?php else : ?>
+
+  <section class="post-grid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h5>Sorry, no posts have been found.</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <?php endif; ?>

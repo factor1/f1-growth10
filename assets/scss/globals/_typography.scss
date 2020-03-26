@@ -47,6 +47,12 @@ a {
   transition: all .4s ease;
 }
 
+// Typography classes
+.author-description { // p
+  margin-bottom: rem(30);
+  font: italic 300 rem(16)/1.38 $serif;
+}
+
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   // Headings
