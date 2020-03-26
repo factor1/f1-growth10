@@ -7,6 +7,7 @@
  * @since 0.1.0
  */
 
+$category = get_queried_object();
 $leftMenu = get_field('left_menu', 'option'); ?>
 
 <section class="mega-menu">
@@ -31,10 +32,11 @@ $leftMenu = get_field('left_menu', 'option'); ?>
 
               <?php foreach( $leftMenu as $cat ) :
                 $imgBlue = wp_get_attachment_image_src(get_field('category_icon_blue', $cat), 'category_icon');
-                $imgTeal = wp_get_attachment_image_src(get_field('category_icon_teal', $cat), 'category_icon'); ?>
+                $imgTeal = wp_get_attachment_image_src(get_field('category_icon_teal', $cat), 'category_icon');
+                $active = $category->term_id === $cat->term_id ? ' active' : ''; ?>
 
                 <li>
-                  <a href="<?php echo get_category_link($cat); ?>" class="text-center">
+                  <a href="<?php echo get_category_link($cat); ?>" class="text-center<?php echo $active; ?>">
                     <div>
                       <img src="<?php echo $imgBlue[0]; ?>" alt="<?php echo $cat->name; ?> icon blue">
                       <img src="<?php echo $imgTeal[0]; ?>" alt="<?php echo $cat->name; ?> icon teal">

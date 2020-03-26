@@ -1909,11 +1909,11 @@ nav a {
           margin: auto;
           opacity: 0;
           z-index: -1; }
-    .nav--left a:hover {
+    .nav--left a.active, .nav--left a:hover {
       color: #2cbdbe; }
-      .nav--left a:hover > div img:first-of-type {
+      .nav--left a.active > div img:first-of-type, .nav--left a:hover > div img:first-of-type {
         opacity: 0; }
-      .nav--left a:hover > div img:last-of-type {
+      .nav--left a.active > div img:last-of-type, .nav--left a:hover > div img:last-of-type {
         opacity: 1; }
 
 .nav--right {
@@ -2437,8 +2437,11 @@ body.masked:after {
     text-decoration: none; }
     .popular-posts a:hover .img {
       filter: brightness(80%); }
+    .popular-posts a:hover h4 {
+      color: #0356a4; }
   .popular-posts h4 {
-    margin-bottom: 0.3125rem; }
+    margin-bottom: 0.3125rem;
+    transition: all .4s ease; }
   .popular-posts .img {
     position: relative;
     padding-bottom: 60%;
@@ -2470,6 +2473,51 @@ body.masked:after {
     flex-grow: 1;
     min-width: 15.625rem;
     max-width: 80%; } }
+
+/**
+ * Popular Resources (Index)
+ *
+ * Template part used on index.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.popular-resources {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .popular-resources .container {
+    padding: 2.1875rem 0 1.25rem; }
+  .popular-resources .col-12 {
+    margin-bottom: 1.25rem; }
+  .popular-resources .col-4 {
+    margin-bottom: 2.8125rem; }
+  .popular-resources a {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-decoration: none; }
+    .popular-resources a div:first-of-type {
+      width: 2rem;
+      margin-right: 0.9375rem; }
+    .popular-resources a div:last-of-type {
+      flex-grow: 1; }
+    .popular-resources a:hover h4, .popular-resources a:hover i {
+      color: #0356a4; }
+  .popular-resources h4 {
+    margin-bottom: 0.3125rem;
+    transition: all .4s ease; }
+  .popular-resources i {
+    font-size: 1.875rem;
+    color: #2ab2b0;
+    transition: all .4s ease; }
+
+@media screen and (max-width: 47.9375em) {
+  .popular-resources .row {
+    justify-content: center; }
+  .popular-resources .col-4 {
+    flex-grow: 1;
+    max-width: 90%;
+    min-width: 21.875rem; } }
 
 /*
  * Template Name: Landing Page

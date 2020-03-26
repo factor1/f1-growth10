@@ -22,13 +22,20 @@
   a {
     text-decoration: none;
 
-    &:hover .img {
-      filter: brightness(80%);
+    &:hover {
+      .img {
+        filter: brightness(80%);
+      }
+
+      h4 {
+        color: $blue;
+      }
     }
   }
 
   h4 {
     margin-bottom: rem(5);
+    transition: all .4s ease;
   }
 
   .img {

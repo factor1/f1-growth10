@@ -13,6 +13,8 @@ get_template_part('parts/index/hero');
 
 get_template_part('parts/index/popular-posts');
 
+get_template_part('parts/index/popular-resources');
+
 // if ( have_posts() ) : while ( have_posts() ) : the_post();
 //
 //   the_content();

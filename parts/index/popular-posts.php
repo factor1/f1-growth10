@@ -26,7 +26,7 @@ if( $popular->have_posts() ) : ?>
 
   <section class="popular-posts">
     <div class="container">
-      <div class="row">
+      <div class="row row--justify-content-start">
         <div class="col-12 sm-text-center">
           <h2>Popular Ideas</h2>
         </div>
