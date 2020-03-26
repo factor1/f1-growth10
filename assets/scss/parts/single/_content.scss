@@ -1,0 +1,50 @@
+/**
+ * Content (Single)
+ *
+ * Template part used on single.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+
+.post-content {
+  @include iPhoneX;
+
+  .container {
+    padding: 0 0 rem(100);
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0 rem(-10) rem(35);
+  }
+
+  button {
+    flex: 1 0 auto;
+    display: inline-block;
+    margin: rem(10);
+    padding: rem(10);
+    border: none;
+    background-color: $lightGray;
+    font: 700 rem(22)/1 $serif;
+    color: $tundora;
+    -webkit-appearance: none;
+    outline: none;
+    transition: all .4s ease;
+
+    &.active,
+    &:focus,
+    &:hover {
+      background-color: $teal;
+      color: $white;
+    }
+  }
+
+  .rt-reading-time {
+    display: none !important;
+  }
+}

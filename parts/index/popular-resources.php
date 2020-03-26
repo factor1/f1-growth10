@@ -35,7 +35,7 @@ if( $resources->have_posts() ) : ?>
     <div class="container">
       <div class="row row--justify-content-start">
         <div class="col-12 sm-text-center">
-          <h2>Popular Resources</h2>
+          <h3>Popular Resources</h3>
         </div>
 
         <?php while( $resources->have_posts() ) : $resources->the_post();

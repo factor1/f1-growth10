@@ -28,7 +28,7 @@ if( $popular->have_posts() ) : ?>
     <div class="container">
       <div class="row row--justify-content-start">
         <div class="col-12 sm-text-center">
-          <h2>Popular Ideas</h2>
+          <h3>Popular Ideas</h3>
         </div>
 
         <?php while( $popular->have_posts() ) : $popular->the_post();

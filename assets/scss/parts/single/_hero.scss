@@ -40,8 +40,8 @@
     &__img {
       flex: 0 0 auto;
       position: relative;
-      top: rem(-100);
       width: rem(200);
+      margin-top: rem(-100);
       margin-right: rem(20);
       z-index: 1;
       overflow: hidden;
@@ -102,15 +102,21 @@
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
-  .hero--post__author {
-    &__img {
-      top: rem(-75);
-      width: rem(150);
-      margin-right: rem(12);
+  .hero--post {
+    h1 + .hero--post__author {
+      margin-top: rem(100);
     }
 
-    &:after {
-      width: calc(100% - 75px);
+    &__author {
+      &__img {
+        width: rem(150);
+        margin-top: rem(-75);
+        margin-right: rem(12);
+      }
+
+      &:after {
+        width: calc(100% - 75px);
+      }
     }
   }
 }

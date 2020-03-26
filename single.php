@@ -15,7 +15,9 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
   <article class="blog-post">
 
-    <?php get_template_part('parts/single/hero'); ?>
+    <?php get_template_part('parts/single/hero');
+
+    get_template_part('parts/single/content'); ?>
 
   </article>
 
