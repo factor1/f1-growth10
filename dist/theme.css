@@ -1730,12 +1730,27 @@ a img.aligncenter {
   Typography
 ------------------------------------------------------------------------------*/
 body {
-  font: 400 0.9375rem/1.47 "Montserrat", sans-serif; }
+  font: 400 0.9375rem/1.47 "Montserrat", sans-serif;
+  color: #464646; }
 
 h1 {
   margin: 0 0 3.125rem;
   font: 700 3.125rem/1.12 "Comfortaa", cursive;
   text-transform: uppercase; }
+
+h2 {
+  margin: 0 0 1.875rem;
+  font: 700 1.875rem/1.1 "Comfortaa", cursive;
+  text-transform: uppercase; }
+
+h4 {
+  margin: 0 0 0.9375rem;
+  font: 700 1.375rem/1 museo-slab, serif;
+  color: #2ab2b0; }
+
+h5 {
+  margin: 0 0 0.9375rem;
+  font: 700 1rem/1.38 museo-slab, serif; }
 
 p, ol, ul, li {
   font: 400 0.9375rem/1.47 "Montserrat", sans-serif; }
@@ -1894,11 +1909,11 @@ nav a {
           margin: auto;
           opacity: 0;
           z-index: -1; }
-    .nav--left a:hover {
+    .nav--left a.active, .nav--left a:hover {
       color: #2cbdbe; }
-      .nav--left a:hover > div img:first-of-type {
+      .nav--left a.active > div img:first-of-type, .nav--left a:hover > div img:first-of-type {
         opacity: 0; }
-      .nav--left a:hover > div img:last-of-type {
+      .nav--left a.active > div img:last-of-type, .nav--left a:hover > div img:last-of-type {
         opacity: 1; }
 
 .nav--right {
@@ -2182,6 +2197,46 @@ nav a {
     flex-basis: 100%; } }
 
 /*------------------------------------------------------------------------------
+  Pagination
+------------------------------------------------------------------------------*/
+.pagination {
+  margin-top: 4.375rem; }
+  .pagination .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .pagination .page-numbers {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.625rem;
+    height: 2.625rem;
+    margin: 0.625rem;
+    border: 0.0625rem solid #e5e5e5;
+    font: 400 1.125rem/1 "Montserrat", sans-serif;
+    color: #464646;
+    text-decoration: none; }
+  .pagination .prev,
+  .pagination .next {
+    display: inline-block;
+    width: auto;
+    border: none;
+    height: auto;
+    background-color: transparent !important; }
+    .pagination .prev:hover,
+    .pagination .next:hover {
+      color: #2ab2b0 !important; }
+  .pagination span.page-numbers,
+  .pagination a.page-numbers:hover {
+    border-color: #2ab2b0;
+    background-color: #2ab2b0;
+    color: #fff; }
+
+@media screen and (max-width: 47.9375em) {
+  .pagination {
+    margin-top: 2.5rem; } }
+
+/*------------------------------------------------------------------------------
   Header
 ------------------------------------------------------------------------------*/
 html,
@@ -2349,6 +2404,239 @@ body.masked:after {
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform; }
+
+/**
+ * SCSS Parts
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+/**
+ * Hero (Index)
+ *
+ * Template part used on index.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.hero--blog {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  background-color: #0356a4; }
+  .hero--blog .container {
+    padding: 2.5rem 0 3.75rem; }
+  .hero--blog h1 {
+    font-size: 5rem;
+    color: #fff; }
+  .hero--blog img {
+    height: 5.9375rem;
+    margin-right: 1.25rem;
+    vertical-align: middle; }
+  .hero--blog .search-form {
+    max-width: 56.25rem;
+    margin: 0 auto; }
+    .hero--blog .search-form i {
+      color: #fff; }
+    .hero--blog .search-form input[type="text"] {
+      background-color: rgba(229, 229, 229, 0.57);
+      color: #fff; }
+      .hero--blog .search-form input[type="text"]::placeholder {
+        color: #fff; }
+      .hero--blog .search-form input[type="text"]:active, .hero--blog .search-form input[type="text"]:focus {
+        border-color: #fff; }
+    .hero--blog .search-form button:active, .hero--blog .search-form button:focus, .hero--blog .search-form button:hover,
+    .hero--blog .search-form input[type="submit"]:active,
+    .hero--blog .search-form input[type="submit"]:focus,
+    .hero--blog .search-form input[type="submit"]:hover {
+      background-color: #2cbdbe; }
+
+@media screen and (max-width: 47.9375em) {
+  .hero--blog h1 {
+    font-size: 2.625rem; }
+  .hero--blog img {
+    height: 3.125rem;
+    margin-right: 0; } }
+
+/**
+ * Popular Posts (Index)
+ *
+ * Template part used on index.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.popular-posts {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .popular-posts .container {
+    padding: 2.5rem 0 0; }
+  .popular-posts .col-3 {
+    margin-bottom: 1.875rem; }
+  .popular-posts a {
+    text-decoration: none; }
+    .popular-posts a:hover .img {
+      filter: brightness(80%); }
+    .popular-posts a:hover h4 {
+      color: #0356a4; }
+  .popular-posts h4 {
+    margin-bottom: 0.3125rem;
+    transition: all .4s ease; }
+  .popular-posts .img {
+    position: relative;
+    padding-bottom: 60%;
+    margin-bottom: 0.9375rem;
+    transition: all .4s ease; }
+    .popular-posts .img.has-featured:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(70, 70, 70, 0.2);
+      background: linear-gradient(to top, rgba(70, 70, 70, 0.6), rgba(70, 70, 70, 0) 35%); }
+  .popular-posts .formats {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 0.625rem;
+    z-index: 1; }
+    .popular-posts .formats i {
+      color: #fff; }
+
+@media screen and (max-width: 47.9375em) {
+  .popular-posts .row {
+    justify-content: center; }
+  .popular-posts .col-3 {
+    flex-grow: 1;
+    min-width: 15.625rem;
+    max-width: 80%; } }
+
+/**
+ * Popular Resources (Index)
+ *
+ * Template part used on index.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.popular-resources {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .popular-resources .container {
+    padding: 2.1875rem 0 1.25rem; }
+  .popular-resources .col-12 {
+    margin-bottom: 1.25rem; }
+  .popular-resources .col-4 {
+    margin-bottom: 2.8125rem; }
+  .popular-resources a {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-decoration: none; }
+    .popular-resources a div:first-of-type {
+      width: 2rem;
+      margin-right: 0.9375rem; }
+    .popular-resources a div:last-of-type {
+      flex-grow: 1; }
+    .popular-resources a:hover h4, .popular-resources a:hover i {
+      color: #0356a4; }
+  .popular-resources h4 {
+    margin-bottom: 0.3125rem;
+    transition: all .4s ease; }
+  .popular-resources i {
+    font-size: 1.875rem;
+    color: #2ab2b0;
+    transition: all .4s ease; }
+
+@media screen and (max-width: 47.9375em) {
+  .popular-resources .row {
+    justify-content: center; }
+  .popular-resources .col-4 {
+    flex-grow: 1;
+    max-width: 90%;
+    min-width: 21.875rem; } }
+
+/**
+ * Post Grid (Index)
+ *
+ * Template part used on index.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.post-grid {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .post-grid .container {
+    padding: 1.875rem 0; }
+  .post-grid .col-12 {
+    margin-bottom: 1.25rem; }
+  .post-grid .col-6 {
+    margin-bottom: 1.875rem; }
+  .post-grid a {
+    text-decoration: none; }
+    .post-grid a:hover h4 {
+      color: #0356a4; }
+  .post-grid .post-block {
+    display: flex;
+    justify-content: space-between;
+    height: 100%; }
+    .post-grid .post-block__img {
+      flex: 0 1 auto;
+      display: block;
+      width: 30%;
+      padding-bottom: 20%;
+      margin-right: 1.25rem;
+      transition: all .4s ease; }
+      .post-grid .post-block__img.book, .post-grid .post-block__img.link {
+        position: relative; }
+        .post-grid .post-block__img.book:before, .post-grid .post-block__img.link:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font-family: 'Font Awesome 5 Pro';
+          font-weight: 400;
+          font-size: 4rem;
+          color: #fff;
+          text-align: center; }
+      .post-grid .post-block__img.book:before {
+        content: '\f02d'; }
+      .post-grid .post-block__img.link:before {
+        content: '\f0c1'; }
+      .post-grid .post-block__img:hover {
+        filter: brightness(85%); }
+    .post-grid .post-block__info {
+      flex: 1 1 calc(70% - 100px);
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%; }
+      .post-grid .post-block__info div {
+        flex: 0 1 100%; }
+    .post-grid .post-block__formats {
+      align-self: flex-end;
+      padding-bottom: 0.3125rem; }
+    .post-grid .post-block__icons {
+      width: 3.75rem;
+      margin-left: 1.25rem; }
+  .post-grid h4 {
+    margin-bottom: 0.3125rem;
+    transition: all .4s ease; }
+  .post-grid h5 {
+    margin-bottom: 0.625rem; }
+  .post-grid p {
+    margin-bottom: 1.25rem; }
 
 /*
  * Template Name: Landing Page
