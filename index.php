@@ -15,14 +15,6 @@ get_template_part('parts/index/popular-posts');
 
 get_template_part('parts/index/popular-resources');
 
-// if ( have_posts() ) : while ( have_posts() ) : the_post();
-//
-//   the_content();
-//
-// endwhile;
-//     the_posts_pagination( array('mid_size' => 2) );
-// else :
-//   echo '<h2>Sorry, no posts have been found</h2>';
-// endif;
+get_template_part('parts/index/post-grid');
 
 get_footer();
