@@ -1730,12 +1730,27 @@ a img.aligncenter {
   Typography
 ------------------------------------------------------------------------------*/
 body {
-  font: 400 0.9375rem/1.47 "Montserrat", sans-serif; }
+  font: 400 0.9375rem/1.47 "Montserrat", sans-serif;
+  color: #464646; }
 
 h1 {
   margin: 0 0 3.125rem;
   font: 700 3.125rem/1.12 "Comfortaa", cursive;
   text-transform: uppercase; }
+
+h2 {
+  margin: 0 0 1.875rem;
+  font: 700 1.875rem/1.1 "Comfortaa", cursive;
+  text-transform: uppercase; }
+
+h4 {
+  margin: 0 0 0.9375rem;
+  font: 700 1.375rem/1 museo-slab, serif;
+  color: #2ab2b0; }
+
+h5 {
+  margin: 0 0 0.9375rem;
+  font: 700 1rem/1.38 museo-slab, serif; }
 
 p, ol, ul, li {
   font: 400 0.9375rem/1.47 "Montserrat", sans-serif; }
@@ -2402,6 +2417,59 @@ body.masked:after {
   .hero--blog img {
     height: 3.125rem;
     margin-right: 0; } }
+
+/**
+ * Popular Posts (Index)
+ *
+ * Template part used on index.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.popular-posts {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .popular-posts .container {
+    padding: 2.5rem 0 0; }
+  .popular-posts .col-3 {
+    margin-bottom: 1.875rem; }
+  .popular-posts a {
+    text-decoration: none; }
+    .popular-posts a:hover .img {
+      filter: brightness(80%); }
+  .popular-posts h4 {
+    margin-bottom: 0.3125rem; }
+  .popular-posts .img {
+    position: relative;
+    padding-bottom: 60%;
+    margin-bottom: 0.9375rem;
+    transition: all .4s ease; }
+    .popular-posts .img.has-featured:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(70, 70, 70, 0.2);
+      background: linear-gradient(to top, rgba(70, 70, 70, 0.6), rgba(70, 70, 70, 0) 35%); }
+  .popular-posts .formats {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 0.625rem;
+    z-index: 1; }
+    .popular-posts .formats i {
+      color: #fff; }
+
+@media screen and (max-width: 47.9375em) {
+  .popular-posts .row {
+    justify-content: center; }
+  .popular-posts .col-3 {
+    flex-grow: 1;
+    min-width: 15.625rem;
+    max-width: 80%; } }
 
 /*
  * Template Name: Landing Page

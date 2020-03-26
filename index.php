@@ -11,6 +11,8 @@ get_header();
 
 get_template_part('parts/index/hero');
 
+get_template_part('parts/index/popular-posts');
+
 // if ( have_posts() ) : while ( have_posts() ) : the_post();
 //
 //   the_content();

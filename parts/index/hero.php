@@ -10,7 +10,7 @@
  */
 
 $cat = get_queried_object();
-$imgWhite = wp_get_attachment_image_src(get_field('category_icon_white', $cat), 'category_icon');?>
+$imgWhite = wp_get_attachment_image_src(get_field('category_icon_white', $cat), 'category_icon'); ?>
 
 <section class="hero--blog">
   <div class="container">

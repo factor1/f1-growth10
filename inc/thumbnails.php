@@ -18,4 +18,5 @@ if( function_exists('prelude_features') ){
   add_image_size( 'landing', 1920, 1200, array('center', 'center') );
   add_image_size( 'landing_logo', 680, 330, false );
   add_image_size( 'category_icon', 200, 320, false );
+  add_image_size( 'post_grid', 800, 480, array('center', 'center') );
 }
