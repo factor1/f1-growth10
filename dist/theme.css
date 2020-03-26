@@ -2350,6 +2350,59 @@ body.masked:after {
 .micromodal-slide .modal__overlay {
   will-change: transform; }
 
+/**
+ * SCSS Parts
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+/**
+ * Hero (Index)
+ *
+ * Template part used on index.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.hero--blog {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  background-color: #0356a4; }
+  .hero--blog .container {
+    padding: 2.5rem 0 3.75rem; }
+  .hero--blog h1 {
+    font-size: 5rem;
+    color: #fff; }
+  .hero--blog img {
+    height: 5.9375rem;
+    margin-right: 1.25rem;
+    vertical-align: middle; }
+  .hero--blog .search-form {
+    max-width: 56.25rem;
+    margin: 0 auto; }
+    .hero--blog .search-form i {
+      color: #fff; }
+    .hero--blog .search-form input[type="text"] {
+      background-color: rgba(229, 229, 229, 0.57);
+      color: #fff; }
+      .hero--blog .search-form input[type="text"]::placeholder {
+        color: #fff; }
+      .hero--blog .search-form input[type="text"]:active, .hero--blog .search-form input[type="text"]:focus {
+        border-color: #fff; }
+    .hero--blog .search-form button:active, .hero--blog .search-form button:focus, .hero--blog .search-form button:hover,
+    .hero--blog .search-form input[type="submit"]:active,
+    .hero--blog .search-form input[type="submit"]:focus,
+    .hero--blog .search-form input[type="submit"]:hover {
+      background-color: #2cbdbe; }
+
+@media screen and (max-width: 47.9375em) {
+  .hero--blog h1 {
+    font-size: 2.625rem; }
+  .hero--blog img {
+    height: 3.125rem;
+    margin-right: 0; } }
+
 /*
  * Template Name: Landing Page
  *
