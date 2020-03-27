@@ -1801,6 +1801,23 @@ a {
     background-color: #2cbdbe;
     color: #fff; }
 
+.button--teal {
+  display: inline-block;
+  padding: 1.25rem 0.875rem;
+  border: 0.25rem solid #2ab2b0;
+  border-top-left-radius: 0.5625rem;
+  border-bottom-right-radius: 0.5625rem;
+  background-color: #2ab2b0;
+  font: 700 1.125rem/1.11 "Comfortaa", cursive;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .4s ease;
+  outline: none; }
+  .button--teal:focus, .button--teal:hover {
+    background-color: transparent;
+    color: #2ab2b0; }
+
 .button--ghost {
   display: inline-block;
   padding: 1.25rem 0.875rem;
@@ -2679,13 +2696,14 @@ body.masked:after {
 .hero--post__author {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start; }
   .hero--post__author__img {
     flex: 0 0 auto;
     position: relative;
-    width: 12.5rem;
-    margin-top: -6.25rem;
+    width: 11.25rem;
+    margin-top: -5.625rem;
     margin-right: 1.25rem;
     z-index: 1;
     overflow: hidden; }
@@ -2695,6 +2713,7 @@ body.masked:after {
     border: 0.25rem solid #fff; }
   .hero--post__author__info {
     flex: 1 1 auto;
+    display: flex;
     width: calc(70% - 20px);
     margin-top: 0.625rem; }
     .hero--post__author__info h4 {
@@ -2710,16 +2729,15 @@ body.masked:after {
     position: absolute;
     top: -1.75rem;
     right: 0;
-    width: calc(100% - 100px);
+    width: calc(100% - 90px);
     height: 1.75rem;
     background-color: #2ab2b0; }
 
 .hero--post__icons {
   flex: 0 0 auto;
-  width: 10%;
   margin-top: 0.625rem;
-  margin-right: 1.25rem;
-  padding-top: 2.5rem; }
+  margin-left: 1.25rem;
+  padding-top: 1.875rem; }
   .hero--post__icons i {
     display: block;
     font-size: 1.125rem; }
@@ -2747,14 +2765,16 @@ body.masked:after {
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
   .post-content .container {
     padding: 0 0 6.25rem; }
+  .post-content .col-8 .col-4 {
+    padding-left: 0; }
   .post-content__buttons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: stretch;
     margin: 0 -0.625rem 2.1875rem; }
   .post-content button {
-    flex: 1 0 auto;
+    flex: 0 0 22%;
     display: inline-block;
     margin: 0.625rem;
     padding: 0.625rem;
@@ -2768,8 +2788,32 @@ body.masked:after {
     .post-content button.active, .post-content button:focus, .post-content button:hover {
       background-color: #2ab2b0;
       color: #fff; }
+  .post-content__blocks > div {
+    display: none; }
+    .post-content__blocks > div.active {
+      display: block; }
   .post-content .rt-reading-time {
     display: none !important; }
+
+@media screen and (max-width: 47.9375em) {
+  .post-content .container {
+    padding: 0 0 3.125rem; }
+  .post-content .col-8 .col-4 {
+    padding-left: 0.8rem; }
+  .post-content__buttons {
+    justify-content: center; }
+  .post-content button {
+    flex: 0 0 9.375rem;
+    padding: 0.625rem 0.3125rem;
+    font-size: 1.0625rem; } }
+
+@media screen and (max-width: 31.25rem) {
+  .post-content .col-8 .col-4 {
+    flex: 0 1 100%;
+    text-align: center; }
+  .post-content .col-8 .col-8 {
+    flex: 0 1 100%;
+    margin-top: 1.875rem; } }
 
 /*
  * Template Name: Landing Page

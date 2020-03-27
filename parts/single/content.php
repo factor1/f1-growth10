@@ -10,55 +10,24 @@
  */
 
 // Post Custom Fields
-$video = get_field('video_link');
-$audio = get_field('audio_link');
-$worksheet = get_field('worksheet'); ?>
+$isResource = has_term(['book', 'link'], 'resource'); ?>
 
 <section class="post-content">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-3">
 
-        <?php // Section buttons ?>
-        <div class="post-content__buttons">
-          <?php if( trim($post->post_content) !== '' ) : ?>
-            <button id="text">Text</button>
-          <?php endif; ?>
+        <?php // Resource view
+        if( $isResource ) :
 
-          <?php if( $video ) : ?>
-            <button id="video">Video</button>
-          <?php endif; ?>
+          get_template_part('parts/single/resource-content');
 
-          <?php if( $audio ) : ?>
-            <button id="audio">Audio</button>
-          <?php endif; ?>
+        // Regular blog view (tabbed)
+        else :
 
-          <?php if( $worksheet ) : ?>
-            <button id="worksheet">Worksheet</button>
-          <?php endif; ?>
-        </div>
+          get_template_part('parts/single/tabbed-content');
 
-        <?php if( trim($post->post_content) !== '' ) : ?>
-          <div class="post-content__text">
-            <?php the_content(); ?>
-          </div>
-        <?php endif; ?>
-
-        <?php if( $video ) : ?>
-          <div class="post-content__video">
-            <div class="flex-video">
-              <iframe src="<?php echo $video; ?>" width="1000" height="563" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            </div>
-          </div>
-        <?php endif; ?>
-
-        <?php if( $audio ) : ?>
-
-        <?php endif; ?>
-
-        <?php if( $worksheet ) : ?>
-
-        <?php endif; ?>
+        endif; ?>
 
       </div>
     </div>

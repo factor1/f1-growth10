@@ -34,14 +34,15 @@
   &__author {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
 
     &__img {
       flex: 0 0 auto;
       position: relative;
-      width: rem(200);
-      margin-top: rem(-100);
+      width: rem(180);
+      margin-top: rem(-90);
       margin-right: rem(20);
       z-index: 1;
       overflow: hidden;
@@ -55,6 +56,7 @@
 
     &__info {
       flex: 1 1 auto;
+      display: flex;
       width: calc(70% - 20px);
       margin-top: rem(10);
 
@@ -80,7 +82,7 @@
       position: absolute;
       top: rem(-28);
       right: 0;
-      width: calc(100% - 100px);
+      width: calc(100% - 90px);
       height: rem(28);
       background-color: $teal;
     }
@@ -88,10 +90,9 @@
 
   &__icons {
     flex: 0 0 auto;
-    width: 10%;
     margin-top: rem(10);
-    margin-right: rem(20);
-    padding-top: rem(40);
+    margin-left: rem(20);
+    padding-top: rem(30);
 
     i {
       display: block;

@@ -17,6 +17,14 @@ $args = array(
   'posts_per_page' => 4,
   'category__in' => $cat->term_id,
   'tag' => 'popular',
+  'tax_query' => array(
+    array(
+      'taxonomy' => 'resource',
+      'field' => 'slug',
+      'terms' => ['book', 'link'],
+      'operator' => 'NOT IN'
+    )
+  )
 );
 
 // WP Query

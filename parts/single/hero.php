@@ -34,25 +34,29 @@ $user = get_avatar($author, 400); ?>
           </div>
 
           <div class="hero--post__author__info">
-            <h4>
-              <?php the_author(); ?>
+            <div>
+              <h4>
+                <?php the_author(); ?>
 
-              <?php if( $li ) : ?>
-                <a href="<?php echo $li; ?>"><i class="fab fa-linkedin"></i></a>
-              <?php endif; ?>
+                <span>
+                  <?php if( $li ) : ?>
+                    <a href="<?php echo $li; ?>"><i class="fab fa-linkedin"></i></a>
+                  <?php endif; ?>
 
-              <?php if( $url ) : ?>
-                <a href="<?php echo $url; ?>"><i class="far fa-globe"></i></a>
-              <?php endif; ?>
-            </h4>
+                  <?php if( $url ) : ?>
+                    <a href="<?php echo $url; ?>"><i class="far fa-globe"></i></a>
+                  <?php endif; ?>
+                </span>
+              </h4>
 
-            <p class="author-description"><?php echo $desc; ?></p>
-          </div>
+              <p class="author-description"><?php echo $desc; ?></p>
+            </div>
 
-          <div class="hero--post__icons text-right">
-            <i class="far fa-heart"></i>
+            <div class="hero--post__icons text-right">
+              <i class="far fa-heart"></i>
 
-            <i class="far fa-flag"></i>
+              <i class="far fa-flag"></i>
+            </div>
           </div>
         </div>
 
