@@ -16,7 +16,9 @@
           <img src="<?php echo get_template_directory_uri();?>/assets/img/logo-white.svg" alt="<?php echo get_bloginfo('name'); ?>">
         </div>
 
-        <button class="menu-icon"><span></span></button>
+        <?php if( !is_page(208) ) : ?>
+          <button class="menu-icon"><span></span></button>
+        <?php endif; ?>
       </div>
     </div>
   </div>

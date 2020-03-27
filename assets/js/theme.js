@@ -61,4 +61,20 @@ jQuery(document).ready(function($) {
 
     }, 1500);
   }
+
+  // Blog single tabbing
+  if( $(".post-content__buttons").length ) {
+    $(".post-content__buttons button:first-of-type").addClass("active");
+    $(".post-content__blocks > div:first-of-type").addClass("active");
+  }
+
+  $(".post-content__buttons button").on("click", function() {
+    var id = $(this).attr("id");
+
+    $(".post-content__buttons button").removeClass("active");
+    $(this).addClass("active");
+
+    $(".post-content__blocks > div").removeClass("active");
+    $(".post-content__" + id).addClass("active");
+  });
 });

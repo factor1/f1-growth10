@@ -1739,6 +1739,10 @@ h1 {
   text-transform: uppercase; }
 
 h2 {
+  margin: 0 0 1.25rem;
+  font: 700 1.375rem/1 museo-slab, serif; }
+
+h3 {
   margin: 0 0 1.875rem;
   font: 700 1.875rem/1.1 "Comfortaa", cursive;
   text-transform: uppercase; }
@@ -1758,11 +1762,20 @@ p, ol, ul, li {
 p, ol, ul {
   margin: 0 0 3.125rem; }
 
+blockquote,
+blockquote p {
+  font: italic 400 1.375rem/1.36 museo-slab, serif;
+  color: #0356a4; }
+
 a {
   font: inherit;
   color: inherit;
   text-decoration: underline;
   transition: all .4s ease; }
+
+.author-description {
+  margin-bottom: 1.875rem;
+  font: italic 300 1rem/1.38 museo-slab, serif; }
 
 @media screen and (max-width: 47.9375em) {
   h1 {
@@ -1787,6 +1800,23 @@ a {
   .button--scooter:focus, .button--scooter:hover {
     background-color: #2cbdbe;
     color: #fff; }
+
+.button--teal {
+  display: inline-block;
+  padding: 1.25rem 0.875rem;
+  border: 0.25rem solid #2ab2b0;
+  border-top-left-radius: 0.5625rem;
+  border-bottom-right-radius: 0.5625rem;
+  background-color: #2ab2b0;
+  font: 700 1.125rem/1.11 "Comfortaa", cursive;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .4s ease;
+  outline: none; }
+  .button--teal:focus, .button--teal:hover {
+    background-color: transparent;
+    color: #2ab2b0; }
 
 .button--ghost {
   display: inline-block;
@@ -2637,6 +2667,153 @@ body.masked:after {
     margin-bottom: 0.625rem; }
   .post-grid p {
     margin-bottom: 1.25rem; }
+
+/**
+ * Hero (Single)
+ *
+ * Template part used on single.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.blog-post {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+
+.hero--post .container {
+  padding: 3.75rem 0 1.875rem; }
+
+.hero--post h1 {
+  margin-bottom: 2.1875rem;
+  color: #2ab2b0;
+  text-transform: none; }
+  .hero--post h1 + .hero--post__author {
+    margin-top: 8.125rem; }
+
+.hero--post__img {
+  padding-bottom: 40%; }
+
+.hero--post__author {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .hero--post__author__img {
+    flex: 0 0 auto;
+    position: relative;
+    width: 11.25rem;
+    margin-top: -5.625rem;
+    margin-right: 1.25rem;
+    z-index: 1;
+    overflow: hidden; }
+  .hero--post__author img {
+    width: 100%;
+    border-radius: 50%;
+    border: 0.25rem solid #fff; }
+  .hero--post__author__info {
+    flex: 1 1 auto;
+    display: flex;
+    width: calc(70% - 20px);
+    margin-top: 0.625rem; }
+    .hero--post__author__info h4 {
+      color: #464646; }
+      .hero--post__author__info h4 a {
+        color: #0356a4; }
+        .hero--post__author__info h4 a:hover {
+          color: #2ab2b0; }
+        .hero--post__author__info h4 a:first-of-type {
+          margin-left: 1.875rem; }
+  .hero--post__author:after {
+    content: '';
+    position: absolute;
+    top: -1.75rem;
+    right: 0;
+    width: calc(100% - 90px);
+    height: 1.75rem;
+    background-color: #2ab2b0; }
+
+.hero--post__icons {
+  flex: 0 0 auto;
+  margin-top: 0.625rem;
+  margin-left: 1.25rem;
+  padding-top: 1.875rem; }
+  .hero--post__icons i {
+    display: block;
+    font-size: 1.125rem; }
+
+@media screen and (max-width: 47.9375em) {
+  .hero--post h1 + .hero--post__author {
+    margin-top: 6.25rem; }
+  .hero--post__author__img {
+    width: 9.375rem;
+    margin-top: -4.6875rem;
+    margin-right: 0.75rem; }
+  .hero--post__author:after {
+    width: calc(100% - 75px); } }
+
+/**
+ * Content (Single)
+ *
+ * Template part used on single.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.post-content {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .post-content .container {
+    padding: 0 0 6.25rem; }
+  .post-content .col-8 .col-4 {
+    padding-left: 0; }
+  .post-content__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 0 -0.625rem 2.1875rem; }
+  .post-content button {
+    flex: 0 0 22%;
+    display: inline-block;
+    margin: 0.625rem;
+    padding: 0.625rem;
+    border: none;
+    background-color: #e5e5e5;
+    font: 700 1.375rem/1 museo-slab, serif;
+    color: #464646;
+    -webkit-appearance: none;
+    outline: none;
+    transition: all .4s ease; }
+    .post-content button.active, .post-content button:focus, .post-content button:hover {
+      background-color: #2ab2b0;
+      color: #fff; }
+  .post-content__blocks > div {
+    display: none; }
+    .post-content__blocks > div.active {
+      display: block; }
+  .post-content .rt-reading-time {
+    display: none !important; }
+
+@media screen and (max-width: 47.9375em) {
+  .post-content .container {
+    padding: 0 0 3.125rem; }
+  .post-content .col-8 .col-4 {
+    padding-left: 0.8rem; }
+  .post-content__buttons {
+    justify-content: center; }
+  .post-content button {
+    flex: 0 0 9.375rem;
+    padding: 0.625rem 0.3125rem;
+    font-size: 1.0625rem; } }
+
+@media screen and (max-width: 31.25rem) {
+  .post-content .col-8 .col-4 {
+    flex: 0 1 100%;
+    text-align: center; }
+  .post-content .col-8 .col-8 {
+    flex: 0 1 100%;
+    margin-top: 1.875rem; } }
 
 /*
  * Template Name: Landing Page

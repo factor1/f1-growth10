@@ -17,7 +17,7 @@ if( have_posts() ) : ?>
     <div class="container">
       <div class="row">
         <div class="col-12 sm-text-center">
-          <h2>All <?php echo $cat->name; ?> Ideas &amp; Resources</h2>
+          <h3>All <?php echo $cat->name; ?> Ideas &amp; Resources</h3>
         </div>
 
         <?php while( have_posts() ) : the_post();
@@ -86,6 +86,18 @@ if( have_posts() ) : ?>
           <?php the_posts_pagination( array('mid_size' => 2) ); ?>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+<?php else : ?>
+
+  <section class="post-grid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h5>Sorry, no posts have been found.</h5>
+        </div>
       </div>
     </div>
   </section>
