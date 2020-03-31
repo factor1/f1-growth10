@@ -1996,7 +1996,7 @@ nav a {
   height: 100vh;
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
   background-color: #fff;
-  z-index: 999; }
+  z-index: 99999; }
   .mega-menu .container {
     height: 100%;
     padding: 1.25rem 0 3.125rem;
@@ -2293,7 +2293,8 @@ body.masked:after {
 
 .site-header {
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
-  background-color: #0356a4; }
+  background-color: #0356a4;
+  z-index: 99999; }
   .site-header .container {
     padding: 1.25rem 0 0.75rem; }
   .site-header .col-12 {
@@ -2302,6 +2303,13 @@ body.masked:after {
     align-items: center; }
   .site-header__logo {
     width: 11.875rem; }
+
+.page-template-home .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent; }
 
 /*------------------------------------------------------------------------------
   Footer
@@ -2442,6 +2450,31 @@ body.masked:after {
  * @author Factor1 Studios
  * @since 0.1.0
  */
+/*
+ * Hero (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+.hero--home {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .hero--home .container {
+    padding: 13.75rem 0; }
+  .hero--home h1 {
+    margin: 0;
+    font-size: 5rem;
+    color: #fff;
+    text-transform: none; }
+
+@media screen and (max-width: 47.9375em) {
+  .hero--home .container {
+    padding: 11.25rem 0 6.25rem; }
+  .hero--home h1 {
+    font-size: 2.25rem; } }
+
 /**
  * Hero (Index)
  *
