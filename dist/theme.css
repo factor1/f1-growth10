@@ -2551,6 +2551,57 @@ body.masked:after {
   .text-split p {
     font-size: 1.375rem; } }
 
+/*
+ * Category Grid (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+.category-grid {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .category-grid .container {
+    padding: 3.125rem 0 1.875rem; }
+  .category-grid h2 {
+    margin: 0 0 3.75rem;
+    font: 700 3.125rem/1.12 "Comfortaa", cursive;
+    color: #2ab2b0; }
+  .category-grid .block-grid-5 {
+    justify-content: center; }
+  .category-grid .col {
+    margin-bottom: 2.8125rem; }
+    .category-grid .col > div {
+      margin-bottom: 1.25rem; }
+      .category-grid .col > div img {
+        height: 3.75rem; }
+    .category-grid .col h4 {
+      font-family: "Montserrat", sans-serif;
+      color: #0356a4;
+      text-transform: uppercase; }
+  .category-grid h3 {
+    margin: 0 0 0.625rem;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #464646;
+    text-transform: none; }
+
+@media screen and (max-width: 47.9375em) {
+  .category-grid .col {
+    min-width: 13.75rem;
+    margin-bottom: 1.875rem; }
+    .category-grid .col > div {
+      margin-bottom: 0.625rem; }
+      .category-grid .col > div img {
+        height: 3.125rem; }
+    .category-grid .col h4 {
+      font-size: 1.125rem; }
+  .category-grid h2 {
+    font-size: 2rem; }
+  .category-grid h3 {
+    font-size: 1.75rem; } }
+
 /**
  * Hero (Index)
  *
