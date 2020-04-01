@@ -49,6 +49,8 @@ if( have_rows('plans') ) : ?>
               <?php echo $desc; ?>
 
               <div class="plan__monthly active text-center">
+                <span><?php echo $savings; ?></span>
+                
                 <p class="plan__price"><?php echo $monthlyPrice; ?></p>
 
                 <?php if( $monthlyBtn ) : ?>
