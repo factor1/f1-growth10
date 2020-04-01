@@ -2517,6 +2517,40 @@ body.masked:after {
   .three-column-section h3 {
     font-size: 1.75rem; } }
 
+/*
+ * Text Split (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+.text-split {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  background-color: #0356a4; }
+  .text-split .container {
+    padding: 3.75rem 0; }
+  .text-split h2 {
+    margin: 0;
+    font: 700 3.75rem/1.12 "Comfortaa", cursive; }
+  .text-split p {
+    font-size: 1.875rem;
+    line-height: 1.17; }
+  .text-split h1, .text-split h2, .text-split h3, .text-split h4, .text-split h5, .text-split h6, .text-split p, .text-split blockquote, .text-split ol, .text-split ul, .text-split li {
+    color: #fff; }
+
+@media screen and (max-width: 64em) {
+  .text-split h2 {
+    font-size: 3.125rem; } }
+
+@media screen and (max-width: 47.9375em) {
+  .text-split h2 {
+    margin-bottom: 1.875rem;
+    font-size: 2rem; }
+  .text-split p {
+    font-size: 1.375rem; } }
+
 /**
  * Hero (Index)
  *
