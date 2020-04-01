@@ -93,6 +93,11 @@
       display: none;
     }
 
+    &__monthly span {
+      opacity: 0;
+      pointer-events: none;
+    }
+
     .active {
       display: block;
     }
