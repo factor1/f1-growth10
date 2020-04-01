@@ -23,4 +23,6 @@ get_template_part('parts/home/text-image-split');
 
 get_template_part('parts/home/testimonials');
 
+get_template_part('parts/home/plans');
+
 get_footer(); ?>

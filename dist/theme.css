@@ -1844,6 +1844,23 @@ a {
     background-color: #fff;
     color: #2cbdbe; }
 
+.button--ghost-blue {
+  display: inline-block;
+  padding: 1.25rem 0.875rem;
+  border: 0.25rem solid #0356a4;
+  border-top-left-radius: 0.5625rem;
+  border-bottom-right-radius: 0.5625rem;
+  background-color: transparent;
+  font: 700 1.125rem/1.11 "Comfortaa", cursive;
+  color: #0356a4;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .4s ease;
+  outline: none; }
+  .button--ghost-blue:focus, .button--ghost-blue:hover {
+    background-color: #0356a4;
+    color: #fff; }
+
 /*------------------------------------------------------------------------------
   Menu Icon
 ------------------------------------------------------------------------------*/
@@ -2081,6 +2098,43 @@ nav a {
 /*------------------------------------------------------------------------------
   Forms
 ------------------------------------------------------------------------------*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 5.125rem;
+  height: 2.375rem;
+  margin: 0 0.9375rem; }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+    .switch input:checked + .slider:before {
+      transform: translateX(45px); }
+    .switch input:active + .slider, .switch input:focus + .slider, .switch input:hover + .slider {
+      border-color: #2ab2b0; }
+  .switch .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0.0625rem solid #000;
+    border-radius: 1.125rem;
+    box-shadow: 0 0 0.375rem #464646;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .4s ease; }
+    .switch .slider:before {
+      content: '';
+      position: absolute;
+      left: 0.1875rem;
+      bottom: 0.1875rem;
+      width: 1.875rem;
+      height: 1.875rem;
+      border-radius: 50%;
+      background-color: #2ab2b0;
+      transition: all .4s ease; }
+
 .search-form {
   position: relative;
   display: flex;
@@ -2648,8 +2702,7 @@ body.masked:after {
     margin-bottom: 4.375rem; }
   .home-testimonials img {
     width: 9.375rem;
-    border-radius: 50%;
-    border: 1px solid #0356a4; }
+    border-radius: 50%; }
   .home-testimonials p {
     margin: 0 0 0.9375rem;
     font-size: 1.375rem;
@@ -2669,6 +2722,91 @@ body.masked:after {
     font-size: 1.125rem; }
   .home-testimonials h4 {
     font-size: 1.125rem; } }
+
+/*
+ * Plans Section (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+.plans-section {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .plans-section .container {
+    padding: 3.125rem 0 0; }
+  .plans-section .col-10 {
+    margin-bottom: 2.5rem; }
+    .plans-section .col-10 h1, .plans-section .col-10 h2, .plans-section .col-10 h3, .plans-section .col-10 h4, .plans-section .col-10 h5, .plans-section .col-10 h6, .plans-section .col-10 p, .plans-section .col-10 blockquote, .plans-section .col-10 ol, .plans-section .col-10 ul, .plans-section .col-10 li, .plans-section .col-10 span {
+      color: #fff; }
+  .plans-section h2 {
+    margin: 0 0 2.5rem;
+    font: 700 3.75rem/1.12 "Comfortaa", cursive; }
+  .plans-section h4 {
+    font: 700 1.5rem/1.25 "Comfortaa", cursive; }
+  .plans-section__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .plans-section__toggle span {
+      font: 400 1.125rem/1.22 "Montserrat", sans-serif;
+      text-transform: uppercase; }
+  .plans-section .col-4 {
+    margin-bottom: 3.75rem; }
+    .plans-section .col-4:nth-of-type(3) .plan p:not(.plan__price) {
+      margin-bottom: 7.5rem; }
+  .plans-section .plan {
+    padding: 2.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 0.625rem black; }
+    .plans-section .plan h3 {
+      font-size: 2.1875rem;
+      color: #2ab2b0; }
+    .plans-section .plan img {
+      margin: 0;
+      width: 2.5rem;
+      vertical-align: text-top; }
+    .plans-section .plan span {
+      display: block;
+      margin-bottom: 0.625rem;
+      font: italic 300 0.875rem/1.13 "Montserrat", sans-serif;
+      color: #2ab2b0; }
+    .plans-section .plan__price {
+      margin: 0 0 0.625rem;
+      font-size: 1.875rem;
+      line-height: 1.17;
+      color: #0356a4; }
+    .plans-section .plan small {
+      display: block;
+      margin-top: 0.625rem;
+      font: italic 300 0.875rem/1.13 "Montserrat", sans-serif;
+      color: #707070; }
+    .plans-section .plan__monthly, .plans-section .plan__annual {
+      display: none; }
+    .plans-section .plan .active {
+      display: block; }
+
+@media screen and (max-width: 64em) {
+  .plans-section .col-4 {
+    align-self: stretch; }
+    .plans-section .col-4:nth-of-type(3) .plan p:not(.plan__price) {
+      margin-bottom: 3.125rem; }
+  .plans-section .plan {
+    height: 100%;
+    padding: 2.5rem 1.25rem; }
+    .plans-section .plan h3 {
+      font-size: 1.75rem; }
+    .plans-section .plan img {
+      width: 1.875rem; }
+    .plans-section .plan p:emtpy {
+      display: none; }
+    .plans-section .plan__price {
+      font-size: 1.75rem; } }
+
+@media screen and (max-width: 47.9375em) {
+  .plans-section h2 {
+    font-size: 2rem; } }
 
 /**
  * Hero (Index)

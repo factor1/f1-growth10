@@ -62,6 +62,14 @@ jQuery(document).ready(function($) {
     }, 1500);
   }
 
+  // Home plan switching
+  if( $(".plans-section").length ) {
+    $(".plans-section .switch input[type='checkbox']").on("click", function() {
+      $(".plan__monthly").toggleClass("active");
+      $(".plan__annual").toggleClass("active");
+    });
+  }
+
   // Blog single tabbing
   if( $(".post-content__buttons").length ) {
     $(".post-content__buttons button:first-of-type").addClass("active");
