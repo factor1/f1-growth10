@@ -1767,11 +1767,20 @@ blockquote p {
   font: italic 400 1.375rem/1.36 museo-slab, serif;
   color: #0356a4; }
 
+hr {
+  width: 6.25rem;
+  height: 0.625rem;
+  margin: 0 0 0.625rem;
+  border: none;
+  background-color: #2ab2b0; }
+
 a {
   font: inherit;
   color: inherit;
   text-decoration: underline;
   transition: all .4s ease; }
+  a:hover {
+    color: #2ab2b0; }
 
 .author-description {
   margin-bottom: 1.875rem;
@@ -2474,6 +2483,39 @@ body.masked:after {
     padding: 11.25rem 0 6.25rem; }
   .hero--home h1 {
     font-size: 2.25rem; } }
+
+/*
+ * 3-Column Section (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+.three-column-section {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .three-column-section .container {
+    padding: 3.75rem 0 0; }
+  .three-column-section h2 {
+    margin: 0 0 3.125rem;
+    font: 700 3.125rem/1.12 "Comfortaa", cursive;
+    color: #2ab2b0; }
+  .three-column-section .col-4 {
+    margin-bottom: 0.625rem; }
+  .three-column-section h3 {
+    margin: 0 0 0.625rem;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #464646; }
+
+@media screen and (max-width: 47.9375em) {
+  .three-column-section .container {
+    padding: 2.5rem 0 0; }
+  .three-column-section h2 {
+    font-size: 2rem; }
+  .three-column-section h3 {
+    font-size: 1.75rem; } }
 
 /**
  * Hero (Index)

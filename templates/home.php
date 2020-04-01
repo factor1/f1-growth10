@@ -13,4 +13,6 @@ get_header();
 
 get_template_part('parts/home/hero');
 
+get_template_part('parts/home/3-column-section');
+
 get_footer(); ?>
