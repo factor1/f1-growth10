@@ -21,4 +21,6 @@ get_template_part('parts/home/category-grid');
 
 get_template_part('parts/home/text-image-split');
 
+get_template_part('parts/home/testimonials');
+
 get_footer(); ?>

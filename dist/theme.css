@@ -2631,6 +2631,45 @@ body.masked:after {
   .home-text-image-split p {
     font-size: 1.5rem; } }
 
+/*
+ * Testimonials (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+.home-testimonials {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .home-testimonials .container {
+    padding: 5.625rem 0 3.125rem; }
+  .home-testimonials .row {
+    margin-bottom: 4.375rem; }
+  .home-testimonials img {
+    width: 9.375rem;
+    border-radius: 50%;
+    border: 1px solid #0356a4; }
+  .home-testimonials p {
+    margin: 0 0 0.9375rem;
+    font-size: 1.375rem;
+    line-height: 1.36;
+    font-family: museo-slab, serif;
+    color: #0356a4; }
+  .home-testimonials h4 {
+    font-weight: 400;
+    color: #464646; }
+
+@media screen and (max-width: 47.9375em) {
+  .home-testimonials .container {
+    padding: 2.5rem 0 0; }
+  .home-testimonials .row {
+    margin-bottom: 2.5rem; }
+  .home-testimonials p {
+    font-size: 1.125rem; }
+  .home-testimonials h4 {
+    font-size: 1.125rem; } }
+
 /**
  * Hero (Index)
  *
