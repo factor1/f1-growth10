@@ -1,0 +1,51 @@
+/*
+ * 3-Column Section (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.three-column-section {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(60) 0 0;
+  }
+
+  h2 {
+    margin: 0 0 rem(50);
+    font: 700 rem(50)/1.12 $cursive;
+    color: $teal;
+  }
+
+  .col-4 {
+    margin-bottom: rem(10);
+  }
+
+  h3 {
+    margin: 0 0 rem(10);
+    font-weight: 400;
+    font-family: $sans;
+    color: $tundora;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .three-column-section {
+    .container {
+      padding: rem(40) 0 0;
+    }
+
+    h2 {
+      font-size: rem(32);
+    }
+
+    h3 {
+      font-size: rem(28);
+    }
+  }
+}

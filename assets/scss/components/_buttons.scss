@@ -13,4 +13,8 @@
   &--ghost {
     @include button($white, transparent, $white, $white, $scooter);
   }
+
+  &--ghost-blue {
+    @include button($blue, transparent, $blue, $blue, $white);
+  }
 }

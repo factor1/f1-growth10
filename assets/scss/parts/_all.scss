@@ -6,6 +6,15 @@
  * @since 0.1.0
  */
 
+// Home
+@import 'home/hero';
+@import 'home/3-column-section';
+@import 'home/text-split';
+@import 'home/category-grid';
+@import 'home/text-image-split';
+@import 'home/testimonials';
+@import 'home/plans';
+
 // Index
 @import 'index/hero';
 @import 'index/popular-posts';
