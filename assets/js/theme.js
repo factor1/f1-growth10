@@ -1,5 +1,16 @@
 import Bowser from "Bowser";
 import MicroModal from "micromodal";
+import * as AOS from "aos";
+
+// AOS
+AOS.init({
+  offset: 200,
+  duration: 1000,
+  easing: "ease",
+  anchorPlacement: "top-center",
+  once: true,
+  disable: "mobile",
+});
 
 // Modals
 MicroModal.init();
@@ -84,5 +95,20 @@ jQuery(document).ready(function($) {
 
     $(".post-content__blocks > div").removeClass("active");
     $(".post-content__" + id).addClass("active");
+  });
+
+  // Smooth Anchor Link Scrolling
+  $(".anchor-scroll").on("click", function(e) {
+    e.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    $("html, body").animate({
+      scrollTop: $(hash).offset().top,
+    }, 800, function(){
+
+      window.location.hash = hash;
+    });
   });
 });

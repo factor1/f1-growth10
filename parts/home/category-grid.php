@@ -22,7 +22,8 @@ $cats = get_field('left_menu', 'option'); ?>
       </div>
 
       <?php // Grid
-      if( $cats ) : ?>
+      if( $cats ) :
+        $i = 0; ?>
 
         <div class="col-12 text-center">
           <div class="block-grid-5 md-block-grid-4 sm-block-grid-3">
@@ -30,7 +31,7 @@ $cats = get_field('left_menu', 'option'); ?>
             <?php foreach( $cats as $cat ) :
               $imgBlue = wp_get_attachment_image_src(get_field('category_icon_blue', $cat), 'category_icon');?>
 
-              <div class="col stretch text-center">
+              <div class="col stretch text-center" data-aos="fade-up" data-aos-delay="<?php echo $i * 250; ?>" data-aos-anchor=".category-grid">
                 <div>
                   <img src="<?php echo $imgBlue[0]; ?>" alt="<?php echo $cat->name; ?> icon blue">
                 </div>
@@ -38,7 +39,7 @@ $cats = get_field('left_menu', 'option'); ?>
                 <h4><?php echo $cat->name; ?></h4>
               </div>
 
-            <?php endforeach; ?>
+            <?php $i++; endforeach; ?>
 
           </div>
         </div>

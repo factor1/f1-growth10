@@ -12,7 +12,7 @@
 // Text Split Custom Fields
 $headline = get_field('text_split_headline');
 $content = get_field('text_split_content');
-$btn = get_field('text_split_button'); ?>
+$btn = get_field('text_split_button_text'); ?>
 
 <section class="text-split">
   <div class="container">
@@ -29,8 +29,8 @@ $btn = get_field('text_split_button'); ?>
         <?php if( $btn ) : ?>
 
           <div class="text-center">
-            <a href="<?php echo esc_url($btn['url']); ?>" class="button button--ghost" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
-              <?php echo $btn['title']; ?>
+            <a href="#plans" class="button button--ghost anchor-scroll" role="link" title="<?php echo $btn; ?>">
+              <?php echo $btn; ?>
             </a>
           </div>
 
