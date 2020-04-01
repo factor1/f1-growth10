@@ -2602,6 +2602,35 @@ body.masked:after {
   .category-grid h3 {
     font-size: 1.75rem; } }
 
+/*
+ * Text/Image Split (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+.home-text-image-split {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  background-color: #e5e5e5; }
+  .home-text-image-split .container {
+    padding: 3.125rem 0 0; }
+  .home-text-image-split h2 {
+    margin: 0 0 2.5rem;
+    font: 700 2.8125rem/1.13 "Comfortaa", cursive; }
+  .home-text-image-split p {
+    font-size: 1.875rem;
+    line-height: 1.17; }
+  .home-text-image-split img {
+    margin-bottom: 2.5rem; }
+
+@media screen and (max-width: 47.9375em) {
+  .home-text-image-split h2 {
+    font-size: 2rem; }
+  .home-text-image-split p {
+    font-size: 1.5rem; } }
+
 /**
  * Hero (Index)
  *

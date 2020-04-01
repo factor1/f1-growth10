@@ -19,4 +19,6 @@ get_template_part('parts/home/text-split');
 
 get_template_part('parts/home/category-grid');
 
+get_template_part('parts/home/text-image-split');
+
 get_footer(); ?>
