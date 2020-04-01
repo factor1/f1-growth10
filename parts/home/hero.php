@@ -10,10 +10,10 @@
  */
 
 // Hero Custom Fields
-$img = featuredURL('home_hero');
+$img = wp_get_attachment_image_src(get_field('home_hero_background'), 'home_hero');
 $headline = get_field('home_hero_headline_text'); ?>
 
-<section class="hero--home" style="background: url('<?php echo $img; ?>') center/cover no-repeat">
+<section class="hero--home" style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat">
   <div class="container">
     <div class="row">
       <div class="col-10 sm-col-11 col-centered text-center">
