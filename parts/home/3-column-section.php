@@ -12,7 +12,8 @@
 // 3-Column Section Custom Fields
 $headline = get_field('3_column_section_headline');
 
-if( have_rows('3_column_section_columns') ) : ?>
+if( have_rows('3_column_section_columns') ) :
+  $i = 0; ?>
 
   <section class="three-column-section">
     <div class="container">
@@ -24,13 +25,13 @@ if( have_rows('3_column_section_columns') ) : ?>
         <?php while( have_rows('3_column_section_columns') ) : the_row();
           $content = get_sub_field('content'); ?>
 
-          <div class="col-4 sm-col-11 sm-col-centered">
+          <div class="col-4 sm-col-11 sm-col-centered" data-aos="fade-up" data-aos-delay="<?php echo $i * 200; ?>">
             <hr>
 
             <?php echo $content; ?>
           </div>
 
-        <?php endwhile; ?>
+        <?php $i++; endwhile; ?>
 
       </div>
     </div>

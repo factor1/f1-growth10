@@ -16,7 +16,7 @@ $content = get_field('plans_content');
 
 if( have_rows('plans') ) : ?>
 
-  <section class="plans-section" style="background: url('<?php echo $bg[0]; ?>') center/cover no-repeat">
+  <section class="plans-section" style="background: url('<?php echo $bg[0]; ?>') center/cover no-repeat" id="plans">
     <div class="container">
       <div class="row row--justify-content-center row--align-items-center">
         <div class="col-10 sm-col-11 text-center">
