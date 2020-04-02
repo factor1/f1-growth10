@@ -5,7 +5,8 @@
   function prelude_custom_menus() {
     register_nav_menus(
       array(
-        'mega_right' => 'Mega Menu (right)',
+        'primary' => 'Primary Menu - Logged Out',
+        'mega_right' => 'Mega Menu (right) - Logged In',
         'footer'  => 'Footer Menu',
         'social'  => 'Social Menu',
       )

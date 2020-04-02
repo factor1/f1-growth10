@@ -23,6 +23,21 @@ nav {
   }
 }
 
+// Logged Out Menu
+.nav--primary {
+  a {
+    padding: rem(15) rem(10) rem(10);
+    font: 400 rem(18)/1 $cursive;
+    color: $white;
+    text-decoration: none;
+  }
+
+  .nav-button a {
+    @include button($white, transparent, $white, $white, $scooter);
+    text-transform: none;
+  }
+}
+
 // Mega menu left
 .nav--left {
   width: calc(100% + 20px);
@@ -132,6 +147,12 @@ nav {
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
+  .nav--primary .nav-button a {
+    padding: rem(12);
+    font-size: rem(14);
+    border-width: rem(2);
+  }
+
   .nav--footer {
     flex: 0 1 100%;
     margin: rem(20) 0;

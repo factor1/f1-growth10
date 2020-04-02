@@ -46,6 +46,7 @@ body {
 
   &__logo {
     width: rem(190);
+    margin-right: rem(10);
   }
 }
 
@@ -56,4 +57,11 @@ body {
   left: 0;
   width: 100%;
   background-color: transparent;
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .site-header__logo {
+    width: rem(120);
+  }
 }

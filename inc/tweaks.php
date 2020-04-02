@@ -241,3 +241,6 @@
   	echo 'Powered by<a href="https://WordPress.org">WordPress</a>.';
   }
   add_filter('admin_footer_text', 'modify_footer_admin');
+
+  // Hide admin bar
+  add_filter('show_admin_bar', '__return_false');
