@@ -33,8 +33,8 @@
   get_template_part('parts/global/site-header'); ?>
 
   <?php // Mega menu
-  if( !is_page(208) ) :
-    get_template_part('parts/global/mega-menu'); 
+  if( !is_page(208) && is_user_logged_in() ) :
+    get_template_part('parts/global/mega-menu');
   endif; ?>
 
   <?php // Main Content ?>

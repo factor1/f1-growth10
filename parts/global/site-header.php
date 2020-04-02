@@ -16,9 +16,25 @@
           <img src="<?php echo get_template_directory_uri();?>/assets/img/logo-white.svg" alt="<?php echo get_bloginfo('name'); ?>">
         </div>
 
-        <?php if( !is_page(208) ) : ?>
-          <button class="menu-icon"><span></span></button>
-        <?php endif; ?>
+        <?php if( !is_page(208) ) :
+          if( is_user_logged_in() ) : ?>
+
+            <button class="menu-icon"><span></span></button>
+
+          <?php else :
+
+            wp_nav_menu(
+              array(
+                'theme_location' => 'primary',
+                'container' => 'nav',
+                'container_class' => 'nav--primary',
+                'depth' => 1,
+              )
+            );
+
+          endif;
+        endif; ?>
+
       </div>
     </div>
   </div>

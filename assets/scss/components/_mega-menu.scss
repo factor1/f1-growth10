@@ -42,3 +42,10 @@
     margin-bottom: rem(15);
   }
 }
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .mega-menu__logo {
+    width: rem(120);
+  }
+}
