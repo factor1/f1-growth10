@@ -3,13 +3,13 @@
 <head>
 
   <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta property="og:title" content="<?php the_title(); ?>" />
   <meta property="og:site_name" content="<?php bloginfo('name') ?>">
 
   <?php
   /* Theme color for browsers that support it
-  <meta name="theme-color" content="#000">
+  <meta name="theme-color" content="#2cbdbe">
   */
   ?>
 
@@ -29,18 +29,13 @@
 
 <body <?php body_class(); ?>>
 
-  <?php // Header ?>
-  <div class="container">
-  <div class="row">
-	  <div class="col-3 offset-1">
-	  	<img src="<?php echo get_template_directory_uri();?>/assets/img/Growth10Logo_Color.jpg" alt="Growth 10">
-	  </div>
-	  <div class="col-8">
-		  <h4 style="text-align: center; font-weight:100; margin-top: 60px"><!-- Site Coming Soon --></h4>
-	  </div>
-	  
-  </div>
-  </div>
+  <?php // Header
+  get_template_part('parts/global/site-header'); ?>
+
+  <?php // Mega menu
+  if( !is_page(208) && is_user_logged_in() ) :
+    get_template_part('parts/global/mega-menu');
+  endif; ?>
 
   <?php // Main Content ?>
   <main>

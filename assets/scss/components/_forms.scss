@@ -1,6 +1,106 @@
 /*------------------------------------------------------------------------------
   Forms
 ------------------------------------------------------------------------------*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: rem(82);
+  height: rem(38);
+  margin: 0 rem(15);
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .slider:before {
+      transform: translateX(45px);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      + .slider {
+        border-color: $teal;
+      }
+    }
+  }
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: rem(1) solid $black;
+    border-radius: rem(18);
+    box-shadow: 0 0 rem(6) $tundora;
+    background-color: $white;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: rem(3);
+      bottom: rem(3);
+      width: rem(30);
+      height: rem(30);
+      border-radius: 50%;
+      background-color: $teal;
+      transition: all .4s ease;
+    }
+  }
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  i {
+    margin-right: rem(20);
+    font-size: rem(32);
+    color: $blue;
+  }
+
+  input[type="text"] {
+    flex: 1 1 100%;
+    padding: rem(8) rem(30);
+    border: rem(1) solid transparent;
+    border-radius: 0;
+    background-color: $lightGray;
+    font: 400 rem(18)/1 $cursive;
+    color: $tundora;
+    transition: all .4s ease;
+    outline: none;
+
+    &:active,
+    &:focus {
+      border-color: $teal;
+    }
+  }
+
+  button,
+  input[type="submit"] {
+    -webkit-appearance: none;
+    padding: rem(9) rem(28);
+    border: rem(1) solid transparent;
+    background-color: $teal;
+    font: 400 rem(18)/1 $cursive;
+    color: $white;
+    transition: all .4s ease;
+    outline: none;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $blue;
+    }
+  }
+}
+
 .gform_wrapper {
   margin: 0 !important;
 

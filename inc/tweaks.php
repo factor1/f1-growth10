@@ -31,7 +31,7 @@
     }
     add_action( 'after_setup_theme', 'prelude_features' );
   }
-  
+
   // Set the maximum content width for the theme
   function prelude_content_width() {
     $GLOBALS[ 'content_width' ] = apply_filters( 'prelude_content_width', 1200 );
@@ -127,3 +127,120 @@
     return $buttons;
   }
   add_filter("mce_buttons_3", "enable_more_buttons");
+
+  // Add async defer to font awesome script
+  function add_async_attribute($tag, $handle) {
+    if ( 'font-awesome' !== $handle )
+      return $tag;
+    return str_replace( ' src', ' async="async" src', $tag );
+  }
+  add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
+
+  // Hide ACF from everyone except factor1admin
+  $us = get_user_by('login', 'factor1admin');
+
+  // If the current logged-in user is not us, hide ACF
+  if(wp_get_current_user()->user_login !== $us->user_login) :
+    add_filter('acf/settings/show_admin', '__return_false');
+  endif;
+
+  // Customize Wordpress Admin
+  // add login logo
+  function custom_loginlogo() {
+  	echo '<style type="text/css">
+      .login {
+        background: #fff;
+      }
+      .login .message,
+      .login #login_error {
+        margin-top: 30px;
+        border-color: #2cbdbe;
+      }
+      .login p,
+      .login label {
+        font-family: "Comfortaa", cursive;
+      }
+      .login p a {
+        color: #464646 !important;
+        transition: all .4s ease;
+      }
+      .login p a:hover {
+        color: #2cbdbe !important;
+      }
+      .login input[type="text"],
+      .login input[type="password"] {
+        border: 1px solid transparent;
+        border-radius: 0;
+        background-color: #e5e5e5;
+        font: 400 18px/1 $cursive;
+        color: #464646;
+        transition: all .4s ease;
+        outline: none;
+      }
+      .login input[type="text"]:active,
+      .login input[type="text"]:focus,
+      .login input[type="password"]:active,
+      .login input[type="password"]:focus,
+      input[type=text]:focus,
+      input[type=search]:focus,
+      input[type=radio]:focus,
+      input[type=tel]:focus,
+      input[type=time]:focus,
+      input[type=url]:focus,
+      input[type=week]:focus,
+      input[type=password]:focus,
+      input[type=checkbox]:focus,
+      input[type=color]:focus,
+      input[type=date]:focus,
+      input[type=datetime]:focus,
+      input[type=datetime-local]:focus,
+      input[type=email]:focus,
+      input[type=month]:focus,
+      input[type=number]:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #2ab2b0;
+        box-shadow: none;
+      }
+      .login input[type="submit"] {
+        padding: 9px 29px;
+        border: 1px solid transparent;
+        border-radius: 0;
+        background-color: #2ab2b0;
+        font: 400 18px/1 $cursive;
+        color: #fff;
+        transition: all .4s ease;
+        outline: none;
+        box-shadow: none;
+        text-shadow: none;
+      }
+      .login input[type="submit"]:active,
+      .login input[type="submit"]:focus,
+      .login input[type="submit"]:hover {
+        background-color: #0356a4;
+      }
+    	h1 a {
+    		height: 100% !important;
+    		width:100% !important;
+    		background-image: url(' . get_template_directory_uri() . '/assets/img/logo-color.svg) !important;
+    		background-postion-x: center !important;
+    		background-size:contain !important;
+    		margin-bottom:10px !important;
+      }
+    	h1 {
+    		width: 320px !important;
+    		Height: 120px !important
+      }
+  	</style>';
+  }
+  add_action('login_head', 'custom_loginlogo');
+
+  // add custom footer text
+  function modify_footer_admin () {
+  	echo 'Created by <a href="https://factor1studios.com">factor1</a>. ';
+  	echo 'Powered by<a href="https://WordPress.org">WordPress</a>.';
+  }
+  add_filter('admin_footer_text', 'modify_footer_admin');
+
+  // Hide admin bar
+  add_filter('show_admin_bar', '__return_false');

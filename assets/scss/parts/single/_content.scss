@@ -1,0 +1,99 @@
+/**
+ * Content (Single)
+ *
+ * Template part used on single.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+
+.post-content {
+  @include iPhoneX;
+
+  .container {
+    padding: 0 0 rem(100);
+  }
+
+  .col-8 .col-4 {
+    padding-left: 0;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 0 rem(-10) rem(35);
+  }
+
+  button {
+    flex: 0 0 22%;
+    display: inline-block;
+    margin: rem(10);
+    padding: rem(10);
+    border: none;
+    background-color: $lightGray;
+    font: 700 rem(22)/1 $serif;
+    color: $tundora;
+    -webkit-appearance: none;
+    outline: none;
+    transition: all .4s ease;
+
+    &.active,
+    &:focus,
+    &:hover {
+      background-color: $teal;
+      color: $white;
+    }
+  }
+
+  &__blocks > div {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .rt-reading-time {
+    display: none !important;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .post-content {
+    .container {
+      padding: 0 0 rem(50);
+    }
+
+    .col-8 .col-4 {
+      padding-left: rem(12.8);
+    }
+
+    &__buttons {
+      justify-content: center;
+    }
+
+    button {
+      flex: 0 0 rem(150);
+      padding: rem(10) rem(5);
+      font-size: rem(17);
+    }
+  }
+}
+
+@media screen and (max-width: rem(500)) {
+  .post-content .col-8 {
+    .col-4 {
+      flex: 0 1 100%;
+      text-align: center;
+    }
+
+    .col-8 {
+      flex: 0 1 100%;
+      margin-top: rem(30);
+    }
+  }
+}

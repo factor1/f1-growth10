@@ -1,5 +1,16 @@
 import Bowser from "Bowser";
 import MicroModal from "micromodal";
+import * as AOS from "aos";
+
+// AOS
+AOS.init({
+  offset: 200,
+  duration: 1000,
+  easing: "ease",
+  anchorPlacement: "top-center",
+  once: true,
+  disable: "mobile",
+});
 
 // Modals
 MicroModal.init();
@@ -24,6 +35,15 @@ jQuery(document).ready(function($) {
   } else if (browser.name === "Safari") {
     $("body").addClass("safari");
   }
+
+  // Menu functions
+  $(".menu-icon").on("click", function() {
+    $("html").toggleClass("locked");
+    $("body").toggleClass("locked masked");
+
+    $(".menu-icon").toggleClass("active");
+    $(".mega-menu").slideToggle();
+  });
 
   // Landing hero rotating text
   if( $(".landing-section .span--outer").length ) {
@@ -52,4 +72,43 @@ jQuery(document).ready(function($) {
 
     }, 1500);
   }
+
+  // Home plan switching
+  if( $(".plans-section").length ) {
+    $(".plans-section .switch input[type='checkbox']").on("click", function() {
+      $(".plan__monthly").toggleClass("active");
+      $(".plan__annual").toggleClass("active");
+    });
+  }
+
+  // Blog single tabbing
+  if( $(".post-content__buttons").length ) {
+    $(".post-content__buttons button:first-of-type").addClass("active");
+    $(".post-content__blocks > div:first-of-type").addClass("active");
+  }
+
+  $(".post-content__buttons button").on("click", function() {
+    var id = $(this).attr("id");
+
+    $(".post-content__buttons button").removeClass("active");
+    $(this).addClass("active");
+
+    $(".post-content__blocks > div").removeClass("active");
+    $(".post-content__" + id).addClass("active");
+  });
+
+  // Smooth Anchor Link Scrolling
+  $(".anchor-scroll").on("click", function(e) {
+    e.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    $("html, body").animate({
+      scrollTop: $(hash).offset().top,
+    }, 800, function(){
+
+      window.location.hash = hash;
+    });
+  });
 });
