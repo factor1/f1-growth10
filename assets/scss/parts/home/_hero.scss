@@ -12,12 +12,12 @@
   @include iPhoneX;
 
   .container {
-    padding: rem(220) 0;
+    padding: rem(160) 0;
   }
 
   h1 {
     margin: 0;
-    font-size: rem(80);
+    font-size: rem(64);
     color: $white;
     text-transform: none;
   }
@@ -27,7 +27,7 @@
 @media screen and (max-width: $small-breakpoint) {
   .hero--home {
     .container {
-      padding: rem(180) 0 rem(100);
+      padding: rem(160) 0 rem(100);
     }
 
     h1 {

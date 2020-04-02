@@ -3284,16 +3284,16 @@ body.masked:after {
 .hero--home {
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
   .hero--home .container {
-    padding: 13.75rem 0; }
+    padding: 10rem 0; }
   .hero--home h1 {
     margin: 0;
-    font-size: 5rem;
+    font-size: 4rem;
     color: #fff;
     text-transform: none; }
 
 @media screen and (max-width: 47.9375em) {
   .hero--home .container {
-    padding: 11.25rem 0 6.25rem; }
+    padding: 10rem 0 6.25rem; }
   .hero--home h1 {
     font-size: 2.25rem; } }
 
@@ -3513,8 +3513,6 @@ body.masked:after {
       text-transform: uppercase; }
   .plans-section .col-4 {
     margin-bottom: 3.75rem; }
-    .plans-section .col-4:nth-of-type(3) .plan p:not(.plan__price) {
-      margin-bottom: 7.5rem; }
   .plans-section .plan {
     padding: 2.5rem;
     background-color: #fff;
@@ -3522,6 +3520,21 @@ body.masked:after {
     .plans-section .plan h3 {
       font-size: 2.1875rem;
       color: #2ab2b0; }
+    .plans-section .plan p, .plans-section .plan ol, .plans-section .plan ul {
+      margin-bottom: 1.25rem; }
+    .plans-section .plan ul {
+      list-style-type: none; }
+    .plans-section .plan li {
+      position: relative; }
+      .plans-section .plan li:before {
+        content: '';
+        position: absolute;
+        top: 0.5625rem;
+        left: -1.25rem;
+        width: 0.3125rem;
+        height: 0.3125rem;
+        border-radius: 0;
+        background-color: #0356a4; }
     .plans-section .plan img {
       margin: 0;
       width: 2.5rem;
@@ -3552,8 +3565,6 @@ body.masked:after {
 @media screen and (max-width: 64em) {
   .plans-section .col-4 {
     align-self: stretch; }
-    .plans-section .col-4:nth-of-type(3) .plan p:not(.plan__price) {
-      margin-bottom: 3.125rem; }
   .plans-section .plan {
     height: 100%;
     padding: 2.5rem 1.25rem; }
