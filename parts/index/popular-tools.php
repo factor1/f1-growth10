@@ -1,6 +1,6 @@
 <?php
 /**
- * Popular Posts (Index)
+ * Popular Tools (Index)
  *
  * Template part used on index.php
  *
@@ -21,25 +21,24 @@ $args = array(
     array(
       'taxonomy' => 'format',
       'field' => 'slug',
-      'terms' => ['tools', 'deep-dive'],
-      'operator' => 'NOT IN'
+      'terms' => 'tools'
     )
   )
 );
 
 // WP Query
-$popular = new WP_Query($args);
+$tools = new WP_Query($args);
 
-if( $popular->have_posts() ) : ?>
+if( $tools->have_posts() ) : ?>
 
   <section class="popular-posts">
     <div class="container">
       <div class="row row--justify-content-start">
         <div class="col-12 sm-text-center">
-          <h3>Popular Ideas</h3>
+          <h3>Popular Tools</h3>
         </div>
 
-        <?php while( $popular->have_posts() ) : $popular->the_post();
+        <?php while( $tools->have_posts() ) : $tools->the_post();
           // Post Fields
           $image = featuredURL('post_grid');
           $iconWhite = wp_get_attachment_image_src(get_field('category_icon_white', $cat), 'category_icon');

@@ -13,7 +13,9 @@ get_template_part('parts/index/hero');
 
 get_template_part('parts/index/popular-posts');
 
-get_template_part('parts/index/popular-resources');
+get_template_part('parts/index/popular-tools');
+
+get_template_part('parts/index/deep-dives');
 
 get_template_part('parts/index/post-grid');
 
