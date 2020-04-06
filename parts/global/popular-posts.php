@@ -1,45 +1,73 @@
 <?php
 /**
- * Popular Tools (Index)
+ * Popular Posts (Index)
  *
- * Template part used on index.php
+ * Template part used on index.php and other views
  *
  * @package F1 Growth10
  * @author Factor1 Studios
  * @since 0.1.0
  */
 
+// Check if dashboard template
+$isDash = is_page_template('templates/dashboard.php');
+
+// Check if category
+$isCat = is_category();
+
 $cat = get_queried_object();
 
+// Fields
+$title = $isCat ? 'Popular Ideas' : 'Newest Ideas';
+
 // WP Query arguments
-$args = array(
-  'post_type' => 'post',
-  'posts_per_page' => 4,
-  'category__in' => $cat->term_id,
-  'tag' => 'popular',
-  'tax_query' => array(
-    array(
-      'taxonomy' => 'format',
-      'field' => 'slug',
-      'terms' => 'tools'
+if( $isCat ) :
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 4,
+    'category__in' => $cat->term_id,
+    'tag' => 'popular',
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'format',
+        'field' => 'slug',
+        'terms' => ['tools', 'deep-dive'],
+        'operator' => 'NOT IN'
+      )
     )
-  )
-);
+  );
+else :
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 4,
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'format',
+        'field' => 'slug',
+        'terms' => ['tools', 'deep-dive'],
+        'operator' => 'NOT IN'
+      )
+    )
+  );
+endif;
 
 // WP Query
-$tools = new WP_Query($args);
+$popular = new WP_Query($args);
 
-if( $tools->have_posts() ) : ?>
+if( $popular->have_posts() ) : ?>
 
   <section class="popular-posts">
     <div class="container">
       <div class="row row--justify-content-start">
         <div class="col-12 sm-text-center">
-          <h3>Popular Tools</h3>
+          <h3><?php echo $title; ?></h3>
         </div>
 
-        <?php while( $tools->have_posts() ) : $tools->the_post();
+        <?php while( $popular->have_posts() ) : $popular->the_post();
           // Post Fields
+          if( $isDash ) :
+            $cat = get_the_category()[0]; // get first category for image fallback
+          endif;
           $image = featuredURL('post_grid');
           $iconWhite = wp_get_attachment_image_src(get_field('category_icon_white', $cat), 'category_icon');
           $img = $image ? $image : $iconWhite[0];

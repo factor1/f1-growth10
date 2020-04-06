@@ -1,14 +1,14 @@
 /**
- * Hero (Index)
+ * Hero (Global)
  *
- * Template part used on index.php
+ * Template part used on index.php and other views
  *
  * @package F1 Growth10
  * @author Factor1 Studios
  * @since 0.1.0
  */
 
-.hero--blog {
+.hero--global {
   @include iPhoneX;
   background-color: $blue;
 
@@ -30,7 +30,7 @@
   .search-form {
     max-width: rem(900);
     margin: 0 auto;
-    
+
     i {
       color: $white;
     }
@@ -62,7 +62,7 @@
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
-  .hero--blog {
+  .hero--global {
     h1 {
       font-size: rem(42);
     }

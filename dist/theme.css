@@ -3273,6 +3273,108 @@ body.masked:after {
  * @author Factor1 Studios
  * @since 0.1.0
  */
+/**
+ * Hero (Global)
+ *
+ * Template part used on index.php and other views
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.hero--global {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  background-color: #0356a4; }
+  .hero--global .container {
+    padding: 2.5rem 0 3.75rem; }
+  .hero--global h1 {
+    font-size: 5rem;
+    color: #fff; }
+  .hero--global img {
+    height: 5.9375rem;
+    margin-right: 1.25rem;
+    vertical-align: middle; }
+  .hero--global .search-form {
+    max-width: 56.25rem;
+    margin: 0 auto; }
+    .hero--global .search-form i {
+      color: #fff; }
+    .hero--global .search-form input[type="text"] {
+      background-color: rgba(229, 229, 229, 0.57);
+      color: #fff; }
+      .hero--global .search-form input[type="text"]::placeholder {
+        color: #fff; }
+      .hero--global .search-form input[type="text"]:active, .hero--global .search-form input[type="text"]:focus {
+        border-color: #fff; }
+    .hero--global .search-form button:active, .hero--global .search-form button:focus, .hero--global .search-form button:hover,
+    .hero--global .search-form input[type="submit"]:active,
+    .hero--global .search-form input[type="submit"]:focus,
+    .hero--global .search-form input[type="submit"]:hover {
+      background-color: #2cbdbe; }
+
+@media screen and (max-width: 47.9375em) {
+  .hero--global h1 {
+    font-size: 2.625rem; }
+  .hero--global img {
+    height: 3.125rem;
+    margin-right: 0; } }
+
+/**
+ * Popular Posts (Index)
+ *
+ * Template part used on index.php  and other views
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.popular-posts {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .popular-posts .container {
+    padding: 2.5rem 0 0; }
+  .popular-posts .col-3 {
+    margin-bottom: 1.875rem; }
+  .popular-posts a {
+    text-decoration: none; }
+    .popular-posts a:hover .img {
+      filter: brightness(80%); }
+    .popular-posts a:hover h4 {
+      color: #0356a4; }
+  .popular-posts h4 {
+    margin-bottom: 0.3125rem;
+    transition: all .4s ease; }
+  .popular-posts .img {
+    position: relative;
+    padding-bottom: 60%;
+    margin-bottom: 0.9375rem;
+    transition: all .4s ease; }
+    .popular-posts .img.has-featured:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(70, 70, 70, 0.2);
+      background: linear-gradient(to top, rgba(70, 70, 70, 0.6), rgba(70, 70, 70, 0) 35%); }
+  .popular-posts .formats {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 0.625rem;
+    z-index: 1; }
+    .popular-posts .formats i {
+      color: #fff; }
+
+@media screen and (max-width: 47.9375em) {
+  .popular-posts .row {
+    justify-content: center; }
+  .popular-posts .col-3 {
+    flex-grow: 1;
+    min-width: 15.625rem;
+    max-width: 80%; } }
+
 /*
  * Hero (home)
  *
@@ -3581,108 +3683,6 @@ body.masked:after {
 @media screen and (max-width: 47.9375em) {
   .plans-section h2 {
     font-size: 2rem; } }
-
-/**
- * Hero (Index)
- *
- * Template part used on index.php
- *
- * @package F1 Growth10
- * @author Factor1 Studios
- * @since 0.1.0
- */
-.hero--blog {
-  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
-  background-color: #0356a4; }
-  .hero--blog .container {
-    padding: 2.5rem 0 3.75rem; }
-  .hero--blog h1 {
-    font-size: 5rem;
-    color: #fff; }
-  .hero--blog img {
-    height: 5.9375rem;
-    margin-right: 1.25rem;
-    vertical-align: middle; }
-  .hero--blog .search-form {
-    max-width: 56.25rem;
-    margin: 0 auto; }
-    .hero--blog .search-form i {
-      color: #fff; }
-    .hero--blog .search-form input[type="text"] {
-      background-color: rgba(229, 229, 229, 0.57);
-      color: #fff; }
-      .hero--blog .search-form input[type="text"]::placeholder {
-        color: #fff; }
-      .hero--blog .search-form input[type="text"]:active, .hero--blog .search-form input[type="text"]:focus {
-        border-color: #fff; }
-    .hero--blog .search-form button:active, .hero--blog .search-form button:focus, .hero--blog .search-form button:hover,
-    .hero--blog .search-form input[type="submit"]:active,
-    .hero--blog .search-form input[type="submit"]:focus,
-    .hero--blog .search-form input[type="submit"]:hover {
-      background-color: #2cbdbe; }
-
-@media screen and (max-width: 47.9375em) {
-  .hero--blog h1 {
-    font-size: 2.625rem; }
-  .hero--blog img {
-    height: 3.125rem;
-    margin-right: 0; } }
-
-/**
- * Popular Posts (Index)
- *
- * Template part used on index.php
- *
- * @package F1 Growth10
- * @author Factor1 Studios
- * @since 0.1.0
- */
-.popular-posts {
-  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
-  .popular-posts .container {
-    padding: 2.5rem 0 0; }
-  .popular-posts .col-3 {
-    margin-bottom: 1.875rem; }
-  .popular-posts a {
-    text-decoration: none; }
-    .popular-posts a:hover .img {
-      filter: brightness(80%); }
-    .popular-posts a:hover h4 {
-      color: #0356a4; }
-  .popular-posts h4 {
-    margin-bottom: 0.3125rem;
-    transition: all .4s ease; }
-  .popular-posts .img {
-    position: relative;
-    padding-bottom: 60%;
-    margin-bottom: 0.9375rem;
-    transition: all .4s ease; }
-    .popular-posts .img.has-featured:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(70, 70, 70, 0.2);
-      background: linear-gradient(to top, rgba(70, 70, 70, 0.6), rgba(70, 70, 70, 0) 35%); }
-  .popular-posts .formats {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    padding: 0.625rem;
-    z-index: 1; }
-    .popular-posts .formats i {
-      color: #fff; }
-
-@media screen and (max-width: 47.9375em) {
-  .popular-posts .row {
-    justify-content: center; }
-  .popular-posts .col-3 {
-    flex-grow: 1;
-    min-width: 15.625rem;
-    max-width: 80%; } }
 
 /**
  * Post Grid (Index)

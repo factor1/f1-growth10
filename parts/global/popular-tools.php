@@ -1,45 +1,71 @@
 <?php
 /**
- * Deep Dives (Index)
+ * Popular Tools (Index)
  *
- * Template part used on index.php
+ * Template part used on index.php and other views
  *
  * @package F1 Growth10
  * @author Factor1 Studios
  * @since 0.1.0
  */
 
+// Check if dashboard template
+$isDash = is_page_template('templates/dashboard.php');
+
+// Check if category
+$isCat = is_category();
+
 $cat = get_queried_object();
 
+// Fields
+$title = $isCat ? 'Popular Tools' : 'Newest Tools';
+
 // WP Query arguments
-$args = array(
-  'post_type' => 'post',
-  'posts_per_page' => 4,
-  'category__in' => $cat->term_id,
-  'tag' => 'popular',
-  'tax_query' => array(
-    array(
-      'taxonomy' => 'format',
-      'field' => 'slug',
-      'terms' => 'deep-dives'
+if( $isCat ) :
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 4,
+    'category__in' => $cat->term_id,
+    'tag' => 'popular',
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'format',
+        'field' => 'slug',
+        'terms' => 'tools'
+      )
     )
-  )
-);
+  );
+else :
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 4,
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'format',
+        'field' => 'slug',
+        'terms' => 'tools'
+      )
+    )
+  );
+endif;
 
 // WP Query
-$dives = new WP_Query($args);
+$tools = new WP_Query($args);
 
-if( $dives->have_posts() ) : ?>
+if( $tools->have_posts() ) : ?>
 
   <section class="popular-posts">
     <div class="container">
       <div class="row row--justify-content-start">
         <div class="col-12 sm-text-center">
-          <h3>Deep Dives</h3>
+          <h3><?php echo $title; ?></h3>
         </div>
 
-        <?php while( $dives->have_posts() ) : $dives->the_post();
+        <?php while( $tools->have_posts() ) : $tools->the_post();
           // Post Fields
+          if( $isDash ) :
+            $cat = get_the_category()[0]; // get first category for image fallback
+          endif;
           $image = featuredURL('post_grid');
           $iconWhite = wp_get_attachment_image_src(get_field('category_icon_white', $cat), 'category_icon');
           $img = $image ? $image : $iconWhite[0];
