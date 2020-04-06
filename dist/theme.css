@@ -3122,6 +3122,7 @@ body.masked:after {
     width: 11.875rem;
     margin-right: 0.625rem; }
 
+.error404 .site-header,
 .page-template-home .site-header {
   position: absolute;
   top: 0;
@@ -4029,6 +4030,36 @@ body.masked:after {
 @media screen and (max-width: 25rem) {
   .landing-section .span--inner {
     font-size: 1.5625rem; } }
+
+/**
+ * The 404 Not Found template.
+ *
+ * Used when WordPress encounters an unknown URL.
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.error-404 {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  min-height: calc(100vh - 79px); }
+  .error-404 .container {
+    padding: 10rem 0; }
+  .error-404 h1 {
+    margin: 0;
+    font-size: 4rem;
+    color: #fff;
+    text-transform: none; }
+  .error-404 .button {
+    margin-top: 3.125rem; }
+
+@media screen and (max-width: 47.9375em) {
+  .error-404 {
+    min-height: calc(100vh - 159px); }
+    .error-404 .container {
+      padding: 10rem 0 6.25rem; }
+    .error-404 h1 {
+      font-size: 2.25rem; } }
 
 /*----------------------------------------------------------------------------
   Plugin Overrides
