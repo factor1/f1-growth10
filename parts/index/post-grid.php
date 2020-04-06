@@ -17,13 +17,13 @@ if( have_posts() ) : ?>
     <div class="container">
       <div class="row">
         <div class="col-12 sm-text-center">
-          <h3>All <?php echo $cat->name; ?> Ideas &amp; Resources</h3>
+          <h3>All <?php echo $cat->name; ?> Content</h3>
         </div>
 
         <?php while( have_posts() ) : the_post();
           // Post Fields
           $image = featuredURL('post_grid');
-          $type = get_the_terms($post->ID, 'resource')[0]->slug;
+          $type = get_the_terms($post->ID, 'post-format')[0]->slug;
           $iconWhite = wp_get_attachment_image_src(get_field('category_icon_white', $cat), 'category_icon');
           $size = $image ? 'cover' : 'auto 50%';
           $video = get_field('video_link');
@@ -49,8 +49,6 @@ if( have_posts() ) : ?>
               <a href="<?php the_permalink(); ?>" class="post-block__info">
                 <div>
                   <h4><?php the_title(); ?></h4>
-
-                  <h5>By <?php the_author(); ?></h5>
 
                   <p><em><?php echo do_shortcode('[rt_reading_time postfix="min read"]'); ?></em></p>
                 </div>
