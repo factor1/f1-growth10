@@ -29,7 +29,7 @@ if( $isCat ) :
     'tag' => 'popular',
     'tax_query' => array(
       array(
-        'taxonomy' => 'format',
+        'taxonomy' => 'post-format',
         'field' => 'slug',
         'terms' => ['tools', 'deep-dive'],
         'operator' => 'NOT IN'
@@ -42,7 +42,7 @@ else :
     'posts_per_page' => 4,
     'tax_query' => array(
       array(
-        'taxonomy' => 'format',
+        'taxonomy' => 'post-format',
         'field' => 'slug',
         'terms' => ['tools', 'deep-dive'],
         'operator' => 'NOT IN'

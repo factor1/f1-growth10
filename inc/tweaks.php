@@ -267,3 +267,38 @@
          endforeach;
      }
   }
+
+  // Change post formats to radio buttons
+  function admin_js() { ?>
+    <script type="text/javascript">
+      jQuery(document).ready( function () {
+        jQuery('form#post').find('#post-formatchecklist input').each(function() {
+          var new_input = jQuery('<input type="radio" />'),
+          attrLen = this.attributes.length;
+
+          for (i = 0; i < attrLen; i++) {
+            if (this.attributes[i].name != 'type') {
+              new_input.attr(this.attributes[i].name.toLowerCase(), this.attributes[i].value);
+            }
+          }
+
+          jQuery(this).replaceWith(new_input);
+        });
+      });
+    </script>
+
+  <?php }
+  add_action('admin_head', 'admin_js');
+
+  // // Apply default post format to posts 
+  // $parent_term = term_exists( 'fruits', 'product' ); // array is returned if taxonomy is given
+  // $parent_term_id = $parent_term['term_id']; // get numeric term id
+  // wp_insert_term(
+  //   'Apple', // the term
+  //   'product', // the taxonomy
+  //   array(
+  //     'description'=> 'A yummy apple.',
+  //     'slug' => 'apple',
+  //     'parent'=> $parent_term_id
+  //   )
+  // );

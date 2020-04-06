@@ -23,7 +23,7 @@ if( have_posts() ) : ?>
         <?php while( have_posts() ) : the_post();
           // Post Fields
           $image = featuredURL('post_grid');
-          $type = get_the_terms($post->ID, 'format')[0]->slug;
+          $type = get_the_terms($post->ID, 'post-format')[0]->slug;
           $iconWhite = wp_get_attachment_image_src(get_field('category_icon_white', $cat), 'category_icon');
           $size = $image ? 'cover' : 'auto 50%';
           $video = get_field('video_link');
