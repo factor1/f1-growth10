@@ -2,9 +2,8 @@
 /*-----------------------------------------------------------------------------
   Register Custom Post Types
 -----------------------------------------------------------------------------*/
-// Register Resources Custom Taxonomy
+// Register Formats Custom Taxonomy
 function formats() {
-
 	$labels = array(
 		'name'                       => _x( 'Formats', 'Taxonomy General Name', 'text_domain' ),
 		'singular_name'              => _x( 'Format', 'Taxonomy Singular Name', 'text_domain' ),
@@ -29,14 +28,14 @@ function formats() {
 	);
 	$args = array(
 		'labels'                     => $labels,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'format', array( 'post' ), $args );
+	register_taxonomy( 'post-format', array( 'post' ), $args );
 
 }
 add_action( 'init', 'formats', 0 );
