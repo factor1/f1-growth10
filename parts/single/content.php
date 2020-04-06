@@ -10,7 +10,7 @@
  */
 
 // Post Custom Fields
-$isResource = has_term(['book', 'link'], 'resource'); ?>
+$isResource = has_term(['deep-dives', 'tools'], 'format'); ?>
 
 <section class="post-content">
   <div class="container">
