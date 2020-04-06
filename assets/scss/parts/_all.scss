@@ -6,6 +6,10 @@
  * @since 0.1.0
  */
 
+// Global
+@import 'global/hero';
+@import 'global/popular-posts';
+
 // Home
 @import 'home/hero';
 @import 'home/3-column-section';
@@ -16,8 +20,6 @@
 @import 'home/plans';
 
 // Index
-@import 'index/hero';
-@import 'index/popular-posts';
 // @import 'index/popular-resources';
 @import 'index/post-grid';
 
