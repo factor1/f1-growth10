@@ -7,15 +7,22 @@
  * @since 0.1.0
  */
 
+// Check if search results
+$isSearch = is_search();
+
 get_header();
 
 get_template_part('parts/global/hero');
 
-get_template_part('parts/global/popular-posts');
+if( !$isSearch ) :
 
-get_template_part('parts/global/popular-tools');
+  get_template_part('parts/global/popular-posts');
 
-get_template_part('parts/global/deep-dives');
+  get_template_part('parts/global/popular-tools');
+
+  get_template_part('parts/global/deep-dives');
+
+endif;
 
 get_template_part('parts/index/post-grid');
 

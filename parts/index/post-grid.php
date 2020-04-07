@@ -9,7 +9,13 @@
  * @since 0.1.0
  */
 
+// Check if search results
+$isSearch = is_search();
+$term = $isSearch ? $wp_query->query_vars : '';
+
 $cat = get_queried_object();
+
+$title = $isSearch ? 'Search results for "' . $term['s'] . '"' : 'All ' . $cat->name . ' Content';
 
 if( have_posts() ) : ?>
 
@@ -17,7 +23,7 @@ if( have_posts() ) : ?>
     <div class="container">
       <div class="row">
         <div class="col-12 sm-text-center">
-          <h3>All <?php echo $cat->name; ?> Content</h3>
+          <h3><?php echo $title; ?></h3>
         </div>
 
         <?php while( have_posts() ) : the_post();
@@ -77,7 +83,7 @@ if( have_posts() ) : ?>
                 <i class="far fa-check-square"></i>
               </div>
               */ ?>
-              
+
             </div>
           </div>
 

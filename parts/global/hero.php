@@ -15,20 +15,37 @@ $isDash = is_page_template('templates/dashboard.php');
 // Check if category
 $isCat = is_category();
 
+// Check if search results
+$isSearch = is_search();
+$term = $isSearch && isset($_GET['cat']) ? $_GET['cat'] : '';
+
 if( $isCat ) :
   $cat = get_queried_object();
+  $imgWhite = wp_get_attachment_image_src(get_field('category_icon_white', $cat), 'category_icon');
+elseif( $isSearch ) :
+  $cat = $term ? get_category_by_slug($term) : '';
   $imgWhite = wp_get_attachment_image_src(get_field('category_icon_white', $cat), 'category_icon');
 endif;
 
 // Fields
-$title = $isCat ? $cat->name : get_field('hero_headline'); ?>
+if( $isCat ) :
+  $title = $cat->name;
+elseif( $isSearch ) :
+  if( $term ) :
+    $title = $cat->name;
+  else :
+    $title = 'Search Results';
+  endif;
+else :
+  $title = get_field('hero_headline');
+endif; ?>
 
 <section class="hero--global">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
         <h1>
-          <?php if( $isCat ) : ?>
+          <?php if( $isCat || ($isSearch && $term) ) : ?>
             <img src="<?php echo $imgWhite[0]; ?>" alt="<?php echo $cat->name; ?> icon white">
           <?php endif; ?>
 
