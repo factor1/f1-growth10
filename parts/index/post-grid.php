@@ -9,7 +9,13 @@
  * @since 0.1.0
  */
 
+// Check if search results
+$isSearch = is_search();
+$term = $isSearch ? $wp_query->query_vars : '';
+
 $cat = get_queried_object();
+
+$title = $isSearch ? 'Search results for "' . $term['s'] . '"' : 'All ' . $cat->name . ' Content';
 
 if( have_posts() ) : ?>
 
@@ -17,7 +23,7 @@ if( have_posts() ) : ?>
     <div class="container">
       <div class="row">
         <div class="col-12 sm-text-center">
-          <h3>All <?php echo $cat->name; ?> Content</h3>
+          <h3><?php echo $title; ?></h3>
         </div>
 
         <?php while( have_posts() ) : the_post();
@@ -50,7 +56,9 @@ if( have_posts() ) : ?>
                 <div>
                   <h4><?php the_title(); ?></h4>
 
-                  <p><em><?php echo do_shortcode('[rt_reading_time postfix="min read"]'); ?></em></p>
+                  <?php if( shortcode_exists('rt_reading_time') ) : ?>
+                    <p><em><?php echo do_shortcode('[rt_reading_time postfix="min read" postfix_singular="minute"]'); ?></em></p>
+                  <?php endif; ?>
                 </div>
 
                 <div class="post-block__formats">
@@ -70,11 +78,14 @@ if( have_posts() ) : ?>
                 </div>
               </a>
 
+              <?php /* Post favoriting/reading icons - to be included later
               <div class="post-block__icons text-right">
                 <i class="far fa-heart"></i>
 
                 <i class="far fa-check-square"></i>
               </div>
+              */ ?>
+
             </div>
           </div>
 
