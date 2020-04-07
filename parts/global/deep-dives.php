@@ -18,7 +18,7 @@ $isCat = is_category();
 $cat = get_queried_object();
 
 // Fields
-$title = $isCat ? 'Deep Dives' : 'Newest Deep Dives';
+$title = $isCat ? 'Popular Deep Dives' : 'Newest Deep Dives';
 
 // WP Query arguments
 if( $isCat ) :

@@ -289,16 +289,3 @@
 
   <?php }
   add_action('admin_head', 'admin_js');
-
-  // // Apply default post format to posts 
-  // $parent_term = term_exists( 'fruits', 'product' ); // array is returned if taxonomy is given
-  // $parent_term_id = $parent_term['term_id']; // get numeric term id
-  // wp_insert_term(
-  //   'Apple', // the term
-  //   'product', // the taxonomy
-  //   array(
-  //     'description'=> 'A yummy apple.',
-  //     'slug' => 'apple',
-  //     'parent'=> $parent_term_id
-  //   )
-  // );

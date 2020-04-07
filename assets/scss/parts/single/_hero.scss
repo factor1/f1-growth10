@@ -42,17 +42,20 @@
       flex: 0 0 auto;
       position: relative;
       width: rem(180);
+      height: rem(180);
       margin-top: rem(-90);
       margin-right: rem(20);
+      border-radius: 50%;
+      border: rem(4) solid $white;
       z-index: 1;
       overflow: hidden;
     }
 
-    img {
-      width: 100%;
-      border-radius: 50%;
-      border: rem(4) solid $white;
-    }
+    // img {
+    //   width: 100%;
+    //   border-radius: 50%;
+    //   border: rem(4) solid $white;
+    // }
 
     &__info {
       flex: 1 1 auto;
@@ -111,6 +114,7 @@
     &__author {
       &__img {
         width: rem(150);
+        height: rem(150);
         margin-top: rem(-75);
         margin-right: rem(12);
       }
