@@ -15,8 +15,14 @@
     padding: 0 0 rem(100);
   }
 
-  .col-8 .col-4 {
-    padding-left: 0;
+  .col-8 {
+    .col-4 {
+      padding-left: 0;
+    }
+
+    .col-8 {
+      flex-grow: 1;
+    }
   }
 
   &__buttons {
@@ -89,11 +95,11 @@
     .col-4 {
       flex: 0 1 100%;
       text-align: center;
+      margin-bottom: rem(30);
     }
 
     .col-8 {
       flex: 0 1 100%;
-      margin-top: rem(30);
     }
   }
 }
