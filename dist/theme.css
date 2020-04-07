@@ -3798,14 +3798,13 @@ body.masked:after {
     flex: 0 0 auto;
     position: relative;
     width: 11.25rem;
+    height: 11.25rem;
     margin-top: -5.625rem;
     margin-right: 1.25rem;
+    border-radius: 50%;
+    border: 0.25rem solid #fff;
     z-index: 1;
     overflow: hidden; }
-  .hero--post__author img {
-    width: 100%;
-    border-radius: 50%;
-    border: 0.25rem solid #fff; }
   .hero--post__author__info {
     flex: 1 1 auto;
     display: flex;
@@ -3842,6 +3841,7 @@ body.masked:after {
     margin-top: 6.25rem; }
   .hero--post__author__img {
     width: 9.375rem;
+    height: 9.375rem;
     margin-top: -4.6875rem;
     margin-right: 0.75rem; }
   .hero--post__author:after {

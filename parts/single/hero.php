@@ -14,7 +14,7 @@ $author = get_the_author_meta('ID');
 $li = get_the_author_meta('linkedin');
 $url = get_the_author_meta('user_url');
 $desc = get_the_author_meta('description');
-$user = get_avatar($author, 400); ?>
+$user = get_avatar_url($author, array( 'size' => 400 )); ?>
 
 <section class="hero--post">
   <div class="container">
@@ -29,9 +29,7 @@ $user = get_avatar($author, 400); ?>
 
         // Author ?>
         <div class="hero--post__author">
-          <div class="hero--post__author__img">
-            <?php echo $user; ?>
-          </div>
+          <div class="hero--post__author__img" style="background: url('<?php echo $user; ?>') center/cover no-repeat"></div>
 
           <div class="hero--post__author__info">
             <div>
