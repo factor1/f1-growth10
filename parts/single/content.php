@@ -10,7 +10,7 @@
  */
 
 // Post Custom Fields
-$isResource = has_term(['deep-dives', 'tools'], 'format'); ?>
+$isResource = has_term(['deep-dives', 'tools'], 'post-format'); ?>
 
 <section class="post-content">
   <div class="container">
