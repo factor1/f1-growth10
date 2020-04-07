@@ -13,14 +13,19 @@
 $image = get_field('post_resource_image');
 $img = wp_get_attachment_image_src($image, 'resource');
 $alt = get_post_meta($image, '_wp_attachment_image_alt', true);
-$btn = get_field('post_resource_link'); ?>
+$btn = get_field('post_resource_link');
+
+// Conditional classes
+$colClass = $img ? '' : ' col-no-pad'; ?>
 
 <div class="row">
-  <div class="col-4 sm-col-4">
-    <img src="<?php echo $img[0]; ?>" alt="<?php echo $alt; ?>">
-  </div>
+  <?php if( $img ) : ?>
+    <div class="col-4 sm-col-4">
+      <img src="<?php echo $img[0]; ?>" alt="<?php echo $alt; ?>">
+    </div>
+  <?php endif; ?>
 
-  <div class="col-8 sm-col-8">
+  <div class="col-8 sm-col-8<?php echo $colClass; ?>">
     <?php the_content();
 
     // Optional button
