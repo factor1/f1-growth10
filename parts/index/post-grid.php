@@ -70,11 +70,14 @@ if( have_posts() ) : ?>
                 </div>
               </a>
 
+              <?php /* Post favoriting/reading icons - to be included later
               <div class="post-block__icons text-right">
                 <i class="far fa-heart"></i>
 
                 <i class="far fa-check-square"></i>
               </div>
+              */ ?>
+              
             </div>
           </div>
 

@@ -52,11 +52,14 @@ $user = get_avatar($author, 400); ?>
               <p class="author-description"><?php echo $desc; ?></p>
             </div>
 
+            <?php /* Post favoriting/reading icons - to be included later
             <div class="hero--post__icons text-right">
               <i class="far fa-heart"></i>
 
               <i class="far fa-flag"></i>
             </div>
+            */ ?>
+
           </div>
         </div>
 
