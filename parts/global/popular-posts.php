@@ -18,7 +18,7 @@ $isCat = is_category();
 $cat = get_queried_object();
 
 // Fields
-$title = $isCat ? 'Popular Ideas' : 'Newest Ideas';
+$title = $isCat ? 'Trending Ideas' : 'Newest Ideas';
 
 // WP Query arguments
 if( $isCat ) :
