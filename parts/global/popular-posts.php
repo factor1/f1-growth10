@@ -31,7 +31,7 @@ if( $isCat ) :
       array(
         'taxonomy' => 'post-format',
         'field' => 'slug',
-        'terms' => ['tools', 'deep-dive'],
+        'terms' => ['tools', 'deep-dives'],
         'operator' => 'NOT IN'
       )
     )
@@ -44,7 +44,7 @@ else :
       array(
         'taxonomy' => 'post-format',
         'field' => 'slug',
-        'terms' => ['tools', 'deep-dive'],
+        'terms' => ['tools', 'deep-dives'],
         'operator' => 'NOT IN'
       )
     )
