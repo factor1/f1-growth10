@@ -24,7 +24,7 @@ $title = $isCat ? 'Trending Ideas' : 'Newest Ideas';
 if( $isCat ) :
   $args = array(
     'post_type' => 'post',
-    'posts_per_page' => 4,
+    'posts_per_page' => 8,
     'category__in' => $cat->term_id,
     'tag' => 'popular',
     'tax_query' => array(
