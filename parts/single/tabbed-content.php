@@ -40,9 +40,7 @@ $worksheet = get_field('worksheet');
   <?php if( $video ) : ?>
 
     <div class="post-content__video">
-      <div class="flex-video">
-        <iframe src="<?php echo $video; ?>" width="1000" height="563" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-      </div>
+      <?php echo $video; ?>
     </div>
 
   <?php endif; ?>
