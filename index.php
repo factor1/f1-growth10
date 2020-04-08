@@ -15,12 +15,17 @@ get_header();
 get_template_part('parts/global/hero');
 
 if( !$isSearch ) :
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-  get_template_part('parts/global/popular-posts');
+  if( 1 == $paged ) :
+    
+    get_template_part('parts/global/popular-posts');
 
-  get_template_part('parts/global/popular-tools');
+    get_template_part('parts/global/popular-tools');
 
-  get_template_part('parts/global/deep-dives');
+    get_template_part('parts/global/deep-dives');
+    
+  endif;
 
 endif;
 

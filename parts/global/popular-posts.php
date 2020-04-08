@@ -18,7 +18,7 @@ $isCat = is_category();
 $cat = get_queried_object();
 
 // Fields
-$title = $isCat ? 'Popular Ideas' : 'Newest Ideas';
+$title = $isCat ? 'Trending Ideas' : 'Newest Ideas';
 
 // WP Query arguments
 if( $isCat ) :
@@ -31,7 +31,7 @@ if( $isCat ) :
       array(
         'taxonomy' => 'post-format',
         'field' => 'slug',
-        'terms' => ['tools', 'deep-dive'],
+        'terms' => ['tools', 'deep-dives'],
         'operator' => 'NOT IN'
       )
     )
@@ -44,7 +44,7 @@ else :
       array(
         'taxonomy' => 'post-format',
         'field' => 'slug',
-        'terms' => ['tools', 'deep-dive'],
+        'terms' => ['tools', 'deep-dives'],
         'operator' => 'NOT IN'
       )
     )
