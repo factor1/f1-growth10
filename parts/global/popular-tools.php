@@ -18,7 +18,7 @@ $isCat = is_category();
 $cat = get_queried_object();
 
 // Fields
-$title = $isCat ? 'Popular Tools' : 'Newest Tools';
+$title = $isCat ? 'Trending Tools' : 'Newest Tools';
 
 // WP Query arguments
 if( $isCat ) :

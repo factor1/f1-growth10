@@ -145,6 +145,19 @@ nav {
   }
 }
 
+// Woocommerce nav
+.woocommerce-MyAccount-navigation {
+  margin-bottom: rem(30);
+  
+  ul {
+    flex-wrap: wrap;
+  }
+
+  .woocommerce-MyAccount-navigation-link {
+    flex: 0 1 100%;
+  }
+}
+
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .nav--primary .nav-button a {

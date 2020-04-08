@@ -3,8 +3,8 @@
    * The default page template.
    */
   get_header(); ?>
-  
-  <div class="container">
+
+  <div class="container" style="padding: 50px 0;">
   <div class="row">
 	  <div class="col-10 col-centered">
 	  <?php the_content(); ?>
