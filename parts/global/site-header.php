@@ -13,7 +13,9 @@
     <div class="row">
       <div class="col-12">
         <div class="site-header__logo">
+	        <a href="https://growth10.com/home">
           <img src="<?php echo get_template_directory_uri();?>/assets/img/logo-white.svg" alt="<?php echo get_bloginfo('name'); ?>">
+        </a>
         </div>
 
         <?php if( !is_page(208) ) :
