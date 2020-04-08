@@ -158,7 +158,7 @@
       }
       .login p,
       .login label {
-        font-family: "Comfortaa", cursive;
+        font-family: "Comfortaa", sans-serif;
       }
       .login p a {
         color: #464646 !important;
