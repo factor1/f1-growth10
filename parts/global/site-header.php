@@ -21,7 +21,11 @@
         <?php if( !is_page(208) ) :
           if( is_user_logged_in() ) : ?>
 
-            <button class="menu-icon"><span></span></button>
+            <button class="menu-icon">
+              <small class="sm-hide">Navigation</small>
+
+              <span></span>
+            </button>
 
           <?php else :
 

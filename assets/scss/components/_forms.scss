@@ -88,6 +88,7 @@
     -webkit-appearance: none;
     padding: rem(9) rem(28);
     border: rem(1) solid transparent;
+    border-radius: 0 !important;
     background-color: $teal;
     font: 400 rem(18)/1 $cursive;
     color: $white;
@@ -241,6 +242,16 @@
       @include button($scooter, transparent, $scooter, $scooter, $white);
       width: auto !important;
     }
+  }
+}
+
+form.checkout.woocommerce-checkout {
+  h3 {
+    margin-top: rem(40);
+  }
+
+  label {
+    text-transform: capitalize;
   }
 }
 
