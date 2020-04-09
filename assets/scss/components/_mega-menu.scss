@@ -45,7 +45,13 @@
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
-  .mega-menu__logo {
-    width: rem(120);
+  .mega-menu {
+    .col-3 {
+      margin-bottom: rem(50);
+    }
+
+    &__logo {
+      width: rem(120);
+    }
   }
 }
