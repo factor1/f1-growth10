@@ -57,7 +57,7 @@ if( have_posts() ) : ?>
                   <h4><?php the_title(); ?></h4>
 
                   <?php if( shortcode_exists('rt_reading_time') ) : ?>
-                    <p><em><?php echo do_shortcode('[rt_reading_time postfix="min read" postfix_singular="minute"]'); ?></em></p>
+                    <p><em><?php //echo do_shortcode('[rt_reading_time postfix="min read" postfix_singular="minute"]'); ?></em></p>
                   <?php endif; ?>
                 </div>
 

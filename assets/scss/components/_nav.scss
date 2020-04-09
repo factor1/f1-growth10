@@ -54,7 +54,7 @@ nav {
     width: calc(17% - 20px);
     min-width: rem(130);
     margin: rem(10);
-    background-color: rgba($lightGray, 0.12);
+    // background-color: rgba($lightGray, 0.12);
   }
 
   a {
@@ -148,13 +148,14 @@ nav {
 // Woocommerce nav
 .woocommerce-MyAccount-navigation {
   margin-bottom: rem(30);
-  
+
   ul {
     flex-wrap: wrap;
   }
 
   .woocommerce-MyAccount-navigation-link {
     flex: 0 1 100%;
+    text-transform: capitalize;
   }
 }
 
@@ -164,6 +165,10 @@ nav {
     padding: rem(12);
     font-size: rem(14);
     border-width: rem(2);
+  }
+
+  .nav--left ul {
+    justify-content: center;
   }
 
   .nav--footer {
