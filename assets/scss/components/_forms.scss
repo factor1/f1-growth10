@@ -66,7 +66,8 @@
   }
 
   input[type="text"] {
-    flex: 1 1 100%;
+    flex: 1 1 auto;
+    width: calc(100% - 177px);
     padding: rem(8) rem(30);
     border: rem(1) solid transparent;
     border-radius: 0;
@@ -247,5 +248,22 @@
 @media screen and (max-width: $small-breakpoint) {
   .gform_wrapper form .half-width {
     flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: rem(400)) {
+  .search-form {
+    i {
+      margin-right: rem(10);
+    }
+
+    input[type="text"] {
+      padding: rem(8) rem(15);
+    }
+
+    button,
+    input[type="submit"] {
+      padding: rem(9) rem(15);
+    }
   }
 }
