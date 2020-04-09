@@ -148,7 +148,7 @@ nav {
 // Woocommerce nav
 .woocommerce-MyAccount-navigation {
   margin-bottom: rem(30);
-  
+
   ul {
     flex-wrap: wrap;
   }
@@ -164,6 +164,10 @@ nav {
     padding: rem(12);
     font-size: rem(14);
     border-width: rem(2);
+  }
+
+  .nav--left ul {
+    justify-content: center;
   }
 
   .nav--footer {
