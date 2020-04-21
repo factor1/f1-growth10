@@ -62,7 +62,7 @@
   }
 
   .col-4 {
-    margin-bottom: rem(60);
+    margin-bottom: rem(30);
   }
 
   .plan {
@@ -141,7 +141,7 @@
   }
 
   .feature {
-    padding: rem(40);
+    padding: rem(10);
     background-color: $white;
     box-shadow: 0 0 rem(10) rgba(0, 0, 0, 1);
 
@@ -162,7 +162,7 @@
     }
 
     h4 {
-      font-size: rem(30);
+      font-size: rem(20);
       color: $blue;
     }
   }
@@ -177,7 +177,7 @@
 
     .plan {
       height: 100%;
-      padding: rem(40) rem(20);
+      padding: rem(10);
 
       h3 {
         font-size: rem(28);
