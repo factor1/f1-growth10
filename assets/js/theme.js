@@ -1,6 +1,8 @@
 import Bowser from "Bowser";
 import MicroModal from "micromodal";
 import * as AOS from "aos";
+import $ from "jquery";
+import "slick-carousel";
 
 // AOS
 AOS.init({
@@ -15,7 +17,7 @@ AOS.init({
 // Modals
 MicroModal.init();
 
-jQuery(document).ready(function($) {
+$(document).ready(function($) {
   // Inside of this function, $() will work as an alias for jQuery()
   // and other libraries also using $ will not be accessible under this shortcut
   // https://codex.wordpress.org/Function_Reference/wp_enqueue_script#jQuery_noConflict_Wrappers
@@ -72,6 +74,15 @@ jQuery(document).ready(function($) {
 
     }, 1500);
   }
+
+  // Home testimonials slider
+  $(".home-testimonials__slider").slick({
+    arrows: false,
+    autoplay: false,
+    dots: true,
+    rows: 2,
+    slidesPerRow: 1,
+  });
 
   // Home plan switching
   if( $(".plans-section").length ) {

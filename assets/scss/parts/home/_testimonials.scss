@@ -15,7 +15,14 @@
     padding: rem(90) 0 rem(50);
   }
 
+  .slick-slide > div {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
   .row {
+    display: flex !important;
     margin-bottom: rem(70);
   }
 
