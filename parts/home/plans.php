@@ -12,15 +12,21 @@
 // Plans Section Custom Fields
 $bg = wp_get_attachment_image_src(get_field('plans_background'), 'home_hero');
 $headline = get_field('plans_headline');
-$content = get_field('plans_content');
+$plansToggle = get_field('plans_toggle');
+$featuresToggle = get_field('features_toggle');
+$price = get_field('features_price');
+$btn = get_field('features_button');
+$intro = get_field('features_intro');
+$content = get_field('plans_content'); ?>
 
-if( have_rows('plans') ) : ?>
+<section class="plans-section" style="background: url('<?php echo $bg[0]; ?>') center/cover no-repeat" id="plans">
+  <div class="container">
+    <div class="row row--justify-content-center row--align-items-center">
+      <div class="col-10 sm-col-11 text-center">
+        <h2><?php echo $headline; ?></h2>
 
-  <section class="plans-section" style="background: url('<?php echo $bg[0]; ?>') center/cover no-repeat" id="plans">
-    <div class="container">
-      <div class="row row--justify-content-center row--align-items-center">
-        <div class="col-10 sm-col-11 text-center">
-          <h2><?php echo $headline; ?></h2>
+        <?php // Original plans section
+        if( $plansToggle && have_rows('plans') ) : ?>
 
           <div class="plans-section__toggle">
             <span>Monthly</span>
@@ -32,9 +38,33 @@ if( have_rows('plans') ) : ?>
 
             <span>Annual</span>
           </div>
-        </div>
 
-        <?php while( have_rows('plans') ) : the_row();
+        <?php endif; ?>
+
+        <?php // New plans section
+        if( $featuresToggle && have_rows('features') ) : ?>
+
+          <h4><?php echo $price; ?></h4>
+
+          <?php if( $btn ) : ?>
+
+            <a href="<?php echo esc_url($btn); ?>" class="button button--teal" role="link">
+              Start my Free Trial
+              <span>Cancel Anytime</span>
+            </a>
+
+          <?php endif;
+
+          echo $intro;
+
+        endif; ?>
+
+      </div>
+
+      <?php // Original plans section
+      if( $plansToggle ) :
+
+        if( have_rows('plans') ) : while( have_rows('plans') ) : the_row();
           // Plan Custom Subfields
           $desc = get_sub_field('description');
           $monthlyPrice = get_sub_field('monthly_price');
@@ -50,7 +80,7 @@ if( have_rows('plans') ) : ?>
 
               <div class="plan__monthly active text-center">
                 <span><?php echo $savings; ?></span>
-                
+
                 <p class="plan__price"><?php echo $monthlyPrice; ?></p>
 
                 <?php if( $monthlyBtn ) : ?>
@@ -84,13 +114,35 @@ if( have_rows('plans') ) : ?>
             </div>
           </div>
 
-        <?php endwhile; ?>
+        <?php endwhile; endif;
 
-        <div class="col-10 sm-col-11 text-center">
-          <?php echo $content; ?>
-        </div>
+      endif;
+
+      // New plans section
+      if( $featuresToggle ) :
+
+        if( have_rows('features') ) : while( have_rows('features') ) : the_row();
+          // Features Custom Subfields
+          $icon = get_sub_field('icon');
+          $feature = get_sub_field('content'); ?>
+
+          <div class="col-4 md-col-5 sm-col-10">
+            <div class="feature">
+              <div class="feature__icon">
+                <?php echo $icon; ?>
+              </div>
+
+              <?php echo $feature; ?>
+            </div>
+          </div>
+
+        <?php endwhile; endif;
+
+      endif; ?>
+
+      <div class="col-10 sm-col-11 text-center">
+        <?php echo $content; ?>
       </div>
     </div>
-  </section>
-
-<?php endif; ?>
+  </div>
+</section>

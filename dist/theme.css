@@ -3853,6 +3853,17 @@ body.masked:after {
     .plans-section__toggle span {
       font: 400 1.125rem/1.22 "Montserrat", sans-serif;
       text-transform: uppercase; }
+  .plans-section .button {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem; }
+    .plans-section .button span {
+      display: block;
+      margin-top: 0.3125rem;
+      font-size: 0.875rem;
+      text-transform: capitalize;
+      transition: all .4s ease; }
+    .plans-section .button:hover span {
+      color: #2ab2b0; }
   .plans-section .col-4 {
     margin-bottom: 3.75rem; }
   .plans-section .plan {
@@ -3903,6 +3914,25 @@ body.masked:after {
       pointer-events: none; }
     .plans-section .plan .active {
       display: block; }
+  .plans-section .feature {
+    padding: 2.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 0.625rem black; }
+    .plans-section .feature__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.125rem;
+      height: 2.125rem;
+      margin: 0 auto 1.25rem;
+      border-radius: 50%;
+      background-color: #2ab2b0; }
+      .plans-section .feature__icon i {
+        font-size: 1.375rem;
+        color: #fff; }
+    .plans-section .feature h4 {
+      font-size: 1.875rem;
+      color: #0356a4; }
 
 @media screen and (max-width: 64em) {
   .plans-section .col-4 {
