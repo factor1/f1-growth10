@@ -13,7 +13,7 @@ if( have_rows('home_testimonials') ) :
   $i = 1; ?>
 
   <section class="home-testimonials">
-    <div class="container">
+    <div class="container home-testimonials__slider">
 
       <?php while( have_rows('home_testimonials') ) : the_row();
         // Testimonials Custom Fields
