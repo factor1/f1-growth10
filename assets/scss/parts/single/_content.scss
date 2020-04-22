@@ -125,6 +125,11 @@
       font-size: rem(17);
     }
   }
+  
+  .promotionalCTA .button {
+	  max-width: 100%;
+	  padding: 15px 70px;
+  }
 }
 
 @media screen and (max-width: rem(500)) {
