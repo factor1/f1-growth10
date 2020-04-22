@@ -46,7 +46,7 @@
   .button {
     margin-top: rem(20);
     margin-bottom: rem(20);
-    padding: rem(20) rem(40);
+    padding: rem(20) rem(60);
 
     span {
       display: block;
@@ -62,7 +62,7 @@
   }
 
   .col-4 {
-    margin-bottom: rem(30);
+    margin-bottom: rem(20);
   }
 
   .plan {
@@ -149,21 +149,26 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: rem(34);
-      height: rem(34);
-      margin: 0 auto rem(20);
+      width: rem(20);
+      height: rem(20);
+      margin: 0 auto rem(5);
       border-radius: 50%;
-      background-color: $teal;
+      background-color: #fff;
 
       i {
-        font-size: rem(22);
-        color: $white;
+        font-size: rem(14);
+        color: $teal;
       }
     }
 
     h4 {
       font-size: rem(20);
       color: $blue;
+      margin-bottom: 0.5rem;
+    }
+    
+    p {
+	    margin-bottom: 10px;
     }
   }
 }
@@ -173,11 +178,12 @@
   .plans-section {
     .col-4 {
       align-self: stretch;
-    }
+	  margin-bottom: rem(5);
+	  }
 
     .plan {
       height: 100%;
-      padding: rem(10);
+      padding: rem(5);
 
       h3 {
         font-size: rem(28);

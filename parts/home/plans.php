@@ -49,7 +49,7 @@ $content = get_field('plans_content'); ?>
           <?php if( $btn ) : ?>
 
             <a href="<?php echo esc_url($btn); ?>" class="button button--teal" role="link">
-              Start my Free Trial
+              Start my Free 7-Day Trial
               <span>Cancel Anytime</span>
             </a>
 
@@ -74,7 +74,7 @@ $content = get_field('plans_content'); ?>
           $annualBtn = get_sub_field('annual_join_button');
           $trial = get_sub_field('free_trial'); ?>
 
-          <div class="col-4 md-col-5 sm-col-10">
+          <div class="col-4 md-col-5 sm-col-12">
             <div class="plan">
               <?php echo $desc; ?>
 
@@ -126,7 +126,7 @@ $content = get_field('plans_content'); ?>
           $icon = get_sub_field('icon');
           $feature = get_sub_field('content'); ?>
 
-          <div class="col-4 md-col-5 sm-col-10">
+          <div class="col-4 md-col-5 sm-col-12">
             <div class="feature">
               <div class="feature__icon">
                 <?php echo $icon; ?>
@@ -140,7 +140,7 @@ $content = get_field('plans_content'); ?>
 
       endif; ?>
 
-      <div class="col-10 sm-col-11 text-center">
+      <div class="col-10 sm-col-12 text-center">
         <?php echo $content; ?>
       </div>
     </div>
