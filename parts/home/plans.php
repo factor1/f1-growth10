@@ -49,7 +49,7 @@ $content = get_field('plans_content'); ?>
           <?php if( $btn ) : ?>
 
             <a href="<?php echo esc_url($btn); ?>" class="button button--teal" role="link">
-              Start my Free 7-Day Trial
+              Start my Free 10-Day Trial
               <span>Cancel Anytime</span>
             </a>
 
