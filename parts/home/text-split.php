@@ -29,8 +29,8 @@ $btn = get_field('text_split_button_text'); ?>
         <?php if( $btn ) : ?>
 
           <div class="text-center">
-            <a href="#plans" class="button button--ghost anchor-scroll" role="link" title="<?php echo $btn; ?>">
-              <?php echo $btn; ?>
+            <a href="https://growth10.com/cart/?add-to-cart=925&variation_id=927" class="button button--ghost anchor-scroll" role="link" title="<?php echo $btn; ?>" style="line-height:1.4em;">
+              <?php echo $btn; ?><br><small>CANCEL ANYTIME</small>
             </a>
           </div>
 

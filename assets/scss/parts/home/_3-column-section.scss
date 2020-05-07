@@ -12,7 +12,7 @@
   @include iPhoneX;
 
   .container {
-    padding: rem(60) 0 0;
+    padding: rem(0) 0 0;
   }
 
   h2 {
@@ -37,7 +37,7 @@
 @media screen and (max-width: $small-breakpoint) {
   .three-column-section {
     .container {
-      padding: rem(40) 0 0;
+      padding: rem(0) 0 0;
     }
 
     h2 {
