@@ -78,7 +78,7 @@ $(document).ready(function($) {
   // Home testimonials slider
   $(".home-testimonials__slider").slick({
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     dots: true,
     rows: 2,
     slidesPerRow: 1,

@@ -71,6 +71,15 @@ a {
   }
 }
 
+//Text extenders
+.font-teal {
+	color: $teal;
+}
+
+.font-blue {
+	color: $blue;
+}
+
 // Typography classes
 .author-description { // p
   margin-bottom: rem(30);

@@ -18,8 +18,12 @@ if( have_rows('3_column_section_columns') ) :
   <section class="three-column-section">
     <div class="container">
       <div class="row row--justify-content-start">
-        <div class="col-10  sm-col-11 col-centered text-center">
+        <div class="col-10  sm-col-11 col-centered text-center" style="margin-bottom:50px;">
           <h2><?php echo $headline; ?></h2>
+          <div class="flex-video">
+          <iframe src="https://player.vimeo.com/video/397065857?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+
         </div>
 
         <?php while( have_rows('3_column_section_columns') ) : the_row();

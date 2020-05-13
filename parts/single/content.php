@@ -17,7 +17,7 @@ $isResource = has_term(['deep-dives', 'tools'], 'post-format'); ?>
     <div class="row">
       <div class="col-8 offset-3">
 	      
-	   <?php if( is_user_logged_in() ) :?>
+	   <?php if( is_user_logged_in() or has_tag( 'Promotional' )) :?>
 
 	        <?php // Resource view
 	        if( $isResource ) :
@@ -42,4 +42,23 @@ $isResource = has_term(['deep-dives', 'tools'], 'post-format'); ?>
       </div>
     </div>
   </div>
+</section>
+
+<section class="promo-content">
+<div class="container">
+    <div class="row">
+      <div class="col-8 offset-3">
+	      <?php if ( !is_user_logged_in() and has_tag( 'Promotional' ) ) { ?>
+			<div class="promotionalCTA">
+				<p>This is complimentary content from the growth10 on-demand library, which features hundreds of game-changing ideas (all in 10-minutes or less) to help you fast-track your business growth. </p>
+				
+				<a href="https://growth10.com/cart/?add-to-cart=925&variation_id=927&ref=PromotionalPost" class="button button--teal">
+					START MY FREE 10-DAY TRIAL<br> 
+					<span>Cancel Anytime</span>
+				</a>
+			</div>
+			<?php }	?>
+      </div>
+    </div>
+</div>
 </section>
