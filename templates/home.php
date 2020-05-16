@@ -11,7 +11,7 @@
 
 get_header();
 
-get_template_part('parts/home/2-column-video-hero');
+get_template_part('parts/home/hero-2-col-video');
 
 get_template_part('parts/home/2-column-video-3_rows');
 

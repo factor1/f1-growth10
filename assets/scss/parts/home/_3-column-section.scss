@@ -35,6 +35,10 @@
     font-family: $sans;
     color: $tundora;
   }
+  
+  p {
+	  font-size: rem(18);
+  }
 
   .container--align-items-end {
     justify-self: flex-end;

@@ -9,12 +9,14 @@
  * @since 0.0.1
  */
 
+$title    = get_field('testimonial_title');
 if( have_rows('home_testimonials') ) :
   $i = 1; ?>
 
   <section class="home-testimonials">
+	  <h3 class="text-center"><?php echo $title ?></h3>
     <div class="container home-testimonials__slider">
-
+	
       <?php while( have_rows('home_testimonials') ) : the_row();
         // Testimonials Custom Fields
         $image = get_sub_field('image');

@@ -17,4 +17,41 @@ section.call-to-action{
         color: #FFFFFF;
         opacity: 1;
     }
+    
+    
+    .gform_wrapper form .gfield {
+	    flex-basis: 45%;
+	    margin-right: 5px;
+	    position: relative;
+	    
+	    label {color: #fff;}
+	    
+	    input {
+		    background: #fff; 
+		    width: 75%;}
+    }
+    
+    .gform_wrapper form .gfield#field_5_2 {
+	    top: -6px;
+    }
+    
+    .gform_button.button {
+	    background: $blue;
+	    border-color: $blue;
+	    color: #fff;
+	    display: block;
+	    margin: -20px auto 0;
+	    
+	    &:hover {border-color: $teal;}
+    }
+}
+
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+	section.call-to-action{
+		.gform_wrapper form .gfield {
+	    flex-basis: 100%;
+	    }
+    }
 }

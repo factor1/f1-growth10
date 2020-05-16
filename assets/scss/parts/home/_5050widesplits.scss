@@ -12,7 +12,7 @@ section.home5050 {
   @include iPhoneX;
 
   .full-width .row {
-    max-width: 105rem !important;
+    max-width: 110rem !important;
 	}
   
   .copy-side {
@@ -26,7 +26,7 @@ section.home5050 {
 	  }
 	
 	  p {
-	    font-size: rem(24);
+	    font-size: rem(20);
 	  }
   }
   
@@ -42,12 +42,15 @@ section.home5050 {
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   section.home5050 {
-    h2 {
-      font-size: rem(32);
-    }
-
-    p {
-      font-size: rem(24);
-    }
+	  .copy-side {
+	    h2 {
+	      font-size: rem(27);
+	      margin-top: rem(20);
+	    }
+	
+	    p {
+	      font-size: rem(18);
+	    }
+	   }
   }
 }

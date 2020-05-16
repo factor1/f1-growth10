@@ -10,9 +10,16 @@
 
 .home-testimonials {
   @include iPhoneX;
+  
+  h3 {
+	  font-size: rem(28);
+	  text-transform: capitalize;
+	  margin-top: rem(60);
+	  padding: 0 rem(10);
+	  }
 
   .container {
-    padding: rem(60) 0 rem(30);
+    padding: rem(30) 0 rem(30);
   }
 
   .slick-slide > div {
