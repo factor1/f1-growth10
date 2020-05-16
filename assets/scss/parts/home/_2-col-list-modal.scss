@@ -19,7 +19,7 @@
             text-align: left;
             font: normal 32px/42px 'Comfortaa';
             letter-spacing: 0px;
-            color: #2CBDBE;
+            color: $teal;
             opacity: 1;
         }
         
@@ -28,7 +28,7 @@
             font: normal 32px/49px 'FontAwesome';
             letter-spacing: 0px;
             font-size: 24px;
-            color: #0356A4;
+            color: $blue;
             margin-right: 20px;
             display: flex;
             align-items: center;
@@ -39,7 +39,6 @@
     h2 {
         font: normal 40px/44px "Comfortaa";
         letter-spacing: 0px;
-        color: #1C1C1C;
     }
     
 }
