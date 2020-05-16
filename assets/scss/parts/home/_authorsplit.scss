@@ -8,12 +8,12 @@
  * @since 0.0.1
  */
 
-.home-image-text-split-full-width {
+.home5050 {
   @include iPhoneX;
 
-  .full-width {
-    display: flex;
-    align-items: stretch;
+  .full-width .row {
+    max-width: 95rem !important;
+/*
   
     .col-6.sm-col-11 {
       display: flex;
@@ -34,9 +34,10 @@
         max-width: 35rem;
         flex-direction: row;
       }
+*/
     }
 
-  }
+  
 
   h2 {
     font: Bold 40px/45px "Comfortaa";

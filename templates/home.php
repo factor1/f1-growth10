@@ -20,9 +20,9 @@ get_template_part('parts/home/2-column-call-to-action');
 
 get_template_part('parts/home/2-column-list-modal');
 
-get_template_part('parts/home/full-width-image-text-split');
+get_template_part('parts/home/aboutus');
 
-get_template_part('parts/home/full-width-text-image-split'); 
+get_template_part('parts/home/authorsplit'); 
 
 
 get_template_part('parts/home/testimonials');
