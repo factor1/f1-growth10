@@ -37,7 +37,7 @@
             </div>
             <div class="col-5  sm-col-11">
                 <h2><?php echo $content; ?>
-                <a href="<?php echo $button_url; ?>" 
+                <a href="#plans" 
                     class="button button--teal larger-25 " role="link">Free for 14-days</a>                
 			</div>
 		</div> 
