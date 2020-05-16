@@ -25,7 +25,7 @@ $modal    = get_field('modal_video');
 				<?php echo $wysiwyg;?>
 			</div>
 			<div class="col-6 sm-col-12">
-				<a data-micromodal-trigger="hero-modal-1" href="">
+				<a data-micromodal-trigger="hero-modal-1">
 				<img src="<?php echo $img[0]?>" height='<?php echo $img[2];?>px' alt="<?php echo $alt; ?>">
 				</a>
 			</div>
