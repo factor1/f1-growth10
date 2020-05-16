@@ -17,6 +17,19 @@ AOS.init({
 // Modals
 MicroModal.init();
 
+// Modals
+MicroModal.init();
+
+// Reset modal iframe on close
+$(".modal__close").on("click", function() {
+  var currentModal = $(this).parents(".modal");
+  var iframeSrc = $(this).parents(".modal").find("iframe").attr("src");
+
+  currentModal.find("iframe").attr("src", iframeSrc);
+});
+
+
+
 $(document).ready(function($) {
   // Inside of this function, $() will work as an alias for jQuery()
   // and other libraries also using $ will not be accessible under this shortcut
