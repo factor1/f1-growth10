@@ -15,6 +15,7 @@ $wysiwyg    = get_field('home-list-modal-wysiwyg');
 $image      = get_field('home-list-modal-image');
 $img        = wp_get_attachment_image_src($image, 'home_split');
 $alt        = get_post_meta($image, '_wp_attachment_image_alt', true); 
+$modal    = get_field('modal_video');
 
 ?>
 <section class="modal">
@@ -24,35 +25,23 @@ $alt        = get_post_meta($image, '_wp_attachment_image_alt', true);
 				<?php echo $wysiwyg;?>
 			</div>
 			<div class="col-6 sm-col-12">
+				<a data-micromodal-trigger="hero-modal-1" href="">
 				<img src="<?php echo $img[0]?>" height='<?php echo $img[2];?>px' alt="<?php echo $alt; ?>">
+				</a>
 			</div>
 		</div>
 	</div>
 </section>
-<!-- 
-      <div class="col-12" data-aos="fade-up">
-        <?php echo $content;
-
-        // Category indicator
-        if( $isCat ) : ?>
-
-          <p class="support text-center"><strong>Category:</strong> <?php echo get_queried_object()->name; ?></p>
-
-        <?php endif;?>
-
-          <div class="hero__buttons text-center">
-
-<button 
-    title="title"
-    data-micromodal-trigger="hero-modal">MODAL BUTTON</button>
 
 
+<div class="modal micromodal-slide" id="hero-modal-1" aria-hidden="true">
+          <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
 
-<div id="hero-modal" aria-hidden="">
-   MODAL CONTENT
-</div>
-
-      </div>
-    </div>
-  </div>
-</section> -->
+              <div id="hero-modal-1-content">
+                <?php echo $modal; ?>
+              </div>
+            </div>
+          </div>
+        </div>
