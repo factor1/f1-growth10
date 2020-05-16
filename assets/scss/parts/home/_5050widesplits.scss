@@ -12,44 +12,30 @@ section.home5050 {
   @include iPhoneX;
 
   .full-width .row {
-    max-width: 95rem !important;
-/*
+    max-width: 105rem !important;
+	}
   
-    .col-6.sm-col-11 {
-      display: flex;
-      align-items: center;
-      &.left-side{
-        justify-content: flex-end;
-        .realign.row{
-          justify-content: flex-start;
-        }
-      }
-      &.right-side {
-        justify-content: flex-start;
-        .realign.row {
-          flex-direction: row-reverse;
-        }
-      }
-      .realign.row {
-        max-width: 35rem;
-        flex-direction: row;
-      }
-*/
-    }
-
-  
-
-  h2 {
-    font: Bold 30px/35px "Comfortaa";
-    letter-spacing: 0px;
-    text-transform: capitalize;
+  .copy-side {
+	  display: block;
+	  margin: auto auto;
+	  max-width: 600px;
+	  
+	  h2 {
+	    font-size: rem(42);
+	    text-transform: capitalize;
+	  }
+	
+	  p {
+	    font-size: rem(24);
+	  }
   }
-
-  p {
-    text-align: left;
-    font: normal 20px/25px Montserrat;
-    letter-spacing: 0px;
-    opacity: 1;
+  
+  .image-side {
+	  min-height: 250px;
+	  background-repeat: no-repeat;
+	  background-position: top center;
+	  background-size: cover;
+	  padding: 50% 0 0;
   }
 }
 

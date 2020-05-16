@@ -24,7 +24,7 @@ $alt        = get_post_meta($image, '_wp_attachment_image_alt', true);
 <section class="call-to-action" style="background: url('<?php echo $bg_img[0];?>') no-repeat; background-size: cover;">
     <div class="container">
         <div class="row">
-            <div class="col-4 sm-col-0 col-centered">
+            <div class="col-4 sm-col-0 col-centered" data-aos="fade-up" data-aos-delay="50">
                 <img src="<?php echo $img[0]; ?>" alt="<?php echo $alt; ?>">
             </div>
             <div class="col-7 sm-col-12 col-centered">
