@@ -16,13 +16,15 @@ $img        = wp_get_attachment_image_src($image, 'full');
 $alt        = get_post_meta($image, '_wp_attachment_image_alt', true); 
 ?>
 
-<section class="home-image-text-split-full-width">
-    <div class="container container--direction-row full-width">
-        <div class="col-6 sm-col-12 left-side">
+<section class="home5050 author-split">
+    <div class="container full-width">
+	    <div class="row">
+        <div class="col-6 sm-col-11 copy-side">
                 <?php echo $wysiwyg; ?>
         </div> 
-        <div class="col-6 sm-col-12 image"  
-            style="background: url('<?php echo $img[0];?>') repeat-x 0% 50%;background-size: contain;">
+        <div class="col-6 sm-col-12 image-side"  
+            style="background: url('<?php echo $img[0];?>') repeat-x 0% 50%;background-size: cover; min-height:400px;">
         </div>
+	    </div>
     </div>
 </section>

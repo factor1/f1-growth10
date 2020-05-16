@@ -20,7 +20,7 @@ $alt        = get_post_meta($image, '_wp_attachment_image_alt', true);
 
 <section class="home5050">
     <div class="container full-width">
-	    <div class="row row--justify-content-center">
+	    <div class="row">
 	        <div class="col-6 sm-col-11 image"  
 	            style="background: url('<?php echo $img[0];?>') no-repeat top center;background-size: cover; min-height:400px;">
 	        </div>

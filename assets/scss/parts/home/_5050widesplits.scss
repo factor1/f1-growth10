@@ -8,7 +8,7 @@
  * @since 0.0.1
  */
 
-.home5050 {
+section.home5050 {
   @include iPhoneX;
 
   .full-width .row {
@@ -40,14 +40,14 @@
   
 
   h2 {
-    font: Bold 40px/45px "Comfortaa";
+    font: Bold 30px/35px "Comfortaa";
     letter-spacing: 0px;
     text-transform: capitalize;
   }
 
   p {
     text-align: left;
-    font: normal 30px/35px Montserrat;
+    font: normal 20px/25px Montserrat;
     letter-spacing: 0px;
     opacity: 1;
   }
@@ -55,7 +55,7 @@
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
-  .home-text-image-split-full-width {
+  section.home5050 {
     h2 {
       font-size: rem(32);
     }
