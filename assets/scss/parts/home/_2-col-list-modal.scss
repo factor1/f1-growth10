@@ -12,12 +12,14 @@
     padding-top: 80px;
     ul {
         padding: 0px;
+        clear: both;
+        
         li {
             list-style:none;
             display: flex;
             align-items: center;
             text-align: left;
-            font: normal 32px/42px 'Comfortaa';
+            font: normal 28px/38px 'Comfortaa';
             letter-spacing: 0px;
             color: $teal;
             opacity: 1;
