@@ -1,0 +1,89 @@
+/*
+ * Text/Image Split Full Width (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+ .home-image-text-split-full-width {
+    @include iPhoneX;
+  
+    .full-width {
+      display: flex;
+      align-items: stretch;
+    
+      .col-6.sm-col-11 {
+        display: flex;
+        align-items: center;
+        &.left-side{
+          justify-content: flex-end;
+          .realign.row{
+            justify-content: flex-start;
+          }
+        }
+        &.right-side {
+          justify-content: flex-start;
+          .realign.row {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+  
+    }
+  
+    .right-side {
+        h2 {
+            font: normal 45px/50px 'Comfortaa';
+            margin-bottom: 45px;
+        }
+        p {
+            font: normal 30px/35px 'Open Sans';
+            letter-spacing: 0px;
+            color: #1C1C1C;
+        }
+
+    }
+    .left-side {
+        h2 {
+            font: Bold 45px/51px "Comfortaa";
+            margin-bottom: 63px;
+            text-transform: capitalize;
+        }
+    }
+
+    h2 {
+      font: Bold 45px/51px "Comfortaa";
+      letter-spacing: 0px;
+      color: #1C1C1C;
+        .right-side{
+            color: red;
+        }
+
+    }
+  
+    p {
+      text-align: left;
+      font: normal 30px/35px Montserrat;
+      letter-spacing: 0px;
+      color: #1C1C1C;
+      opacity: 1;
+    } 
+  }
+  
+  // Media Queries
+  @media screen and (max-width: $small-breakpoint) {
+    .home-text-image-split-full-width {
+      h2 {
+        font-size: rem(32);
+      }
+  
+      p {
+        font-size: rem(24);
+      }
+    }
+  }
+  
+  

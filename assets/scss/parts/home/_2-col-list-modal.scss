@@ -1,0 +1,46 @@
+/*
+ * 2-Column List/Modal (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+    
+ section.modal {
+    padding-top: 80px;
+    ul {
+        padding: 0px;
+        clear: both;
+        
+        li {
+            list-style:none;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            font: normal 28px/38px 'Comfortaa';
+            letter-spacing: 0px;
+            color: $teal;
+            opacity: 1;
+        }
+        
+        li:before {
+            content: '\f00c';
+            font: normal 32px/49px 'FontAwesome';
+            letter-spacing: 0px;
+            font-size: 24px;
+            color: $blue;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        
+        }
+    }
+    
+    h2 {
+        font: normal 40px/44px "Comfortaa";
+        letter-spacing: 0px;
+    }
+    
+}

@@ -11,15 +11,19 @@
 
 get_header();
 
-get_template_part('parts/home/hero');
+get_template_part('parts/home/hero-2col-video');
 
-get_template_part('parts/home/3-column-section');
+get_template_part('parts/home/2-column-video-3_rows');
 
-get_template_part('parts/home/text-split');
+get_template_part('parts/home/2-column-call-to-action');
 
-get_template_part('parts/home/category-grid');
 
-get_template_part('parts/home/text-image-split');
+get_template_part('parts/home/2-column-list-modal');
+
+get_template_part('parts/home/aboutus');
+
+get_template_part('parts/home/authorsplit'); 
+
 
 get_template_part('parts/home/testimonials');
 
