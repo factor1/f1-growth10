@@ -10,9 +10,16 @@
 
 .home-testimonials {
   @include iPhoneX;
+  
+  h3 {
+	  font-size: rem(28);
+	  text-transform: capitalize;
+	  margin-top: rem(60);
+	  padding: 0 rem(10);
+	  }
 
   .container {
-    padding: rem(90) 0 rem(50);
+    padding: rem(30) 0 rem(30);
   }
 
   .slick-slide > div {
@@ -23,18 +30,18 @@
 
   .row {
     display: flex !important;
-    margin-bottom: rem(70);
+    margin-bottom: rem(40);
   }
 
   img {
-    width: rem(150);
+    width: rem(130);
     border-radius: 50%;
   }
 
   p {
-    margin: 0 0 rem(15);
-    font-size: rem(22);
-    line-height: 1.36;
+    margin: 0 0 rem(10);
+    font-size: rem(17);
+    line-height: 1.16;
     font-family: $serif;
     color: $blue;
   }

@@ -17,6 +17,16 @@ AOS.init({
 // Modals
 MicroModal.init();
 
+// Reset modal iframe on close
+$(".modal__close").on("click", function() {
+  var currentModal = $(this).parents(".modal");
+  var iframeSrc = $(this).parents(".modal").find("iframe").attr("src");
+
+  currentModal.find("iframe").attr("src", iframeSrc);
+});
+
+
+
 $(document).ready(function($) {
   // Inside of this function, $() will work as an alias for jQuery()
   // and other libraries also using $ will not be accessible under this shortcut
@@ -46,34 +56,6 @@ $(document).ready(function($) {
     $(".menu-icon").toggleClass("active");
     $(".mega-menu").slideToggle();
   });
-
-  // Landing hero rotating text
-  if( $(".landing-section .span--outer").length ) {
-    // Cycle first term in
-    $(".landing-section .span--inner").first().addClass("in");
-
-    // Start cycling through terms
-    setInterval(function() {
-
-      var out = $(".landing-section .span--inner.out");
-      var current = $(".landing-section .span--inner.in");
-
-      // grab next if it exists, otherwise first
-      if( current.next(".landing-section .span--inner")[0] ) {
-        // eslint-disable-next-line
-        var next = current.next(".landing-section .span--inner");
-      } else {
-        // eslint-disable-next-line
-        var next = $(".landing-section .span--inner").first();
-      }
-
-      // Reset out, move in out, and move next term in
-      out.removeClass("out");
-      current.removeClass("in").addClass("out");
-      next.addClass("in");
-
-    }, 1500);
-  }
 
   // Home testimonials slider
   $(".home-testimonials__slider").slick({
