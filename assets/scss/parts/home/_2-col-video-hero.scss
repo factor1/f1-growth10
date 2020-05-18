@@ -95,6 +95,7 @@
 
   }
   
+/*
   // Media Queries
   @media screen and (max-width: $small-breakpoint) {
     .hero--home {
@@ -103,10 +104,11 @@
       }
   
       h1 {
-        font-size: rem(36);
+        font-size: rem(25);
       }
     }
   }
+*/
   
   
   // Hide video on mobile devices
@@ -117,18 +119,16 @@
   
   // Media Queries
   @media screen and (max-width: $small-breakpoint) {
-    .hero {
+    .video-hero--home {
       .container {
         padding: rem(120) 0;
       }
   
       h1 {
         margin-bottom: rem(30);
-        font-size: rem(42);
+        font-size: rem(41) !important;
   
-        strong {
-          font-size: rem(60);
-        }
+        
       }
   
     }
