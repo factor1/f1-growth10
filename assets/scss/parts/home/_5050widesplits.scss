@@ -43,6 +43,11 @@ section.home5050 {
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   section.home5050 {
+	  
+	  .full-width .row {
+	    margin-bottom: 20px;
+		}
+	
 	  .copy-side {
 	    h2 {
 	      font-size: rem(27);
@@ -55,7 +60,7 @@ section.home5050 {
 	   }
 	   
 	   .image-side {
-		   min-height: 300px;
+		   min-height: 400px;
 		   background-position: center center;
 	   }
   }
