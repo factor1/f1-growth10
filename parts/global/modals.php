@@ -12,6 +12,9 @@
 // Check if default template
 $isDefault = is_page() && !is_page_template();
 
+// Check if home template
+$isHome = is_page_template('templates/home.php');
+
 if( $isDefault ) :
 
   // Optional hero buttons
@@ -43,4 +46,35 @@ if( $isDefault ) :
 
   endif;
 
-endif; // end $isDefault ?>
+elseif( $isHome ) :
+
+  $featuresToggle = get_field('features_toggle');
+
+  if( $featuresToggle ) :
+
+    $x = 1;
+
+    if( have_rows('features') ) : while( have_rows('features') ) : the_row();
+      $modal = get_sub_field('modal');
+
+      if( $modal ) : ?>
+
+        <div class="modal micromodal-slide" id="home-modal-<?php echo $x; ?>" aria-hidden="true">
+          <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+
+              <div id="home-modal-<?php echo $x; ?>-content">
+                <?php echo $modal; ?>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <?php endif;
+
+    $x++; endwhile; endif;
+
+  endif;
+
+endif; ?>

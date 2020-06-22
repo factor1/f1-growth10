@@ -47,7 +47,7 @@ $content = get_field('plans_content'); ?>
           <h4><?php echo $price; ?></h4>
 
           <?php if( $btn ) : ?>
-		  
+
             <a href="<?php echo esc_url($btn); ?>" class="button larger25 button--teal" role="link">
               Start my Free 14-Day Trial
             </a>
@@ -120,13 +120,15 @@ $content = get_field('plans_content'); ?>
       // New plans section
       if( $featuresToggle ) :
 
+        $x = 1;
+
         if( have_rows('features') ) : while( have_rows('features') ) : the_row();
           // Features Custom Subfields
           $icon = get_sub_field('icon');
           $feature = get_sub_field('content'); ?>
 
           <div class="col-4 md-col-5 sm-col-12">
-            <div class="feature">
+            <div class="feature" data-micromodal-trigger="home-modal-<?php echo $x; ?>">
               <div class="feature__icon">
                 <?php echo $icon; ?>
               </div>
@@ -135,7 +137,7 @@ $content = get_field('plans_content'); ?>
             </div>
           </div>
 
-        <?php endwhile; endif;
+        <?php $x++; endwhile; endif;
 
       endif; ?>
 
