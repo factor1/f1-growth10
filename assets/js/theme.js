@@ -25,7 +25,17 @@ $(".modal__close").on("click", function() {
   currentModal.find("iframe").attr("src", iframeSrc);
 });
 
+// Reset modal iframe on outside click
+$(document).on("click", function(e) {
+  var currentModal = $(e.target).closest(".modal");
 
+  if( currentModal.length ) {
+    // eslint-disable-next-line
+    var iframeSrc = currentModal.find("iframe").attr("src");
+
+    currentModal.find("iframe").attr("src", iframeSrc);
+  }
+});
 
 $(document).ready(function($) {
   // Inside of this function, $() will work as an alias for jQuery()
