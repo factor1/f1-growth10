@@ -168,9 +168,13 @@
       color: $blue;
       margin-bottom: 0.5rem;
     }
-    
+
     p {
 	    margin-bottom: 10px;
+    }
+
+    &[data-micromodal-trigger] {
+      cursor: pointer;
     }
   }
 }
@@ -182,11 +186,11 @@
       align-self: stretch;
 	  margin-bottom: rem(5);
 	  }
-	
+
 	.button {
 	    padding: rem(20) rem(10);
 	    }
-    
+
     .plan {
       height: 100%;
       padding: rem(5);
