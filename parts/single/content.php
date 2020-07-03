@@ -28,6 +28,8 @@ $isResource = has_term(['deep-dives', 'tools'], 'post-format'); ?>
 	        else :
 	
 	          get_template_part('parts/single/tabbed-content');
+	          echo do_shortcode('[yasr_visitor_votes size="large" show_average="no"]');
+	          echo "<style> .yasr-visitor-votes-after-stars-class {display: none;}</style>";
 	
 	        endif; ?>
 	        
