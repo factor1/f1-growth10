@@ -13,6 +13,12 @@ get_header();
 
 get_template_part('parts/global/hero');
 
+ if(is_page('2821')) :
+	 get_template_part('parts/global/welcome');
+	 
+	 endif; 
+ 
+
 get_template_part('parts/global/popular-posts');
 
 get_template_part('parts/global/popular-tools');
