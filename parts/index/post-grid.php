@@ -13,15 +13,30 @@
 $isSearch = is_search();
 $term = $isSearch ? $wp_query->query_vars : '';
 
+// Check if author view
+$isAuthor = is_author();
+
 $cat = get_queried_object();
 
-$title = $isSearch ? 'Search results for "' . $term['s'] . '"' : 'All ' . $cat->name . ' Content';
+$title = $isSearch ? 'Search results for "' . $term['s'] . '"' : ($isAuthor ? 'All Articles by ' . get_the_author() : 'All ' . $cat->name . ' Content');
 
 if( have_posts() ) : ?>
 
   <section class="post-grid">
     <div class="container">
       <div class="row">
+
+        <?php // Author bio
+        if( $isAuthor ) : ?>
+
+          <div class="col-12">
+
+            <?php get_template_part('parts/global/author'); ?>
+
+          </div>
+
+        <?php endif; ?>
+
         <div class="col-12 sm-text-center">
           <h3><?php echo $title; ?></h3>
         </div>
