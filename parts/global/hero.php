@@ -19,6 +19,9 @@ $isCat = is_category();
 $isSearch = is_search();
 $term = $isSearch && isset($_GET['cat']) ? $_GET['cat'] : '';
 
+// Check if author view
+$isAuthor = is_author();
+
 if( $isCat ) :
   $cat = get_queried_object();
   $imgWhite = wp_get_attachment_image_src(get_field('category_icon_white', $cat), 'category_icon');
@@ -36,6 +39,8 @@ elseif( $isSearch ) :
   else :
     $title = 'Search Results';
   endif;
+elseif( $isAuthor ) :
+  $title = get_the_author();
 else :
   $title = get_field('hero_headline');
 endif; ?>
