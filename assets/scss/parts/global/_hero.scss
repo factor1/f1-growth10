@@ -13,7 +13,7 @@
   background-color: $blue;
 
   .container {
-    padding: rem(40) 0 rem(60);
+    padding: rem(142) 0 rem(60);
   }
 
   h1 {
@@ -63,6 +63,10 @@
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .hero--global {
+    .container {
+      padding-top: rem(129);
+    }
+
     h1 {
       font-size: rem(42);
     }
