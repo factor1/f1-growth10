@@ -1,8 +1,15 @@
 import Bowser from "Bowser";
 import MicroModal from "micromodal";
+import Headroom from "headroom.js";
 import * as AOS from "aos";
 import $ from "jquery";
 import "slick-carousel";
+
+// Headroom
+let header = document.querySelector(".site-header"),
+  headroom = new Headroom(header);
+
+headroom.init();
 
 // AOS
 AOS.init({
