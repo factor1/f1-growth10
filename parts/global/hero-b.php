@@ -16,7 +16,7 @@ $colSpan = get_field('hero_b_column_span');
 $contentAlign = get_field('hero_b_content_alignment');
 $content = get_field('hero_b_content'); ?>
 
-<section class="hero-b" style="background: #0356a4 url('<?php echo $bg[0]; ?>') center/cover no-repeat">
+<section class="hero-b" style="background: #0356a4 url('<?php echo $bg[0]; ?>') center top/cover no-repeat">
 
   <?php if( $contentToggle ) : ?>
 
