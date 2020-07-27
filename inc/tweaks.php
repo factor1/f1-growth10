@@ -289,3 +289,33 @@
 
   <?php }
   add_action('admin_head', 'admin_js');
+
+  // Add custom colors to wysiwygs
+  function custom_editor_colors($init) {
+    $custom_colors = '
+        "0356A4", "Blue",
+        "2AB2B0", "Teal",
+        "2CBDBE", "Lighter Teal",
+        "707070", "Gray",
+        "464646", "Dark Gray",
+        "FFFFFF", "White",
+        "E5E5E5", "Light Gray",
+        "000000", "Black",
+    ';
+
+    // build colour grid default+custom colors
+    $init['textcolor_map'] = '['.$custom_colors.']';
+
+    // change the number of rows in the grid if the number of colors changes
+    // 8 swatches per row
+    $init['textcolor_rows'] = 1;
+
+    return $init;
+  }
+  add_filter('tiny_mce_before_init', 'custom_editor_colors');
+
+  // Add editor styles from custom wysiwyg options
+  function custom_editor_styles() {
+    add_editor_style('/dist/editor-styles.css');
+  }
+  add_action('init', 'custom_editor_styles');

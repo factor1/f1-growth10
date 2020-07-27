@@ -9,10 +9,10 @@
  * @since 0.0.1
  */
 
-// Hero Custom Fields 
+// Hero Custom Fields
 $img = wp_get_attachment_image_src(get_field('home_hero_background'), 'home_hero');
-$headline = get_field('home_hero_headline_text'); 
-$content = get_field('home_hero_content_right'); 
+$headline = get_field('home_hero_headline_text');
+$content = get_field('home_hero_content_right');
 
 ?>
 
@@ -24,10 +24,10 @@ $content = get_field('home_hero_content_right');
             </div>
             <div class="col-5 sm-col-12">
                 <h2><?php echo $content; ?>
-                <a href="#plans" 
-                    class="button larger-25 button--teal" role="link">Free for 14-days</a>                
+                <a href="#plans"
+                    class="button button--teal" role="link">Free for 14-days</a>                
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
 </section>

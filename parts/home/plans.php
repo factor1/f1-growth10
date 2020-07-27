@@ -48,7 +48,7 @@ $content = get_field('plans_content'); ?>
 
           <?php if( $btn ) : ?>
 
-            <a href="<?php echo esc_url($btn); ?>" class="button larger25 button--teal" role="link">
+            <a href="<?php echo esc_url($btn); ?>" class="button button--teal" role="link">
               Start my Free 14-Day Trial
             </a>
 
