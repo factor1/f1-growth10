@@ -9,19 +9,19 @@
  * @since 0.0.1
  */
 
-    // Hero Custom Fields 
+    // Hero Custom Fields
     $image      = get_field('home_hero_mobile_background');
     $img        = wp_get_attachment_image_src($image, 'home_hero');
-    $headline   = get_field('home_hero_headline_text'); 
-    $content    = get_field('home_hero_content_right'); 
+    $headline   = get_field('home_hero_headline_text');
+    $content    = get_field('home_hero_content_right');
     $video      = get_field('home_video_hero_file');
     $button_url = get_field('home_video_hero_button_url');
 ?>
 
 <section class="video-hero--home" style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat">
 
-<?php 
-  if( $video ) : ?> 
+<?php
+  if( $video ) : ?>
     <div class="hero__video">
       <video autoplay loop muted>
         <source src="<?php echo $video['url']; ?>" type="video/mp4">
@@ -37,9 +37,9 @@
             </div>
             <div class="col-5  sm-col-11">
                 <h2><?php echo $content; ?>
-                <a href="#plans" 
-                    class="button button--teal larger-25 " role="link">Free for 14-days</a>                
+                <a href="#plans"
+                    class="button button--teal" role="link">Free for 14-days</a>                
 			</div>
-		</div> 
+		</div>
 	</div>
 </section>
