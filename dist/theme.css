@@ -3436,7 +3436,8 @@ body.masked:after {
     background-color: #0356a4 !important; }
 
 .error404 .site-header,
-.page-template-home .site-header {
+.page-template-home .site-header,
+.page-template-flexible .site-header {
   background-color: transparent; }
 
 .page-template-default main,
@@ -3636,6 +3637,26 @@ body.masked:after {
   .hero--global img {
     height: 3.125rem;
     margin-right: 0; } }
+
+/**
+ * Hero B (with background) (Global)
+ *
+ * Template part used on index.php and other views
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.2.0
+ */
+.hero-b {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .hero-b .container {
+    min-height: 31.25rem;
+    padding: 12.5rem 0; }
+
+@media screen and (max-width: 47.9375em) {
+  .hero-b .container {
+    min-height: 18.75rem;
+    padding: 12.5rem 0 3.125rem; } }
 
 /**
  * Popular Posts (Index)
