@@ -14,11 +14,11 @@
 $wysiwyg    = get_field('home-list-modal-wysiwyg');
 $image      = get_field('home-list-modal-image');
 $img        = wp_get_attachment_image_src($image, 'home_split');
-$alt        = get_post_meta($image, '_wp_attachment_image_alt', true); 
+$alt        = get_post_meta($image, '_wp_attachment_image_alt', true);
 $modal    = get_field('modal_video');
 
 ?>
-<section class="modal">
+<section class="video-split">
 	<div class="container">
 		<div class="row row--align-items-center">
 			<div class="col-6 sm-col-12">
@@ -28,7 +28,7 @@ $modal    = get_field('modal_video');
 				<?php echo $modal; ?>
 <!--
 				<a data-micromodal-trigger="hero-modal-1">
-				<img src="<?php echo $img[0]?>" height='<?php echo $img[2];?>px' alt="<?php echo $alt; ?>">
+				<img src="<?php //echo $img[0]?>" height='<?php //echo $img[2];?>px' alt="<?php //echo $alt; ?>">
 				</a>
 -->
 			</div>
@@ -37,7 +37,7 @@ $modal    = get_field('modal_video');
 </section>
 
 
-<div class="modal micromodal-slide" id="hero-modal-1" aria-hidden="true">
+<?php /* <div class="modal micromodal-slide" id="hero-modal-1" aria-hidden="true">
           <div class="modal__overlay" tabindex="-1" data-micromodal-close>
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
               <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
@@ -47,4 +47,4 @@ $modal    = get_field('modal_video');
               </div>
             </div>
           </div>
-        </div>
+        </div> */ ?>

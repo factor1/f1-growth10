@@ -23,4 +23,5 @@ if( function_exists('prelude_features') ){
   add_image_size( 'resource', 600, 600, false );
   add_image_size( 'home_hero', 1920, 805, array('center', 'center') );
   add_image_size( 'home_split', 770, 460, false );
+  add_image_size( 'text_image_split', 900, 810, false );
 }

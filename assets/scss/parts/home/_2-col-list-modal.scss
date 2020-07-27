@@ -7,13 +7,13 @@
  * @author Factor1 Studios
  * @since 0.0.1
  */
-    
- section.modal {
+
+ .video-split {
     padding-top: 80px;
     ul {
         padding: 0px;
         clear: both;
-        
+
         li {
             list-style:none;
             display: flex;
@@ -24,7 +24,7 @@
             color: $teal;
             opacity: 1;
         }
-        
+
         li:before {
             content: '\f00c';
             font: normal 32px/49px 'FontAwesome';
@@ -34,22 +34,22 @@
             margin-right: 20px;
             display: flex;
             align-items: center;
-        
+
         }
     }
-    
+
     h2 {
         font: normal 40px/44px "Comfortaa";
         letter-spacing: 0px;
     }
-    
+
 }
 
 
   // Media Queries
 @media screen and (max-width: $small-breakpoint) {
-	  
-section.modal {
+
+  .video-split {
     padding-top: 40px;
     ul {
 
@@ -58,5 +58,5 @@ section.modal {
             }
         }
       }
-      
+
 }
