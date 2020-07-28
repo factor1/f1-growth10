@@ -9,25 +9,31 @@
  * @since 1.2.0
  */
 
+global $post;
+
 // Hero B Custom Fields
-$bg = wp_get_attachment_image_src(get_field('hero_b_background'), 'home_hero');
-$contentToggle = get_field('hero_b_content_toggle');
-$colSpan = get_field('hero_b_column_span');
-$contentAlign = get_field('hero_b_content_alignment');
-$content = get_field('hero_b_content'); ?>
+$bg = wp_get_attachment_image_src(get_field('hero_b_background', $post->ID), 'home_hero');
+$contentToggle = get_field('hero_b_content_toggle', $post->ID);
+$colSpan = get_field('hero_b_column_span', $post->ID);
+$contentAlign = get_field('hero_b_content_alignment', $post->ID);
+$content = get_field('hero_b_content', $post->ID);
 
-<section class="hero-b" style="background: #0356a4 url('<?php echo $bg[0]; ?>') center top/cover no-repeat">
+if( $bg ) : ?>
 
-  <?php if( $contentToggle ) : ?>
+  <section class="hero-b" style="background: #0356a4 url('<?php echo $bg[0]; ?>') center top/cover no-repeat">
 
-    <div class="container">
-      <div class="row <?php echo $contentAlign; ?>">
-        <div class="col-<?php echo $colSpan; ?>">
-          <?php echo $content; ?>
+    <?php if( $contentToggle ) : ?>
+
+      <div class="container">
+        <div class="row <?php echo $contentAlign; ?>">
+          <div class="col-<?php echo $colSpan; ?>">
+            <?php echo $content; ?>
+          </div>
         </div>
       </div>
-    </div>
 
-  <?php endif; ?>
+    <?php endif; ?>
 
-</section>
+  </section>
+
+<?php endif; ?>

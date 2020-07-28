@@ -58,12 +58,17 @@ body {
   &.headroom--not-top {
     background-color: $blue !important;
   }
+
+  &.has-hero ~ main {
+    margin-top: 0;
+  }
 }
 
 // Home/404 header
 .error404 .site-header,
 .page-template-home .site-header,
-.page-template-flexible .site-header {
+.page-template-flexible .site-header,
+.site-header.has-hero {
   background-color: transparent;
 }
 

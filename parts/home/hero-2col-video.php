@@ -32,13 +32,13 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-7  sm-col-11">
+            <div class="col-7 sm-col-11 sm-col-centered sm-text-center">
                 <h1><?php echo $headline; ?></h1>
             </div>
-            <div class="col-5  sm-col-11">
-                <h2><?php echo $content; ?>
+            <div class="col-5 sm-col-11 sm-col-centered sm-text-center">
+                <?php echo $content; ?>
                 <a href="#plans"
-                    class="button button--teal" role="link">Free for 14-days</a>                
+                    class="button button--teal" role="link">Free for 14-days</a>
 			</div>
 		</div>
 	</div>
