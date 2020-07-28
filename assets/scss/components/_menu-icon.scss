@@ -81,3 +81,10 @@
     }
   }
 }
+
+// Media Queries
+@media screen and (min-width: rem(1025)) {
+  .menu-icon.lg-hide {
+    display: none;
+  }
+}
