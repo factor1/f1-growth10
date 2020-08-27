@@ -13,9 +13,23 @@ get_header();
 
 get_template_part('parts/global/hero');
 
-get_template_part('parts/dashboard/welcome');
+get_template_part('parts/dashboard/welcome'); ?>
 
-/* get_template_part('parts/global/popular-posts');
+<section class="dashboard-main">
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+
+        <?php get_template_part('parts/dashboard/weekly-message'); ?>
+
+        <?php get_template_part('parts/dashboard/workshops'); ?>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<?php /* get_template_part('parts/global/popular-posts');
 
 get_template_part('parts/global/popular-tools');
 

@@ -9,21 +9,29 @@
 
 global $current_user;
 $user_info = get_currentuserinfo();
-$name = $user_info->first_name; ?>
+$name = $user_info->first_name;
 
-<section class="dashboard-welcome">
-  <div class="container">
-    <div class="row row--justify-content-start">
-      <div class="col-12 text-center">
+// Custom fields
+$sectionToggle = get_field('dashboard_welcome_section_toggle');
+$content = get_field('dashboard_welcome_section_content');
 
-        <h2>
-          <?php echo $user_info->first_name . ",\n"; ?>
-          Thank You for Joining the G10 Community!
-        </h2>
+if( $sectionToggle && $content ) : ?>
 
-        <?php the_content(); ?>
+  <section class="dashboard-welcome">
+    <div class="container">
+      <div class="row row--justify-content-start">
+        <div class="col-12 text-center">
 
+          <h2>
+            <?php echo $user_info->first_name . ",\n"; ?>
+            Thank You for Joining the G10 Community!
+          </h2>
+
+          <?php echo $content; ?>
+
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+<?php endif; ?>

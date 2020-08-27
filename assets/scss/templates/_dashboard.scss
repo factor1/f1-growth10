@@ -1,0 +1,17 @@
+/*
+ * Template Name: Dashboard
+ *
+ * Template used on the dashboard page
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+
+.dashboard-main {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+}
