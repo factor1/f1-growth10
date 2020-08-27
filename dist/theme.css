@@ -16,7 +16,6 @@
      * 2. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -419,7 +418,6 @@ template {
 /*
 * Ginger
 * A minimal flexbox grid system named after a cute dog.
-* Version 2.1.1
 * Written by Eric Stout (@erwstout)
 * http://ericwstout.com
 */
@@ -511,7 +509,11 @@ template {
   .row--align-content-stretch {
     align-content: stretch; }
 
-*[class*="col-"], *[class*="sm-col-"], *[class*="md-col-"], *[class*="flex-basis-"], .col {
+*[class*="col-"],
+*[class*="sm-col-"],
+*[class*="md-col-"],
+*[class*="flex-basis-"],
+.col {
   flex: 0 1 auto;
   position: relative;
   box-sizing: border-box;
@@ -1580,7 +1582,8 @@ template {
     text-align: center; }
   .sm-text-right {
     text-align: right; }
-  .sm-col-center, .sm-col-centered {
+  .sm-col-center,
+  .sm-col-centered {
     margin: 0 auto; } }
 
 [data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {
@@ -4639,6 +4642,18 @@ section.call-to-action {
     margin-bottom: 1.875rem; }
   .post-content .col-8 .col-8 {
     flex: 0 1 100%; } }
+
+/*
+ * Welcome from checkout Header
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+.dashboard-welcome {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .dashboard-welcome .container {
+    padding-top: 1.5625rem; }
 
 /**
  * The default page template.

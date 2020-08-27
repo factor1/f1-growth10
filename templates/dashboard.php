@@ -13,13 +13,9 @@ get_header();
 
 get_template_part('parts/global/hero');
 
- if(is_page('2821')) :
-	 get_template_part('parts/global/welcome');
-	 
-	 endif; 
- 
+get_template_part('parts/dashboard/welcome');
 
-get_template_part('parts/global/popular-posts');
+/* get_template_part('parts/global/popular-posts');
 
 get_template_part('parts/global/popular-tools');
 
@@ -34,6 +30,6 @@ get_template_part('parts/global/deep-dives'); ?>
 			<?php gravity_form( 4, false, false, false, '', false ); ?>
 		</div>
 	</div>
-</div>
+</div> */ ?>
 
 <?php get_footer(); ?>
