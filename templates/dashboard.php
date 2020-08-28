@@ -25,6 +25,19 @@ get_template_part('parts/dashboard/welcome'); ?>
         <?php get_template_part('parts/dashboard/workshops'); ?>
 
       </div>
+
+      <div class="col-6">
+        <div class="dashboard-main__content">
+
+          <?php get_template_part('parts/dashboard/content-tabs'); ?>
+
+          <!-- TODO: Conditional logic -->
+          <?php get_template_part('parts/dashboard/g10-scale-content'); ?>
+
+          <?php get_template_part('parts/dashboard/newest-content'); ?>
+
+        </div>
+      </div>
     </div>
   </div>
 </section>

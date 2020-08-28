@@ -14993,6 +14993,14 @@ _micromodal.default.init(); // Reset modal iframe on close
     }, 800, function () {
       window.location.hash = hash;
     });
+  }); // Dashboard tabbing
+
+  $(".dashboard-tabs button").on("click", function () {
+    var id = $(this).attr("id");
+    $(".dashboard-tabs button").removeClass("active");
+    $(this).addClass("active");
+    $(".dashboard-content").removeClass("active");
+    $(".dashboard-content#content-" + id).addClass("active");
   });
 });
 },{"Bowser":"../../node_modules/Bowser/es5.js","micromodal":"../../node_modules/micromodal/dist/micromodal.es.js","headroom.js":"../../node_modules/headroom.js/dist/headroom.js","aos":"../../node_modules/aos/dist/aos.js","jquery":"../../node_modules/jquery/dist/jquery.js","slick-carousel":"../../node_modules/slick-carousel/slick/slick.js"}]},{},["theme.js"], null)
