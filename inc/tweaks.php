@@ -319,3 +319,31 @@
     add_editor_style('/dist/editor-styles.css');
   }
   add_action('init', 'custom_editor_styles');
+
+  // Register custom query vars
+  function custom_query_vars($vars) {
+    $vars[] = 'level';
+
+    return $vars;
+  }
+  add_filter( 'query_vars', 'custom_query_vars' );
+
+  // Adjust queries
+  function adjust_queries( $query ) {
+    if( !is_admin() && $query->is_main_query() && is_category() ) :
+
+      if( !empty( get_query_var('level') ) ) :
+        $tax_query = array(
+          array(
+            'taxonomy' => 'post-levels',
+            'field' => 'slug',
+            'terms' => get_query_var('level')
+          )
+        );
+
+        $query->set( 'tax_query', $tax_query );
+      endif;
+
+    endif;
+  }
+  add_action( 'pre_get_posts', 'adjust_queries' );
