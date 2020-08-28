@@ -3222,6 +3222,110 @@ nav a {
 /*------------------------------------------------------------------------------
   Forms
 ------------------------------------------------------------------------------*/
+label {
+  position: relative;
+  font: 400 0.9375rem/1.47 "Montserrat", sans-serif;
+  color: #000; }
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="url"],
+textarea,
+select {
+  width: 100% !important;
+  padding: 0.625rem 0.3125rem !important;
+  border-radius: 0 !important;
+  border: none;
+  border-bottom: 0.0625rem solid #000;
+  background-color: transparent;
+  font: 400 0.9375rem/1.47 "Montserrat", sans-serif;
+  color: #000;
+  transition: all .4s ease; }
+  input[type="text"]:active, input[type="text"]:focus, input[type="email"]:active, input[type="email"]:focus, input[type="tel"]:active, input[type="tel"]:focus, input[type="number"]:active, input[type="number"]:focus, input[type="url"]:active, input[type="url"]:focus,
+  textarea:active,
+  textarea:focus,
+  select:active,
+  select:focus {
+    outline: none;
+    border-color: #2cbdbe !important; }
+
+textarea {
+  border: 0.0625rem solid #000 !important; }
+
+select {
+  -webkit-appearance: none; }
+  select::-ms-expand {
+    display: none; }
+
+.acf-field-select {
+  position: relative; }
+  .acf-field-select:after {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    content: url("triangle.7fa3075f.svg");
+    width: 0.5rem;
+    transform: rotate(-90deg);
+    pointer-events: none; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  position: relative;
+  height: 1.25rem !important;
+  margin-right: 0 0 0.5rem !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none; }
+  input[type="checkbox"]:after,
+  input[type="radio"]:after {
+    display: block;
+    position: relative;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 0.0625rem solid #000;
+    background-color: transparent; }
+  input[type="checkbox"]:focus, input[type="checkbox"]:active,
+  input[type="radio"]:focus,
+  input[type="radio"]:active {
+    outline: none; }
+    input[type="checkbox"]:focus:after, input[type="checkbox"]:active:after,
+    input[type="radio"]:focus:after,
+    input[type="radio"]:active:after {
+      border-color: #2cbdbe; }
+
+input[type="checkbox"]:checked:after {
+  background: #fff url("check.db2444a0.svg") center center/80% auto no-repeat; }
+
+input[type="radio"]:after {
+  border-radius: 50%; }
+
+input[type="radio"]:checked:after {
+  background: #fff url("dot.0d06c502.svg") center center/60% auto no-repeat; }
+
+input[type="submit"] {
+  display: inline-block;
+  padding: 1.25rem 0.875rem;
+  border: 0.25rem solid #2cbdbe;
+  border-top-left-radius: 0.5625rem;
+  border-bottom-right-radius: 0.5625rem;
+  background-color: transparent;
+  font: 700 1.125rem/1.11 "Comfortaa", sans-serif;
+  color: #2cbdbe;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .4s ease;
+  outline: none;
+  width: auto !important; }
+  input[type="submit"]:focus, input[type="submit"]:hover {
+    background-color: #2cbdbe;
+    color: #fff; }
+
+.acf-form-submit {
+  margin-top: 1.875rem; }
+
 .switch {
   position: relative;
   display: inline-block;
@@ -3271,6 +3375,7 @@ nav a {
   .search-form input[type="text"] {
     flex: 1 1 auto;
     width: calc(100% - 177px);
+    height: 2.625rem;
     padding: 0.5rem 1.875rem;
     border: 0.0625rem solid transparent;
     border-radius: 0;
@@ -3284,6 +3389,7 @@ nav a {
   .search-form button,
   .search-form input[type="submit"] {
     -webkit-appearance: none;
+    height: 2.625rem;
     padding: 0.5625rem 1.75rem;
     border: 0.0625rem solid transparent;
     border-radius: 0 !important;
@@ -3312,31 +3418,6 @@ nav a {
     padding: 0 !important; }
   .gform_wrapper form .half-width {
     flex-basis: 49%; }
-  .gform_wrapper form label {
-    position: relative;
-    font: 400 0.9375rem/1.47 "Montserrat", sans-serif;
-    color: #000; }
-  .gform_wrapper form input[type="text"], .gform_wrapper form input[type="email"], .gform_wrapper form input[type="tel"], .gform_wrapper form input[type="number"], .gform_wrapper form input[type="url"],
-  .gform_wrapper form textarea,
-  .gform_wrapper form select {
-    width: 100% !important;
-    padding: 0.625rem 0.3125rem !important;
-    border-radius: 0 !important;
-    border: none;
-    border-bottom: 0.0625rem solid #000;
-    background-color: transparent;
-    font: 400 0.9375rem/1.47 "Montserrat", sans-serif;
-    color: #000;
-    transition: all .4s ease; }
-    .gform_wrapper form input[type="text"]:active, .gform_wrapper form input[type="text"]:focus, .gform_wrapper form input[type="email"]:active, .gform_wrapper form input[type="email"]:focus, .gform_wrapper form input[type="tel"]:active, .gform_wrapper form input[type="tel"]:focus, .gform_wrapper form input[type="number"]:active, .gform_wrapper form input[type="number"]:focus, .gform_wrapper form input[type="url"]:active, .gform_wrapper form input[type="url"]:focus,
-    .gform_wrapper form textarea:active,
-    .gform_wrapper form textarea:focus,
-    .gform_wrapper form select:active,
-    .gform_wrapper form select:focus {
-      outline: none;
-      border-color: #2cbdbe !important; }
-  .gform_wrapper form textarea {
-    border: 0.0625rem solid #000 !important; }
   .gform_wrapper form div.ginput_container_select {
     position: relative; }
     .gform_wrapper form div.ginput_container_select:after {
@@ -3349,68 +3430,12 @@ nav a {
       width: 0.5rem;
       transform: rotate(-90deg);
       pointer-events: none; }
-  .gform_wrapper form select {
-    -webkit-appearance: none; }
-    .gform_wrapper form select::-ms-expand {
-      display: none; }
   .gform_wrapper form .gfield_checkbox label {
     max-width: unset !important;
     min-width: 10.625rem;
     margin-top: 0.375rem !important; }
-  .gform_wrapper form input[type="checkbox"],
-  .gform_wrapper form input[type="radio"] {
-    position: relative;
-    height: 1.25rem !important;
-    margin-right: 0 0 0.5rem !important;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none; }
-    .gform_wrapper form input[type="checkbox"]:after,
-    .gform_wrapper form input[type="radio"]:after {
-      display: block;
-      position: relative;
-      content: '';
-      top: 0;
-      left: 0;
-      width: 1.25rem;
-      height: 1.25rem;
-      border: 0.0625rem solid #000;
-      background-color: transparent; }
-    .gform_wrapper form input[type="checkbox"]:focus, .gform_wrapper form input[type="checkbox"]:active,
-    .gform_wrapper form input[type="radio"]:focus,
-    .gform_wrapper form input[type="radio"]:active {
-      outline: none; }
-      .gform_wrapper form input[type="checkbox"]:focus:after, .gform_wrapper form input[type="checkbox"]:active:after,
-      .gform_wrapper form input[type="radio"]:focus:after,
-      .gform_wrapper form input[type="radio"]:active:after {
-        border-color: #2cbdbe; }
-  .gform_wrapper form input[type="checkbox"]:checked:after {
-    background: #fff url("check.db2444a0.svg") center center/80% auto no-repeat; }
-  .gform_wrapper form input[type="radio"]:after {
-    border-radius: 50%; }
-  .gform_wrapper form input[type="radio"]:checked:after {
-    background: #fff url("dot.0d06c502.svg") center center/60% auto no-repeat; }
   .gform_wrapper form .gfield_required {
     color: inherit; }
-  .gform_wrapper form input[type="submit"] {
-    display: inline-block;
-    padding: 1.25rem 0.875rem;
-    border: 0.25rem solid #2cbdbe;
-    border-top-left-radius: 0.5625rem;
-    border-bottom-right-radius: 0.5625rem;
-    background-color: transparent;
-    font: 700 1.125rem/1.11 "Comfortaa", sans-serif;
-    color: #2cbdbe;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all .4s ease;
-    outline: none;
-    width: auto !important; }
-    .gform_wrapper form input[type="submit"]:focus, .gform_wrapper form input[type="submit"]:hover {
-      background-color: #2cbdbe;
-      color: #fff; }
 
 form.checkout.woocommerce-checkout h3 {
   margin-top: 2.5rem; }
@@ -3682,6 +3707,7 @@ body.masked:after {
 .site-header.has-hero {
   background-color: transparent; }
 
+.page-template-assessment main,
 .page-template-default main,
 .single main {
   margin-top: 6.375rem; }
@@ -3689,6 +3715,7 @@ body.masked:after {
 @media screen and (max-width: 47.9375em) {
   .site-header__logo {
     width: 7.5rem; }
+  .page-template-assessment main,
   .page-template-default main,
   .single main {
     margin-top: 5.5625rem; } }
@@ -4842,7 +4869,7 @@ section.call-to-action {
 .dashboard-content {
   display: none;
   padding-top: 1.25rem;
-  padding-bottom: 0.9375rem; }
+  padding-bottom: 1.875rem; }
   .dashboard-content.active {
     display: block; }
   .dashboard-content .assessment {

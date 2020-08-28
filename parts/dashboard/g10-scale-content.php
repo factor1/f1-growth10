@@ -15,6 +15,7 @@ $user = get_current_user_id();
 // Newest Content Custom Fields
 $intro = get_field('dashboard_g10_scale_intro');
 $content = get_field('dashboard_g10_scale_content');
+$btn = get_field('dashboard_g10_scale_button');
 $showLevel = true; ?>
 
 <section class="dashboard-content active" id="content-scale">
@@ -55,7 +56,17 @@ $showLevel = true; ?>
     </div>
 
     <div class="assessment__content">
-      <?php echo $content; ?>
+      <?php echo $content;
+
+      // Optional button
+      if( $btn ) : ?>
+
+        <a href="<?php echo esc_url($btn['url']); ?>" class="button button--teal" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
+          <?php echo $btn['title']; ?>
+        </a>
+
+      <?php endif; ?>
+
     </div>
   </div>
 </section>

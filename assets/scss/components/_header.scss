@@ -73,6 +73,7 @@ body {
 }
 
 // For views without a hero
+.page-template-assessment,
 .page-template-default,
 .single {
   main {
@@ -86,6 +87,7 @@ body {
     width: rem(120);
   }
 
+  .page-template-assessment,
   .page-template-default,
   .single {
     main {
