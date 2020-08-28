@@ -33,7 +33,7 @@ get_header(); ?>
         // SETTING UP FORM TO SET/UPDATE ASSESSMENT LEVELS
         $options = array(
           'post_id' => $current_user_acf,
-          'field_groups' => array(3671), /* CHANGE INTEGER TO ACF FIELD GROUP ID */
+          'field_groups' => array(3205), /* CHANGE INTEGER TO ACF FIELD GROUP ID */
           'form' => true,
           'html_before_fields' => '',
           'html_after_fields' => '',
