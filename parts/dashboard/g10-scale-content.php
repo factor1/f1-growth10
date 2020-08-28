@@ -45,8 +45,17 @@ $showLevel = true; ?>
 
     include( locate_template('components/dashboard-grid.php', false, false) );
 
-  endforeach;
+  endforeach; ?>
 
-  echo $content; ?>
+  <div class="assessment">
+    <div class="assessment__icon">
+      <div>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pencil.svg" alt="Assessment icon">
+      </div>
+    </div>
 
+    <div class="assessment__content">
+      <?php echo $content; ?>
+    </div>
+  </div>
 </section>

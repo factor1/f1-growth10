@@ -11,7 +11,6 @@
 ?>
 
 <div class="dashboard-tabs">
-  <?php // TODO: conditional logic ?>
   <button id="scale" class="active" value="G10 Scale">G10 Scale</button>
 
   <button id="new" value="Newest Content">Newest Content</button>

@@ -20,3 +20,10 @@
     box-shadow: rem(3) rem(10) rem(15) rgba($tundora, 0.2);
   }
 }
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .dashboard-main__content {
+    margin-top: rem(50);
+  }
+}
