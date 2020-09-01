@@ -39,10 +39,12 @@
     // Angles
     &:first-of-type {
       clip-path: polygon(0 0, 94% 0, 100% 100%, 0 100%);
+      -webkit-clip-path: polygon(0 0, 94% 0, 100% 100%, 0 100%); // ios safari fix
     }
 
     &:last-of-type {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%); // ios safari fix
     }
   }
 }
