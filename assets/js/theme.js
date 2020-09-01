@@ -123,4 +123,15 @@ $(document).ready(function($) {
       window.location.hash = hash;
     });
   });
+
+  // Dashboard tabbing
+  $(".dashboard-tabs button").on("click", function() {
+    var id = $(this).attr("id");
+
+    $(".dashboard-tabs button").removeClass("active");
+    $(this).addClass("active");
+
+    $(".dashboard-content").removeClass("active");
+    $(".dashboard-content#content-" + id).addClass("active");
+  });
 });
