@@ -55,8 +55,8 @@ $isResource = has_term(['deep-dives', 'tools'], 'post-format'); ?>
 				<p>This is complimentary content from the growth10 on-demand library, which features hundreds of game-changing ideas (all in 10-minutes or less) to help you fast-track your business growth. </p>
 				
 				<a href="https://growth10.com/cart/?add-to-cart=925&variation_id=927&ref=PromotionalPost" class="button button--teal">
-					START MY FREE 10-DAY TRIAL<br> 
-					<span>Cancel Anytime</span>
+					START MY FREE 14-DAY TRIAL<br> 
+					<span>No Credit Card Required</span>
 				</a>
 			</div>
 			<?php }	?>

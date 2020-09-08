@@ -19,7 +19,7 @@ if (!(is_admin() )) {
  */
 function prelude_theme_scripts() {
   // Fonts
-  wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Comfortaa:400,700|Montserrat:400,700&display=swap', array(), THEME_VERSION );
+  wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap', array(), THEME_VERSION );
   wp_enqueue_style('typekit', 'https://use.typekit.net/hww8zis.css', array(), THEME_VERSION );
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/c3fa898253.js', array(), THEME_VERSION );
 

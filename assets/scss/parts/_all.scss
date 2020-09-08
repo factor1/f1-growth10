@@ -8,7 +8,10 @@
 
 // Global
 @import 'global/hero';
+@import 'global/hero-b';
 @import 'global/popular-posts';
+@import 'global/callout';
+@import 'global/text-image-split';
 
 // Home
 @import 'home/hero';
@@ -30,6 +33,9 @@
 @import 'single/hero';
 @import 'single/content';
 
-
-// Import Web Fonts
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+// Dashboard
+@import 'dashboard/welcome';
+@import 'dashboard/weekly-message';
+@import 'dashboard/workshops';
+@import 'dashboard/content-tabs';
+@import 'dashboard/content';

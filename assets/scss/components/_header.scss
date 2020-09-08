@@ -30,9 +30,14 @@ body {
 }
 
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   @include iPhoneX;
   background-color: $blue;
   z-index: 99999;
+  transition: all .4s ease;
 
   .container {
     padding: rem(20) 0 rem(12);
@@ -48,21 +53,45 @@ body {
     width: rem(190);
     margin-right: rem(10);
   }
+
+  // Headroom styles
+  &.headroom--not-top {
+    background-color: $blue !important;
+  }
+
+  &.has-hero ~ main {
+    margin-top: 0;
+  }
 }
 
 // Home/404 header
 .error404 .site-header,
-.page-template-home .site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.page-template-home .site-header,
+.page-template-flexible .site-header,
+.site-header.has-hero {
   background-color: transparent;
+}
+
+// For views without a hero
+.page-template-assessment,
+.page-template-default,
+.single {
+  main {
+    margin-top: rem(102);
+  }
 }
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .site-header__logo {
     width: rem(120);
+  }
+
+  .page-template-assessment,
+  .page-template-default,
+  .single {
+    main {
+      margin-top: rem(89);
+    }
   }
 }
