@@ -1,15 +1,24 @@
 <?php
-  /**
-   * The default page template.
-   */
-  get_header(); ?>
+/**
+ * The default page template.
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
 
-  <div class="container" style="padding: 50px 0;">
-  <div class="row">
-	  <div class="col-10 col-centered">
-	  <?php the_content(); ?>
-	  </div>
-  </div>
-  </div>
+get_header();
 
-  <?php get_footer();
+get_template_part('parts/global/hero-b'); ?>
+
+<section class="default-content">
+  <div class="container">
+    <div class="row">
+  	  <div class="col-10 col-centered">
+  	  <?php the_content(); ?>
+  	  </div>
+    </div>
+  </div>
+</section>
+
+<?php get_footer(); ?>

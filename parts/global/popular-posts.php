@@ -19,23 +19,52 @@ $cat = get_queried_object();
 
 // Fields
 $title = $isCat ? 'Trending Ideas' : 'Newest Ideas';
+$subtitle = '';
 
 // WP Query arguments
 if( $isCat ) :
-  $args = array(
-    'post_type' => 'post',
-    'posts_per_page' => 8,
-    'category__in' => $cat->term_id,
-    'tag' => 'popular',
-    'tax_query' => array(
-      array(
-        'taxonomy' => 'post-format',
-        'field' => 'slug',
-        'terms' => ['tools', 'deep-dives'],
-        'operator' => 'NOT IN'
+  $level = !empty( get_query_var('level') ) ? get_query_var('level') : false;
+
+  if( $level ) :
+    $subtitle = '<p><img src="' . get_template_directory_uri() . '/assets/img/logo-g10.svg" alt="G10 logo">plan | ' . $level . '</p>';
+
+    $args = array(
+      'post_type' => 'post',
+      'posts_per_page' => 8,
+      'category__in' => $cat->term_id,
+      'tag' => 'popular',
+      'tax_query' => array(
+        'relation' => 'AND',
+        array(
+          'taxonomy' => 'post-format',
+          'field' => 'slug',
+          'terms' => ['tools', 'deep-dives'],
+          'operator' => 'NOT IN'
+        ),
+        array(
+          'taxonomy' => 'post-levels',
+          'field' => 'slug',
+          'terms' => $level
+        )
       )
-    )
-  );
+    );
+  else :
+    $args = array(
+      'post_type' => 'post',
+      'posts_per_page' => 8,
+      'category__in' => $cat->term_id,
+      'tag' => 'popular',
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'post-format',
+          'field' => 'slug',
+          'terms' => ['tools', 'deep-dives'],
+          'operator' => 'NOT IN'
+        )
+      )
+    );
+  endif;
+
 else :
   $args = array(
     'post_type' => 'post',
@@ -61,6 +90,8 @@ if( $popular->have_posts() ) : ?>
       <div class="row row--justify-content-start">
         <div class="col-12 sm-text-center">
           <h3><?php echo $title; ?></h3>
+
+          <?php echo $subtitle; ?>
         </div>
 
         <?php while( $popular->have_posts() ) : $popular->the_post();

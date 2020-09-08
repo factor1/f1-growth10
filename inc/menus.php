@@ -6,6 +6,7 @@
     register_nav_menus(
       array(
         'primary' => 'Primary Menu - Logged Out',
+        'mobile' => 'Mobile Menu - Logged Out',
         'mega_right' => 'Mega Menu (right) - Logged In',
         'footer'  => 'Footer Menu',
         'social'  => 'Social Menu',
