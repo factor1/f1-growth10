@@ -36,6 +36,8 @@ if( have_rows('home_testimonials') ) :
             <?php echo $content; ?>
           </div>
         </div>
+        
+        <div id="plans"><!-- Anchor for the plans button to scroll to --></div>
 
       <?php $i++; endwhile; ?>
 
