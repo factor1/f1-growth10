@@ -40,7 +40,7 @@
 
   h1 {
     margin-bottom: rem(50);
-    font: 700 rem(60)/1 'Open Sans', sans-serif;
+    font: 700 rem(60)/1 $open;
     letter-spacing: -0.00107em;
     text-transform: lowercase;
     color: $white;
