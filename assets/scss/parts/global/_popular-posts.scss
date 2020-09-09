@@ -15,6 +15,16 @@
     padding: rem(40) 0 0;
   }
 
+  h3 + p {
+    margin-top: rem(-20);
+    text-transform: capitalize;
+
+    img {
+      width: rem(25);
+      margin-right: rem(5);
+    }
+  }
+
   .col-3 {
     margin-bottom: rem(30);
   }
