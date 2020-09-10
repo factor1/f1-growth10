@@ -33,13 +33,13 @@ get_template_part('parts/dashboard/welcome'); ?>
         <div class="dashboard-main__content">
 
           <?php // Engage plan content
-          if( $showEngage ) :
+          //if( $showEngage ) :
 
             get_template_part('parts/dashboard/content-tabs');
 
             get_template_part('parts/dashboard/g10-scale-content');
 
-          endif;
+          //endif;
 
           // All content
           get_template_part('parts/dashboard/newest-content'); ?>
