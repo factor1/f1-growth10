@@ -18,11 +18,10 @@
 
   h2 {
     margin: 0 0 rem(50);
-    font: Bold 45px/51px 'Comfortaa';
-    letter-spacing: 0px;
+    font-size: rem(45);
+    font-family: $cursive;
     color: $black;
     text-transform: capitalize;
-    opacity: 1;
   }
 
   .col-4 {
@@ -35,7 +34,7 @@
     font-family: $sans;
     color: $tundora;
   }
-  
+
   p {
 	  font-size: rem(18);
   }
@@ -55,8 +54,8 @@
     }
 
     h2 {
-      font-size: rem(32);
       margin: 0 0 rem(20);
+      font-size: rem(32);
     }
 
     h3 {
