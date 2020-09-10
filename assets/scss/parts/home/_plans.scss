@@ -24,13 +24,9 @@
   }
 
   h2 {
-    margin: 0 0 rem(40);
-    font: 700 rem(60)/1.12 $cursive;
-  }
-
-  h4 {
-    font: 700 rem(24)/1.25 $cursive;
-    margin-top: 20px;
+    margin-bottom: rem(40);
+    font-size: rem(60);
+    font-family: $cursive;
   }
 
   &__toggle {
