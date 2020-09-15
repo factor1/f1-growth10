@@ -9,30 +9,30 @@ body {
 // Headings
 h1 {
   margin: 0 0 rem(50);
-  font: 700 rem(50)/1.12 $cursive;
+  font: 400 rem(50)/1.12 $sans;
   text-transform: uppercase;
 }
 
 h2 {
   margin: 0 0 rem(20);
-  font: 700 rem(40)/1.12 $serif;
+  font: 400 rem(40)/1.12 $sans;
 }
 
 h3 {
   margin: 0 0 rem(30);
-  font: 700 rem(30)/1.1 $cursive;
+  font: 700 rem(30)/1.1 $sans;
   text-transform: uppercase;
 }
 
 h4 {
   margin: 0 0 rem(15);
-  font: 700 rem(22)/1 $serif;
+  font: 400 rem(22)/1 $sans;
   color: $teal;
 }
 
 h5 {
   margin: 0 0 rem(15);
-  font: 700 rem(16)/1.38 $serif;
+  font: 400 rem(16)/1.38 $sans;
 }
 
 // Body copy

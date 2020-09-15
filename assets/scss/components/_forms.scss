@@ -181,7 +181,7 @@ input[type="submit"] {
     border: rem(1) solid transparent;
     border-radius: 0;
     background-color: $lightGray;
-    font: 400 rem(18)/1 $cursive;
+    font: 400 rem(18)/1 $sans;
     color: $tundora;
     transition: all .4s ease;
     outline: none;
@@ -200,7 +200,7 @@ input[type="submit"] {
     border: rem(1) solid transparent;
     border-radius: 0 !important;
     background-color: $teal;
-    font: 400 rem(18)/1 $cursive;
+    font: 400 rem(18)/1 $sans;
     color: $white;
     transition: all .4s ease;
     outline: none;
