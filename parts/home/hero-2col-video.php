@@ -38,7 +38,7 @@
             <div class="col-5 sm-col-11 sm-col-centered sm-text-center">
                 <?php echo $content; ?>
                 <a href="#plans"
-                    class="button button--teal" role="link">Free for 14-days</a>
+                    class="button button--teal" role="link">Learn More</a>
 			</div>
 		</div>
 	</div>
