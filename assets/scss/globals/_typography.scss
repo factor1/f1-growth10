@@ -11,17 +11,20 @@ h1 {
   margin: 0 0 rem(50);
   font: 400 rem(50)/1.12 $sans;
   text-transform: uppercase;
+  color: $tundora;
 }
 
 h2 {
   margin: 0 0 rem(20);
   font: 400 rem(40)/1.12 $sans;
+  color: $tundora;
 }
 
 h3 {
   margin: 0 0 rem(30);
   font: 700 rem(30)/1.1 $sans;
   text-transform: uppercase;
+  color: $tundora;
 }
 
 h4 {
@@ -37,11 +40,11 @@ h5 {
 
 // Body copy
 p, ol, ul, li {
-  font: 400 rem(15)/1.47 $sans;
+  font: 400 rem(17)/1.47 $sans;
 }
 
 p, ol, ul {
-  margin: 0 0 rem(50);
+  margin: 0 0 rem(25);
 }
 
 blockquote,

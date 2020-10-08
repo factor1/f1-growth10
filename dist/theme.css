@@ -2656,16 +2656,19 @@ body {
 h1 {
   margin: 0 0 3.125rem;
   font: 400 3.125rem/1.12 "Montserrat", sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #464646; }
 
 h2 {
   margin: 0 0 1.25rem;
-  font: 400 2.5rem/1.12 "Montserrat", sans-serif; }
+  font: 400 2.5rem/1.12 "Montserrat", sans-serif;
+  color: #464646; }
 
 h3 {
   margin: 0 0 1.875rem;
   font: 700 1.875rem/1.1 "Montserrat", sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #464646; }
 
 h4 {
   margin: 0 0 0.9375rem;
@@ -2677,10 +2680,10 @@ h5 {
   font: 400 1rem/1.38 "Montserrat", sans-serif; }
 
 p, ol, ul, li {
-  font: 400 0.9375rem/1.47 "Montserrat", sans-serif; }
+  font: 400 1.0625rem/1.47 "Montserrat", sans-serif; }
 
 p, ol, ul {
-  margin: 0 0 3.125rem; }
+  margin: 0 0 1.5625rem; }
 
 blockquote,
 blockquote p {
@@ -4155,15 +4158,13 @@ body.masked:after {
     margin: 0 0 3.125rem;
     font-size: 2.8125rem;
     font-family: "Montserrat", sans-serif;
-    color: #000;
     text-transform: capitalize; }
   .three-column-section .col-4 {
     margin-bottom: 0.625rem; }
   .three-column-section h3 {
     margin: 0 0 0.625rem;
     font-weight: 400;
-    font-family: "Montserrat", sans-serif;
-    color: #464646; }
+    font-family: "Montserrat", sans-serif; }
   .three-column-section p {
     font-size: 1.125rem; }
   .three-column-section .container--align-items-end {
@@ -4488,10 +4489,13 @@ section.call-to-action {
       color: #2ab2b0; }
     .plans-section .plan p, .plans-section .plan ol, .plans-section .plan ul {
       margin-bottom: 1.25rem; }
+    .plans-section .plan p {
+      font-size: 0.9rem; }
     .plans-section .plan ul {
       list-style-type: none; }
     .plans-section .plan li {
-      position: relative; }
+      position: relative;
+      font-size: 0.9rem; }
       .plans-section .plan li:before {
         content: '\f00c';
         position: absolute;
