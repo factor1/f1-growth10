@@ -73,7 +73,7 @@ $content = get_field('plans_content'); ?>
           $annualBtn = get_sub_field('annual_join_button');
           $trial = get_sub_field('free_trial'); ?>
 
-          <div class="col-4 md-col-5 sm-col-12">
+          <div class="col-6  sm-col-12">
             <div class="plan">
               <?php echo $desc; ?>
 
@@ -113,7 +113,14 @@ $content = get_field('plans_content'); ?>
             </div>
           </div>
 
-        <?php endwhile; endif;
+        <?php 
+	        
+	        
+	        
+	        endwhile; endif;
+	        
+	        echo $intro;
+	        echo $btn;
 
       endif;
 
