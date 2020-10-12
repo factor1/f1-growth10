@@ -59,7 +59,7 @@
     }
   }
 
-  .col-4 {
+  .col-6 {
     margin-bottom: rem(20);
   }
 
@@ -186,9 +186,9 @@
 // Media Queries
 @media screen and (max-width: $medium-breakpoint) {
   .plans-section {
-    .col-4 {
+    .col-6 {
       align-self: stretch;
-	  margin-bottom: rem(5);
+	  margin-bottom: rem(15);
 	  }
 
 	.button {
@@ -197,7 +197,7 @@
 
     .plan {
       height: 100%;
-      padding: rem(5);
+      //padding: rem(5);
 
       h3 {
         font-size: rem(28);
