@@ -80,7 +80,7 @@ $content = get_field('plans_content'); ?>
               <div class="plan__monthly active text-center">
                 <span><?php echo $savings; ?></span>
 
-                <p class="plan__price"><?php echo $monthlyPrice; ?></p>
+                <h5 class="plan__price"><?php echo $monthlyPrice; ?></h5>
 
                 <?php if( $monthlyBtn ) : ?>
                   <a href="<?php echo esc_url($monthlyBtn['url']); ?>" class="button button--ghost-blue" role="link" title="<?php echo $monthlyBtn['title']; ?>" target="<?php echo $monthlyBtn['target']; ?>">
@@ -95,9 +95,11 @@ $content = get_field('plans_content'); ?>
               </div>
 
               <div class="plan__annual text-center">
-                <span><?php echo $savings; ?></span>
+                
 
-                <p class="plan__price"><?php echo $annualPrice; ?></p>
+                <h5 class="plan__price"><?php echo $annualPrice; ?></h5>
+
+                <span><?php echo $savings; ?></span>
 
                 <?php if( $annualBtn ) : ?>
                   <a href="<?php echo esc_url($annualBtn['url']); ?>" class="button button--ghost-blue" role="link" title="<?php echo $annualBtn['title']; ?>" target="<?php echo $annualBtn['target']; ?>">
@@ -113,16 +115,19 @@ $content = get_field('plans_content'); ?>
             </div>
           </div>
 
-        <?php 
+        <?php endwhile; endif; ?>
+	        <div class="row">
+		        <div class="col-12 sm-col-12 text-center" style="margin-top: 35px;">
+	        <a href="<?php echo $btn; ?>" class="button button--teal ">Apply Now</a>
+	        </div>
+	        </div>
 	        
+	        <div style="max-width: 800px;">
+	        <?php echo $intro; ?>
+	        </div>
 	        
-	        
-	        endwhile; endif;
-	        
-	        echo $intro;
-	        echo $btn;
 
-      endif;
+      <?php endif;
 
       // New plans section
       if( $featuresToggle ) :
