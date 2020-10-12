@@ -73,8 +73,8 @@ $content = get_field('plans_content'); ?>
           $annualBtn = get_sub_field('annual_join_button');
           $trial = get_sub_field('free_trial'); ?>
 
-          <div class="col-6  sm-col-12">
-            <div class="plan">
+          <div class="col-6  sm-col-12 stretch">
+            <div class="plan" style="height: 100%">
               <?php echo $desc; ?>
 
               <div class="plan__monthly active text-center">
