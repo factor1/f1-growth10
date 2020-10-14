@@ -4478,7 +4478,7 @@ section.call-to-action {
       transition: all .4s ease; }
     .plans-section .button:hover span {
       color: #2ab2b0; }
-  .plans-section .col-4 {
+  .plans-section .col-6 {
     margin-bottom: 1.25rem; }
   .plans-section .plan {
     padding: 2.5rem;
@@ -4559,14 +4559,13 @@ section.call-to-action {
       cursor: pointer; }
 
 @media screen and (max-width: 64em) {
-  .plans-section .col-4 {
+  .plans-section .col-6 {
     align-self: stretch;
-    margin-bottom: 0.3125rem; }
+    margin-bottom: 0.9375rem; }
   .plans-section .button {
     padding: 1.25rem 0.625rem; }
   .plans-section .plan {
-    height: 100%;
-    padding: 0.3125rem; }
+    height: 100%; }
     .plans-section .plan h3 {
       font-size: 1.75rem;
       margin-top: 25px; }
