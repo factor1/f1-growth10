@@ -11,13 +11,13 @@
 
 $bg = wp_get_attachment_image_src(get_sub_field('cta_background'), 'home_hero');
 $headline = get_sub_field('cta_headline');
-$monthlyDesc = get_sub_field('card_monthly_description');
+$desc = get_sub_field('card_description');
 $monthlyPrice = get_sub_field('card_monthly_price');
 $monthlyBtn = get_sub_field('card_monthly_button');
-$annualDesc = get_sub_field('card_annual_description');
-$annualSavings = get_sub_field('card_annual_price_savings');
+$monthlyBlurb = get_sub_field('card_monthly_blurb');
 $annualPrice = get_sub_field('card_annual_price');
-$annualBtn = get_sub_field('card_annual_button'); ?>
+$annualBtn = get_sub_field('card_annual_button');
+$annualBlurb = get_sub_field('card_annual_blurb');?>
 
 <section class="cta" style="background: url('<?php echo $bg[0]; ?>') center/cover no-repeat">
   <div class="container">
@@ -46,34 +46,31 @@ $annualBtn = get_sub_field('card_annual_button'); ?>
       <div class="col-6">
         <div class="cta__card">
 
+          <?php echo $desc; ?>
+
           <?php // Monthly content ?>
-          <div class="content content__monthly active text-center">
+          <div class="cta__price monthly active text-center">
+            <h5>
 
-            <?php echo $monthlyDesc; ?>
+              <?php echo $monthlyPrice; ?>
 
-            <h5 class="cta__price"><?php echo $monthlyPrice; ?></h5>
+              <br>
+              <em><small><?php echo $monthlyBlurb; ?></small></em>
 
+            </h5>
           </div>
 
-          <?php if( $annualDesc && $annualBtn ) : ?>
+          <?php if( $annualBtn ) : ?>
 
-            <div class="content content__annual text-center">
-
-              <?php echo $annualDesc; ?>
-
-              <h5 class="cta__price">
+            <div class="cta__price annual text-center">
+              <h5>
 
                 <?php echo $annualPrice; ?>
 
-                <?php if( $annualSavings ) : ?>
-
-                  <br>
-                  <em><small><?php echo $annualSavings; ?></small></em>
-
-                <?php endif; ?>
+                <br>
+                <em><small><?php echo $annualBlurb; ?></small></em>
 
               </h5>
-
             </div>
 
           <?php endif; ?>
