@@ -93,6 +93,16 @@ $(document).ready(function($) {
     });
   }
 
+  // Flex template card switching
+  if( $(".cta").length ) {
+    $(".cta .switch input[type='checkbox']").on("click", function() {
+      $(this).parents(".cta").find(".cta__price.monthly").toggleClass("active");
+      $(this).parents(".cta").find(".cta__price.annual").toggleClass("active");
+      $(this).parents(".cta").find(".button--monthly").toggleClass("active");
+      $(this).parents(".cta").find(".button--annual").toggleClass("active");
+    });
+  }
+
   // Blog single tabbing
   if( $(".post-content__buttons").length ) {
     $(".post-content__buttons button:first-of-type").addClass("active");

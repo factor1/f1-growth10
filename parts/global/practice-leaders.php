@@ -55,4 +55,6 @@ $staffToggle = get_sub_field('show_practice_leaders');
     </div>
   </div>
 </section>
-<?php endif; ?>
+<?php endif; 
+	wp_reset_postdata();
+?>
