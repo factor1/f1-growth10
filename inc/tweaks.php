@@ -347,3 +347,10 @@
     endif;
   }
   add_action( 'pre_get_posts', 'adjust_queries' );
+
+  //user has active membership
+
+  function f1_check_membership($user) {
+    $user_check = wc_memberships_is_user_active_member($user->ID, 2229) || wc_memberships_is_user_active_member($user->ID, 931) || wc_memberships_is_user_active_member($user->ID, 220) || wc_memberships_is_user_active_member($user->ID, 219) ? true : false;
+    return $user_check;
+  }
