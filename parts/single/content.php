@@ -17,7 +17,7 @@ $isResource = has_term(['deep-dives', 'tools'], 'post-format'); ?>
     <div class="row">
       <div class="col-8 offset-3">
 	      
-	   <?php if( is_user_logged_in() or has_tag( 'Promotional' )) :?>
+	   <?php if( (is_user_logged_in() && f1_check_membership(get_current_user_id()) ) or has_tag( 'Promotional' )) :?>
 
 	        <?php // Resource view
 	        if( $isResource ) :
