@@ -23,7 +23,9 @@ get_template_part('parts/home/aboutus');
 
 get_template_part('parts/home/authorsplit');
 
-get_template_part('parts/home/testimonials');
+// get_template_part('parts/home/testimonials');
+
+get_template_part('parts/global/testimonials');
 
 get_template_part('parts/home/plans');
 
