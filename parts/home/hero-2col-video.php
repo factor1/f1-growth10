@@ -37,7 +37,7 @@
             </div>
             <div class="col-5 sm-col-11 sm-col-centered sm-text-center">
                 <?php echo $content; ?>
-                <a href="#plans"
+                <a href="/tribe"
                     class="button button--teal" role="link">Learn More</a>
 			</div>
 		</div>
