@@ -29,6 +29,8 @@ if( !$isSearch ) :
 
 endif;
 
+echo '<style> .wc-memberships-content-restricted-message { display: none !important; } </style>';
+
 get_template_part('parts/index/post-grid');
 
 get_footer();

@@ -16,30 +16,30 @@ $isResource = has_term(['deep-dives', 'tools'], 'post-format'); ?>
   <div class="container">
     <div class="row">
       <div class="col-8 offset-3">
-	      
-	   <?php if( (is_user_logged_in() && f1_check_membership(get_current_user_id()) ) or has_tag( 'Promotional' )) :?>
+			
+				<?php if( ( !wc_memberships_is_post_content_restricted($page_id) ) || ( wc_memberships_is_post_content_restricted($page_id) && f1_check_membership(get_current_user_id()) ) || has_tag( 'Promotional' )) :?>
 
-	        <?php // Resource view
-	        if( $isResource ) :
-	
-	          get_template_part('parts/single/resource-content');
-	
-	        // Regular blog view (tabbed)
-	        else :
-	
-	          get_template_part('parts/single/tabbed-content');
-	          echo do_shortcode('[yasr_visitor_votes size="large" show_average="no"]');
-	          echo "<style> .yasr-visitor-votes-after-stars-class {display: none;}</style>";
-	
-	        endif; ?>
-	        
-	     <?php else : ?>
-	     
-	     <h3>You must be logged in to view this content</h3>
-	     <h2><a href="https://growth10.com/login">Login here</a></h2>
-	     <h2>Not a member yet? <a href="https://growth10.com/">Join now</a></h2>
-	     
-	     <?php endif; ?>
+						<?php // Resource view
+							if( $isResource ) :
+
+								get_template_part('parts/single/resource-content');
+
+							// Regular blog view (tabbed)
+							else :
+
+								get_template_part('parts/single/tabbed-content');
+								echo do_shortcode('[yasr_visitor_votes size="large" show_average="no"]');
+								echo "<style> .yasr-visitor-votes-after-stars-class {display: none;}</style>";
+
+							endif; ?>
+						
+					<?php else : ?>
+					
+					<h3>You must be logged in to view this content</h3>
+					<h2><a href="<?php echo bloginfo('url'); ?>/login">Login here</a></h2>
+					<h2>Not a member yet? <a href="<?php echo bloginfo('url'); ?>/">Join now</a></h2>
+					
+					<?php endif; ?>
 
       </div>
     </div>
