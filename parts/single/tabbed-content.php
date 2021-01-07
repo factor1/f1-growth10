@@ -25,7 +25,7 @@ $worksheet = get_field('worksheet');
     <button id="audio">Audio</button>
   <?php endif; ?>
 
-  <?php if( trim($post->post_content) !== '' ) : ?>
+  <?php if( (trim($post->post_content) !== '') && ( $video || $audio || $worksheet ) ) : ?>
     <button id="text">Text</button>
   <?php endif; ?>
 
