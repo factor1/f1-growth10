@@ -1,0 +1,22 @@
+/*
+ * Hero (home)
+ *
+ * Template part used on the landing 2021 template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ */
+
+.template-hero {
+  @include iPhoneX;
+  min-height: 100vh;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+}
