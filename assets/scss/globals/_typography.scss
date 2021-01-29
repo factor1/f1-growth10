@@ -91,6 +91,30 @@ a {
   color: $teal;
 }
 
+.landing-heading { // h1
+  font: 400 rem(40)/1.38 $fjalla;
+  margin: rem(30) 0;
+  text-transform: none;
+  color: $white;
+  text-shadow: 0 rem(3) rem(6) rgba(0,0,0,0.87);
+}
+
+.landing-big-title { // h2
+  font: 400 rem(60)/1.38 $fjalla;
+  text-transform: none;
+}
+
+.landing-medium-title { // h3
+  font: 400 rem(50)/1.38 $fjalla;
+  text-transform: none;
+}
+
+.landing-small-title { // h4
+  font: 400 rem(40)/1.38 $fjalla;
+  text-transform: none;
+}
+
+
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   // Headings
@@ -100,5 +124,9 @@ a {
 
   h2 {
     font-size: rem(32);
+  }
+
+  .landing-heading {
+    font-size: rem(30);
   }
 }

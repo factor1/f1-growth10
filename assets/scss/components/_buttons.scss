@@ -22,4 +22,22 @@
   &--ghost-blue {
     @include button($blue, transparent, $blue, $blue, $white);
   }
+
+  &--landing {
+    @include button($blue-dark, $blue-dark, $white, $white, $blue-dark);
+    border-radius: 0;
+    font: 400 rem(24)/1.3 $fjalla;
+    padding: rem(15) rem(20);
+    width: 100%;
+    max-width: rem(370);
+  }
+  
+  &--landing-ghost {
+    @include button($blue-dark, transparent, $white, $white, $blue-dark);
+    border-radius: 0;
+    font: 400 rem(24)/1 $fjalla;
+    padding: rem(15) rem(20);
+    width: 100%;
+    max-width: rem(370);
+  }
 }

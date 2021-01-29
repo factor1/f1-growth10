@@ -7,16 +7,10 @@
  * @author Factor1 Studios
  */
 
-.template-hero {
+.landing-banner {
   @include iPhoneX;
-  min-height: 100vh;
 
   .container {
-    padding: rem(50) 0;
+    padding: rem(40) 0 rem(60);
   }
-
-}
-
-// Media Queries
-@media screen and (max-width: $small-breakpoint) {
 }

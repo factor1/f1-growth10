@@ -6,16 +6,8 @@
 
 get_header('landing');
 
-get_template_part('parts/template/hero'); ?>
+get_template_part('parts/template/landing/hero'); 
 
-<section class="landing-2021">
-  <div class="container">
-    <div class="row">
-  	  <div class="col-10 col-centered">
-        <h2>Content</h2>
-  	  </div>
-    </div>
-  </div>
-</section>
+get_template_part('parts/template/landing/banner'); ?>
 
 <?php get_footer('landing'); ?>
