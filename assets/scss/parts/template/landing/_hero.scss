@@ -10,6 +10,7 @@
 .landing-hero {
   @include iPhoneX;
   min-height: 105vh;
+  background-color: $landingGray !important;
 
   .container {
     padding: 15vh 0;

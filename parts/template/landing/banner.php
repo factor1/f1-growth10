@@ -8,7 +8,7 @@
  */
 
 $content = get_field('landing_banner_content');
-$button = get_field('landing_banner_button');
+$link = get_field('landing_banner_button');
 ?>
 <?php if($content): ?>
 
@@ -17,7 +17,11 @@ $button = get_field('landing_banner_button');
       <div class="row">
         <div class="col-12 text-center">
           <?php echo $content; ?>
-          <a href="#" class="button button--landing">Test</a>
+          <?php if($link): ?>
+            <a href="<?php echo esc_url($link['url']); ?>" class="button button--landing" title="<?php echo $link['title']; ?>" target="<?php echo $link['target']; ?>">
+              <?php echo $link['title']; ?>
+            </a>
+          <?php endif; ?>
         </div>
       </div>
     </div>

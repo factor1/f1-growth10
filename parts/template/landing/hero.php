@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Hero
+ * Landing Hero
  *
  *
  * @package F1 Growth10

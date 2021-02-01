@@ -9,6 +9,7 @@
 
 .landing-banner {
   @include iPhoneX;
+  background-color: $landingGray;
 
   .container {
     padding: rem(40) 0 rem(60);

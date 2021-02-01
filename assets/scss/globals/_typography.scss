@@ -114,6 +114,14 @@ a {
   text-transform: none;
 }
 
+.factor1 {
+  font-weight: bold;
+  font-family: Helvetica,sans-serif;
+  letter-spacing: -.1em;
+  color: inherit;
+  text-decoration: none;
+}
+
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
@@ -128,5 +136,17 @@ a {
 
   .landing-heading {
     font-size: rem(30);
+  }
+
+  .landing-big-title {
+    font-size: rem(40);
+  }
+
+  .landing-medium-title { 
+    font-size: rem(30);
+  }
+
+  .landing-small-title {
+    font-size: rem(25);
   }
 }
