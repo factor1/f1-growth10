@@ -19,17 +19,22 @@ $wysiwyg    = get_field('cta-right-side');
 $image      = get_field('cta-left-image');
 $img        = wp_get_attachment_image_src($image, 'full');
 $alt        = get_post_meta($image, '_wp_attachment_image_alt', true); 
-?>
 
-<section class="call-to-action" style="background: url('<?php echo $bg_img[0];?>') no-repeat; background-size: cover;">
-    <div class="container">
-        <div class="row">
-            <div class="col-3 sm-col-0 col-centered" data-aos="fade-up" data-aos-delay="50">
-                <img src="<?php echo $img[0]; ?>" alt="<?php echo $alt; ?>">
-            </div>
-            <div class="col-9 sm-col-12 col-centered">
-                <?php echo $wysiwyg; ?>
+$toggle = get_field('cta_toggle');
+?>
+<?php if($toggle): ?>
+
+    <section class="call-to-action" style="background: url('<?php echo $bg_img[0];?>') no-repeat; background-size: cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 sm-col-0 col-centered" data-aos="fade-up" data-aos-delay="50">
+                    <img src="<?php echo $img[0]; ?>" alt="<?php echo $alt; ?>">
+                </div>
+                <div class="col-9 sm-col-12 col-centered">
+                    <?php echo $wysiwyg; ?>
+                </div>
             </div>
         </div>
-    </div>
-</section> 
+    </section> 
+
+<?php endif; ?>
