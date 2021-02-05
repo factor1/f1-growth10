@@ -27,7 +27,7 @@ $rowClass = $layoutOption == 'right' ? ' row--reverse' : ''; ?>
 
       <?php // Text ?>
       <div class="col-7 stretch sixty-text-image-split__text col-no-pad" style="background: url('<?php echo $contentBg[0]; ?>') center/cover no-repeat">
-        <div>
+        <div class="content-container">
 
           <?php echo $content;
 

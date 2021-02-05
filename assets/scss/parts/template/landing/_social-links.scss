@@ -29,3 +29,13 @@
 
 }
 
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .social-links__container a {
+    font-size: rem(25);
+    margin-right: rem(10);
+  }
+}
+
+
+
