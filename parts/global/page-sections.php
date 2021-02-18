@@ -21,7 +21,8 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
   elseif( get_row_layout() == 'practice_leaders' ) :
 
-    get_template_part('parts/global/practice-leaders');
+    // HIDE for now 
+    //get_template_part('parts/global/practice-leaders');
 
   elseif( get_row_layout() == 'testimonials_slider' ) :
 
