@@ -37,13 +37,13 @@ $staffToggle = get_sub_field('show_practice_leaders');
 
   // WP Query
   $staff = new WP_Query($args); ?>
-		<div class="row row--justify-content-start">
+		<div class="row row--justify-content-start staff">
 			<?php if( $staff->have_posts() ) : while( $staff->have_posts() ) : $staff->the_post(); ?>
 			
-			<div class="col-3 sm-col-6 staff--container text-center">
+			<div class="col-3 sm-col-12 staff--container text-center">
 				<?php if( has_post_thumbnail() ) : ?>
 				<div class="staff--container-img" 
-					style="background: url(<?php echo featuredURL('medium'); ?>) center/cover no-repeat; height:300px; width: 100%; display: block; margin-bottom:30px;" >	
+					style="background: url(<?php echo featuredURL('medium'); ?>) center/cover no-repeat;" >	
 					</div>
 				<?php endif; ?>
 				
