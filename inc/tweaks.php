@@ -144,6 +144,42 @@
     add_filter('acf/settings/show_admin', '__return_false');
   endif;
 
+  // Add custom classes to WYSIWYGs
+  function custom_wysiwyg_options( $init_array ) {
+    $style_formats = array(
+      array(
+        'title' => 'Landing Heading',
+  			'block' => 'h1',
+        'classes' => 'landing-heading',
+  			'wrapper' => false,
+      ),
+      array(
+        'title' => 'Landing Big Title',
+  			'block' => 'h2',
+        'classes' => 'landing-big-title',
+  			'wrapper' => false,
+      ),
+      array(
+        'title' => 'Landing Medium Title',
+  			'block' => 'h3',
+        'classes' => 'landing-medium-title',
+  			'wrapper' => false,
+      ),
+      array(
+        'title' => 'Landing Small Title',
+  			'block' => 'h4',
+        'classes' => 'landing-small-title',
+  			'wrapper' => false,
+      ),
+    );
+    // Insert the array, JSON ENCODED, into 'style_formats'
+    $init_array['style_formats_merge'] = true;
+    $init_array['style_formats'] = wp_json_encode( $style_formats );
+    return $init_array;
+  }
+  add_filter( 'tiny_mce_before_init', 'custom_wysiwyg_options' );
+  
+
   // Customize Wordpress Admin
   // add login logo
   function custom_loginlogo() {
@@ -301,6 +337,8 @@
         "FFFFFF", "White",
         "E5E5E5", "Light Gray",
         "000000", "Black",
+        "0F203E", "Blue Dark",
+        "16709A", "Blue Light"
     ';
 
     // build colour grid default+custom colors
@@ -308,7 +346,7 @@
 
     // change the number of rows in the grid if the number of colors changes
     // 8 swatches per row
-    $init['textcolor_rows'] = 1;
+    $init['textcolor_rows'] = 2;
 
     return $init;
   }

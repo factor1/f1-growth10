@@ -12,7 +12,9 @@
 @import 'global/popular-posts';
 @import 'global/callout';
 @import 'global/text-image-split';
+@import 'global/sixty-text-image-split';
 @import 'global/cta';
+@import 'global/2-col-banner';
 
 // Home
 @import 'home/hero';
@@ -40,3 +42,9 @@
 @import 'dashboard/workshops';
 @import 'dashboard/content-tabs';
 @import 'dashboard/content';
+
+// Landing 2021
+@import 'template/landing/hero';
+@import 'template/landing/banner';
+@import 'template/landing/social-links';
+@import 'template/landing/footer';
