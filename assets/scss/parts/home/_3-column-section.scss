@@ -16,6 +16,12 @@
     margin: 40px 0 26px 0;
   }
 
+  .centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   h2 {
     margin: 0 0 rem(50);
     font-size: rem(45);
