@@ -19,10 +19,13 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/text-image-split');
 
+  elseif( get_row_layout() == 'sixty_text_image_split' ) :
+
+    get_template_part('parts/global/sixty-text-image-split');
+
   elseif( get_row_layout() == 'practice_leaders' ) :
 
-    // HIDE for now 
-    //get_template_part('parts/global/practice-leaders');
+    // get_template_part('parts/global/practice-leaders');
 
   elseif( get_row_layout() == 'testimonials_slider' ) :
 

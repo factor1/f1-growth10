@@ -281,6 +281,41 @@ nav {
   }
 }
 
+.nav--landing-footer {
+  padding: rem(20) 0;
+  ul {
+    justify-content: flex-end;
+    
+    li:last-child {
+      margin-right: 0;
+      a:after {
+        display: none;
+      }
+    }
+  }
+
+  > ul > li {
+    position: relative;
+    margin-right: rem(30);
+  }
+
+  a {
+    text-decoration: none;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: rem(2);
+      height: rem(20);
+      background-color: $white;
+      right: rem(-15);
+      top: 0;
+    }
+
+  }
+
+}
+
 // Woocommerce nav
 .woocommerce-MyAccount-navigation {
   margin-bottom: rem(30);
@@ -308,5 +343,9 @@ nav {
     ul {
       justify-content: center;
     }
+  }
+
+  .nav--landing-footer ul {
+    justify-content: center;
   }
 }

@@ -9,6 +9,7 @@
         'mobile' => 'Mobile Menu - Logged Out',
         'mega_right' => 'Mega Menu (right) - Logged In',
         'footer'  => 'Footer Menu',
+        'landing-footer'  => 'Landing Footer Menu',
         'social'  => 'Social Menu',
       )
     );

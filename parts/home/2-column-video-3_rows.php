@@ -26,7 +26,7 @@ if( have_rows('3_column_section_columns') ) :
                 </div>
             </div>
         
-            <div class="col-5 sm-col-12">
+            <div class="col-5 sm-col-12 centered-content">
                 <?php while( have_rows('3_column_section_columns') ) : the_row();
                     $content = get_sub_field('content'); ?>
                     <div class="row">
