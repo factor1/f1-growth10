@@ -9,7 +9,13 @@
  * @since 1.2.0
  */
 
-get_header();
+$navigation_toggle = get_field('flexible_navigation_toggle') ? get_field('flexible_navigation_toggle') : false;
+
+if(!$navigation_toggle){
+  get_header();
+} else {
+  get_header('landing');  
+}
 
 get_template_part('parts/global/hero-b');
 
