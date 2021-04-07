@@ -35,6 +35,11 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/cta');
 
+  
+    elseif( get_row_layout() == 'cta2' ) :
+
+    get_template_part('parts/global/cta-hashed');
+
   endif;
 
 endwhile; endif; ?>
