@@ -23,13 +23,13 @@ get_template_part('parts/global/2-col-banner');
 
 get_template_part('parts/home/2-column-list-modal');
 
-get_template_part('parts/home/aboutus');
+//get_template_part('parts/home/aboutus');
 
-get_template_part('parts/home/authorsplit');
+//get_template_part('parts/home/authorsplit');
 
 // get_template_part('parts/home/testimonials');
 
-get_template_part('parts/global/testimonials');
+//get_template_part('parts/global/testimonials');
 
 get_template_part('parts/home/plans');
 
