@@ -4,6 +4,7 @@ import Headroom from "headroom.js";
 import * as AOS from "aos";
 import $ from "jquery";
 import "slick-carousel";
+import renderPlan from './cta-hashed';
 
 // Headroom
 let header = document.querySelector(".site-header"),
@@ -98,8 +99,6 @@ $(document).ready(function($) {
     $(".cta .switch input[type='checkbox']").on("click", function() {
       $(this).parents(".cta").find(".cta__price.monthly").toggleClass("active");
       $(this).parents(".cta").find(".cta__price.annual").toggleClass("active");
-      $(this).parents(".cta").find(".button--monthly").toggleClass("active");
-      $(this).parents(".cta").find(".button--annual").toggleClass("active");
     });
   }
 
@@ -144,4 +143,14 @@ $(document).ready(function($) {
     $(".dashboard-content").removeClass("active");
     $(".dashboard-content#content-" + id).addClass("active");
   });
+
+  // hashed part
+  var hash = window.location.hash.substr(1);
+  if (hash != ''){
+    renderPlan(parseInt(hash)-1);
+  } else {
+    $('#plan-data').hide();
+    $('#error').show();
+  }
+
 });
