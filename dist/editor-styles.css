@@ -36,3 +36,8 @@ hr {
   font: 400 40px/1.38 'Fjalla One', sans-serif;
   text-transform: none;
 }
+
+.preview-small-title { 
+  font: 400 45px/1.38 'Comfortaa', cursive;
+  text-transform: none;
+}

@@ -34,11 +34,14 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
   elseif( get_row_layout() == 'cta' ) :
 
     get_template_part('parts/global/cta');
-
   
-    elseif( get_row_layout() == 'cta2' ) :
+  elseif( get_row_layout() == 'cta2' ) :
 
     get_template_part('parts/global/cta-hashed');
+
+  elseif( get_row_layout() == 'eighty_twenty_text_split' ) :
+
+    get_template_part('parts/global/eighty-twenty-text-split');
 
   endif;
 

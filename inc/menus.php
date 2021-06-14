@@ -11,6 +11,7 @@
         'footer'  => 'Footer Menu',
         'landing-footer'  => 'Landing Footer Menu',
         'social'  => 'Social Menu',
+        'preview' => 'Preview Page Menu',
       )
     );
   }

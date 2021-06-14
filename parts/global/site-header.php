@@ -36,7 +36,17 @@ $headerClass = $isDefault && $bg ? ' has-hero' : ''; ?>
               <span></span>
             </button>
 
-          <?php else :
+          <?php elseif(is_page_template( 'templates/preview-page.php' )) :
+
+            wp_nav_menu(
+              array(
+                'theme_location' => 'preview',
+                'container' => 'nav',
+                'container_class' => 'nav--primary lg-only',
+              )
+            );            
+
+          else:
 
             wp_nav_menu(
               array(
