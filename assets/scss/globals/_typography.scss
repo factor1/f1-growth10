@@ -114,8 +114,13 @@ a {
   text-transform: none;
 }
 
-.preview-small-title { // h4
+.preview-medium-title { // h4
   font: 400 rem(45)/1.1 $comforta;
+  text-transform: none;
+}
+
+.preview-small-title { // h5
+  font: 400 rem(35)/1.1 $comforta;
   text-transform: none;
 }
 

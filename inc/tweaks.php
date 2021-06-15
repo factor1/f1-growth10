@@ -172,8 +172,14 @@
   			'wrapper' => false,
       ),
       array(
-        'title' => 'Preview Small Title',
+        'title' => 'Preview Medium Title',
   			'block' => 'h4',
+        'classes' => 'preview-medium-title',
+  			'wrapper' => false,
+      ),
+      array(
+        'title' => 'Preview Small Title',
+  			'block' => 'h5',
         'classes' => 'preview-small-title',
   			'wrapper' => false,
       ),

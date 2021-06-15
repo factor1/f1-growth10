@@ -43,6 +43,14 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/eighty-twenty-text-split');
 
+  elseif( get_row_layout() == 'text_image_banner' ) :
+
+    get_template_part('parts/global/text-image-banner');
+
+  elseif( get_row_layout() == 'four_column_content' ) :
+
+    get_template_part('parts/global/4-col-content');
+
   endif;
 
 endwhile; endif; ?>

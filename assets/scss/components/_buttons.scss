@@ -15,6 +15,19 @@
     }
   }
 
+  &--teal-block {
+    @include button($teal, $teal, $white, transparent, $teal);
+    border-radius: 0;
+    padding: rem(12) rem(50);
+    font-family: $serif;
+    text-transform: unset;
+
+    &:focus,
+    &:hover {
+      border-color: $teal;
+    }
+  }
+
   &--ghost {
     @include button($white, transparent, $white, $white, $scooter);
   }
