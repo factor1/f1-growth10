@@ -18,11 +18,9 @@ $bg = wp_get_attachment_image_src(get_field('hero_b_background', $post->ID), 'ho
 //Check if template
 $is_template = is_page_template( 'templates/preview-page.php' );
 
-$menu_class = $is_template ? ' transparent' : '';
+$headerClass = ($isDefault && $bg) || ($is_template && $bg) ? ' has-hero' : ''; ?>
 
-$headerClass = $isDefault && $bg ? ' has-hero' : ''; ?>
-
-<header class="site-header<?php echo $headerClass.$menu_class; ?>">
+<header class="site-header<?php echo $headerClass; ?>">
   <div class="container">
     <div class="row">
       <div class="col-12">
