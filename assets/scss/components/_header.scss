@@ -39,6 +39,10 @@ body {
   z-index: 99999;
   transition: all .4s ease;
 
+  &.transparent {
+    background-color: transparent;
+  }
+
   .container {
     padding: rem(20) 0 rem(12);
   }
