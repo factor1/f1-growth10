@@ -171,6 +171,18 @@
         'classes' => 'landing-small-title',
   			'wrapper' => false,
       ),
+      array(
+        'title' => 'Preview Medium Title',
+  			'block' => 'h4',
+        'classes' => 'preview-medium-title',
+  			'wrapper' => false,
+      ),
+      array(
+        'title' => 'Preview Small Title',
+  			'block' => 'h5',
+        'classes' => 'preview-small-title',
+  			'wrapper' => false,
+      ),
     );
     // Insert the array, JSON ENCODED, into 'style_formats'
     $init_array['style_formats_merge'] = true;

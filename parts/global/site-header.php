@@ -15,7 +15,10 @@ $isDefault = is_page() && !is_page_template();
 // Check if hero exists
 $bg = wp_get_attachment_image_src(get_field('hero_b_background', $post->ID), 'home_hero');
 
-$headerClass = $isDefault && $bg ? ' has-hero' : ''; ?>
+//Check if template
+$is_template = is_page_template( 'templates/preview-page.php' );
+
+$headerClass = ($isDefault && $bg) || ($is_template && $bg) ? ' has-hero' : ''; ?>
 
 <header class="site-header<?php echo $headerClass; ?>">
   <div class="container">
@@ -36,7 +39,17 @@ $headerClass = $isDefault && $bg ? ' has-hero' : ''; ?>
               <span></span>
             </button>
 
-          <?php else :
+          <?php elseif($is_template) :
+
+            wp_nav_menu(
+              array(
+                'theme_location' => 'preview',
+                'container' => 'nav',
+                'container_class' => 'nav--primary lg-only',
+              )
+            );            
+
+          else:
 
             wp_nav_menu(
               array(
