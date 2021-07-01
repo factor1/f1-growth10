@@ -12,6 +12,10 @@
     padding: 0;
   }
 
+  &.extra-padding .container {
+    padding: rem(80) 0;
+  }
+
   &__img {
     min-height: rem(400);
 
