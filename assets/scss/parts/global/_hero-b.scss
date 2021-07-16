@@ -15,6 +15,13 @@
   .container {
     padding: rem(200) 0;
   }
+
+  &.small-hero {
+    min-height: auto;
+    .container {
+      padding: rem(150) 0 rem(120);
+    }
+  }
 }
 
 // Media Queries
