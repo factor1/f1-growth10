@@ -20,10 +20,11 @@ export default function renderPlan(plan) {
 
   let costTemplate = (selectedPlan, type) => `<div id="${ type ? 'month' : 'annual' }-plan-${ plan }"><h5>$${ type ? selectedPlan.variations.month.cost : selectedPlan.variations.annual.cost }</h5><a href="https://growth10.com/cart/?add-to-cart=${ selectedPlan.product_id }&variation_id=${ type ? selectedPlan.variations.month.id : selectedPlan.variations.annual.id }" class="button button--teal active" role="link">Register here</a></div>`;
 
+  console.log(plan);
   let selected = plans.find(x => x.id === plan);
   let index = plans.indexOf(selected);
 
-  if (selected) {
+  if (selected && index) {
     monthContainer.html(costTemplate(plans[index],true));
     annualContainer.html(costTemplate(plans[index],false));
   } else {
