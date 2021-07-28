@@ -22,9 +22,11 @@ export default function renderPlan(plan) {
 
   console.log(plan);
   let selected = plans.find(x => x.id === plan);
+  console.log(selected);
   let index = plans.indexOf(selected);
+  console.log(index);
 
-  if (selected && index) {
+  if (selected && (index >= 0)) {
     monthContainer.html(costTemplate(plans[index],true));
     annualContainer.html(costTemplate(plans[index],false));
   } else {
