@@ -147,7 +147,7 @@ $(document).ready(function($) {
   // hashed part
   var hash = window.location.hash.substr(1);
   if (hash != ''){
-    renderPlan(parseInt(hash)-1);
+    renderPlan(parseInt(hash));
   } else {
     $('#plan-data').hide();
     $('#error').show();
