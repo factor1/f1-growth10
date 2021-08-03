@@ -37,8 +37,9 @@
             </div>
             <div class="col-5 sm-col-11 sm-col-centered sm-text-center">
                 <?php echo $content; ?>
-                <a href="/apply"
-                    class="button button--teal" role="link">Apply Now</a>
+                <a href="/apply" class="button button--teal" role="link">Join a group</a>
+                <a href="/prospective" class="button button--teal" role="link">Start a group</a>
+            </div>
 			</div>
 		</div>
 	</div>
