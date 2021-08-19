@@ -71,8 +71,16 @@
 }
 
 // Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+  .video-hero--home .hero-button a.button {
+    min-width: 70%;
+    margin-bottom: rem(20);
+  }
+}
+
 @media screen and (max-width: $small-breakpoint) {
   .video-hero--home {
+
     .container {
       padding: rem(150) 0 rem(30);
     }
