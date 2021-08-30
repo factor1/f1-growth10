@@ -35,7 +35,7 @@
             <div class="col-7 sm-col-11 sm-col-centered sm-text-center">
                 <h1><?php echo $headline; ?></h1>
             </div>
-            <div class="col-5 sm-col-11 sm-col-centered sm-text-center">
+            <div class="col-5 sm-col-11 sm-col-centered sm-text-center hero-button">
                 <?php echo $content; ?>
                 <a href="/apply" class="button button--teal" role="link">Join a group</a>
                 <a href="/prospective" class="button button--teal" role="link">Start a group</a>
