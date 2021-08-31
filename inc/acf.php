@@ -22,4 +22,12 @@ if( function_exists('acf_add_options_page') ) {
       'position' => 4
     )
   );
+
+  acf_add_options_page(
+    array(
+      'page_title' => 'Single staff Options',
+      'position' => 5
+    )
+  );
+
 } ?>
