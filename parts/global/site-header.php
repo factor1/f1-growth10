@@ -18,7 +18,10 @@ $bg = wp_get_attachment_image_src(get_field('hero_b_background', $post->ID), 'ho
 //Check if template
 $is_template = is_page_template( 'templates/preview-page.php' );
 
-$headerClass = ($isDefault && $bg) || ($is_template && $bg) ? ' has-hero' : ''; ?>
+//check if single
+$is_singular = is_singular('f1_staffgrid_cpt');
+
+$headerClass = ($isDefault && $bg) || ($is_template && $bg) || ($is_singular) ? ' has-hero' : ''; ?>
 
 <header class="site-header<?php echo $headerClass; ?>">
   <div class="container">
