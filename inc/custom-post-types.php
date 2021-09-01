@@ -78,3 +78,13 @@ function levels() {
 
 }
 add_action( 'init', 'levels', 0 );
+
+
+//Staff CPT slug rename
+add_filter( 'register_post_type_args', 'f1_register_post_type_args', 10, 2 );
+function f1_register_post_type_args( $args, $post_type ) {
+	if ( 'f1_staffgrid_cpt' === $post_type ) {
+			$args['rewrite']['slug'] = 'practice-leader';
+	}
+	return $args;
+}
