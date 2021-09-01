@@ -14,6 +14,8 @@ get_template_part('parts/single-staff/staff-profile');
 
 get_template_part('parts/single-staff/page-sections');
 
+get_template_part('parts/single-staff/CTA');
+
 if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 
