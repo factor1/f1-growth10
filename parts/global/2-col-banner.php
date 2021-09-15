@@ -22,7 +22,7 @@ $img        = wp_get_attachment_image_src($image, 'full');
 $alt        = get_post_meta($image, '_wp_attachment_image_alt', true); 
 ?>
 
-<?php if(!$section_toggle): ?>
+<?php if(!$section_toggle && ( $bg_image || $bg_img || $wysiwyg || $image || $img || $alt ) ): ?>
 
     <section class="two-col-banner" style="background: url('<?php echo $bg_img[0];?>') no-repeat; background-size: cover;">
         <div class="container">
