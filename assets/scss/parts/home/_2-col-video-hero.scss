@@ -38,6 +38,10 @@
     z-index: 1;
   }
 
+  .button {
+    margin-right: rem(30);
+  }
+
   h1 {
     margin-bottom: rem(50);
     font: 700 rem(60)/1 $open;
@@ -75,6 +79,7 @@
   .video-hero--home .hero-button a.button {
     min-width: 70%;
     margin-bottom: rem(20);
+    margin-right: 0;
   }
 }
 
