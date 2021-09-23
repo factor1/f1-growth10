@@ -10,11 +10,11 @@ export default function renderPlan(plan) {
     { id: 7, product_id: 3843, variations: { month: { id: 5552, cost: 799 }, annual: { id: 5769, cost: 7999 } } },
     { id: 8, product_id: 3843, variations: { month: { id: 5553, cost: 899 }, annual: { id: 5770, cost: 8999 } } },
     { id: 9, product_id: 3843, variations: { month: { id: 5554, cost: 999 }, annual: { id: 5771, cost: 9999 } } },
-    { id: 10, product_id: 3843, variations: { month: { id: 7145, cost: 1099 }, annual: { id: 7146, cost: 10990 } } },
-    { id: 11, product_id: 3843, variations: { month: { id: 7147, cost: 1199 }, annual: { id: 7148, cost: 11990 } } },
-    { id: 12, product_id: 3843, variations: { month: { id: 7149, cost: 1299 }, annual: { id: 7150, cost: 12990 } } },
-    { id: 13, product_id: 3843, variations: { month: { id: 7151, cost: 1399 }, annual: { id: 7152, cost: 13990 } } },
-    { id: 14, product_id: 3843, variations: { month: { id: 7153, cost: 1499 }, annual: { id: 7154, cost: 14990 } } },
+    { id: 10, product_id: 3843, variations: { month: { id: 7145, cost: '1,099' }, annual: { id: 7146, cost: '10,990' } } },
+    { id: 11, product_id: 3843, variations: { month: { id: 7147, cost: '1,199' }, annual: { id: 7148, cost: '11,990' } } },
+    { id: 12, product_id: 3843, variations: { month: { id: 7149, cost: '1,299' }, annual: { id: 7150, cost: '12,990' } } },
+    { id: 13, product_id: 3843, variations: { month: { id: 7151, cost: '1,399' }, annual: { id: 7152, cost: '13,990' } } },
+    { id: 14, product_id: 3843, variations: { month: { id: 7153, cost: '1,499' }, annual: { id: 7154, cost: '14,990' } } },
     { id: 99, product_id: 3843, variations: { month: { id: 6667, cost: 99 }, annual: { id: 6668, cost: 999 } } }
   ];
 
