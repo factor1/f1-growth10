@@ -18,24 +18,26 @@ $alt        = get_post_meta($image, '_wp_attachment_image_alt', true);
 $modal    = get_field('modal_video');
 
 ?>
-<section class="video-split">
-	<div class="container">
-		<div class="row row--align-items-center">
-			<div class="col-6 sm-col-12">
-				<?php echo $wysiwyg;?>
-			</div>
-			<div class="col-6 sm-col-12">
-				<?php echo $modal; ?>
-<!--
-				<a data-micromodal-trigger="hero-modal-1">
-				<img src="<?php //echo $img[0]?>" height='<?php //echo $img[2];?>px' alt="<?php //echo $alt; ?>">
-				</a>
--->
+
+<?php if( $wysiwyg || $image ): ?>
+	<section class="video-split">
+		<div class="container">
+			<div class="row row--align-items-center">
+				<div class="col-6 sm-col-12">
+					<?php echo $wysiwyg;?>
+				</div>
+				<div class="col-6 sm-col-12">
+					<?php echo $modal; ?>
+	<!--
+					<a data-micromodal-trigger="hero-modal-1">
+					<img src="<?php //echo $img[0]?>" height='<?php //echo $img[2];?>px' alt="<?php //echo $alt; ?>">
+					</a>
+	-->
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
-
+	</section>
+<?php endif; ?>
 
 <?php /* <div class="modal micromodal-slide" id="hero-modal-1" aria-hidden="true">
           <div class="modal__overlay" tabindex="-1" data-micromodal-close>
