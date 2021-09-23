@@ -19,8 +19,7 @@ $modal    = get_field('modal_video');
 
 ?>
 
-<?php if( $wysiwyg || $image || $img || $alt || $modal ): ?>
-
+<?php if( $wysiwyg || $image ): ?>
 	<section class="video-split">
 		<div class="container">
 			<div class="row row--align-items-center">
@@ -38,9 +37,7 @@ $modal    = get_field('modal_video');
 			</div>
 		</div>
 	</section>
-
 <?php endif; ?>
-
 
 <?php /* <div class="modal micromodal-slide" id="hero-modal-1" aria-hidden="true">
           <div class="modal__overlay" tabindex="-1" data-micromodal-close>

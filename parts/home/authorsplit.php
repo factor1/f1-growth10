@@ -25,7 +25,7 @@ $alt        = get_post_meta($image, '_wp_attachment_image_alt', true);
         </div>
 		    
 		<div class="col-6 sm-col-11 copy-side" data-aos="fade-right" data-aos-delay="50">
-                <?php echo $wysiwyg; ?>
+            <?php echo $wysiwyg; ?>
         </div> 
         
 		    <div class="col-6 sm-hide sm-col-12 image-side"  

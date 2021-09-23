@@ -15,7 +15,6 @@
     $headline   = get_field('home_hero_headline_text');
     $content    = get_field('home_hero_content_right');
     $video      = get_field('home_video_hero_file');
-    $button_url = get_field('home_video_hero_button_url');
 ?>
 
 <section class="video-hero--home" style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat">
@@ -37,8 +36,13 @@
             </div>
             <div class="col-5 sm-col-11 sm-col-centered sm-text-center hero-button">
                 <?php echo $content; ?>
-                <a href="/apply" class="button button--teal" role="link">Join a group</a>
-                <a href="/prospective" class="button button--teal" role="link">Start a group</a>
+
+                <?php if( have_rows('home_hero_buttons') ): ?>
+                  <?php while( have_rows('home_hero_buttons') ): the_row(); 
+                    $link = get_sub_field('link'); ?>
+                    <a href="<?php echo $link['url']; ?>" class="button button--teal" target="<?php echo $link['target']; ?>" role="link"><?php echo $link['title']; ?></a>
+                  <?php endwhile; ?>
+                <?php endif; ?>
             </div>
 			</div>
 		</div>
