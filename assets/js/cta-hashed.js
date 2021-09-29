@@ -15,12 +15,13 @@ export default function renderPlan(plan) {
     { id: 12, product_id: 3843, variations: { month: { id: 7149, cost: '1,299' }, annual: { id: 7150, cost: '12,990' } } },
     { id: 13, product_id: 3843, variations: { month: { id: 7151, cost: '1,399' }, annual: { id: 7152, cost: '13,990' } } },
     { id: 14, product_id: 3843, variations: { month: { id: 7153, cost: '1,499' }, annual: { id: 7154, cost: '14,990' } } },
+    { id: 15, product_id: 3843, variations: { month: { id: 7238, cost: '1,599' }, annual: { id: 7239, cost: '15,990' } } },
+    { id: 16, product_id: 3843, variations: { month: { id: 7240, cost: '1,699' }, annual: { id: 7241, cost: '16,990' } } },
+    { id: 17, product_id: 3843, variations: { month: { id: 7242, cost: '1,799' }, annual: { id: 7243, cost: '17,990' } } },
+    { id: 18, product_id: 3843, variations: { month: { id: 7244, cost: '1,899' }, annual: { id: 7245, cost: '18,990' } } },
+    { id: 19, product_id: 3843, variations: { month: { id: 7246, cost: '1,999' }, annual: { id: 7247, cost: '19,990' } } },
     { id: 99, product_id: 3843, variations: { month: { id: 6667, cost: 99 }, annual: { id: 6668, cost: 999 } } }
   ];
-
-  // console.log('Plans: ', plans);
-
-
 
   let monthContainer = jQuery('#monthly');
   let annualContainer = jQuery('#annual');
@@ -29,11 +30,8 @@ export default function renderPlan(plan) {
 
   let costTemplate = (selectedPlan, type) => `<div id="${ type ? 'month' : 'annual' }-plan-${ plan }"><h5>$${ type ? selectedPlan.variations.month.cost : selectedPlan.variations.annual.cost }</h5><a href="https://growth10.com/cart/?add-to-cart=${ selectedPlan.product_id }&variation_id=${ type ? selectedPlan.variations.month.id : selectedPlan.variations.annual.id }" class="button button--teal active" role="link">Register here</a></div>`;
 
-  // console.log('Url: ', plan);
   let selected = plans.find(x => x.id === plan);
-  // console.log('Selected: ', selected);
   let index = plans.indexOf(selected);
-  // console.log('Index: ', index);
 
   if (selected && (index >= 0)) {
     monthContainer.html(costTemplate(plans[index],true));
