@@ -24,6 +24,7 @@ export default function renderPlan(plan) {
   ];
 
   let monthContainer = jQuery('#monthly');
+  console.log('Month container: ', monthContainer);
   let annualContainer = jQuery('#annual');
   const errorContainer = jQuery('#error');
   const planContainer = jQuery('#plan-data');
