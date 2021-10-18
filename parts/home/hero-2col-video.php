@@ -22,7 +22,7 @@
 <?php
   if( $video ) : ?>
     <div class="hero__video">
-      <video autoplay loop muted>
+      <video autoplay loop muted playsinline>
         <source src="<?php echo $video['url']; ?>" type="video/mp4">
       </video>
     </div>
