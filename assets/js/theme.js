@@ -153,4 +153,11 @@ $(document).ready(function($) {
     $('#error').show();
   }
 
+  //remove duplicate in advanced search form
+  var fields = document.querySelectorAll('.uwp-field-industry');
+  if (fields.length > 0) {
+    fields[1].remove();
+  }
+
+
 });
