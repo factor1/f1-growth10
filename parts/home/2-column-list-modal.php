@@ -19,7 +19,7 @@ $modal    = get_field('modal_video');
 
 ?>
 
-<?php if( $wysiwyg || $image ): ?>
+<?php if( $wysiwyg && $image ): ?>
 	<section class="video-split">
 		<div class="container">
 			<div class="row row--align-items-center">
