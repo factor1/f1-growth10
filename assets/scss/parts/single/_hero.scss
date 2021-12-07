@@ -27,6 +27,14 @@
     }
   }
 
+  .mark-unread {
+    outline: none;
+    -webkit-appearance: none;
+    border: none;
+    background: transparent;
+    
+  }
+
   &__img {
     padding-bottom: 40%;
   }

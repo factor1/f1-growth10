@@ -15,7 +15,11 @@ $img = featuredURL('post_featured'); ?>
   <div class="container">
     <div class="row row--justify-content-center">
       <div class="col-10 md-col-11">
-        <h1><?php the_title(); ?></h1>
+        <h1>
+          <?php the_title(); ?> 
+        
+          <button class="mark-unread">Mark as Unread</button>
+        </h1>
 
         <?php // Optional featured image
         if( $img ) : ?>

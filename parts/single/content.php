@@ -10,7 +10,11 @@
  */
 
 // Post Custom Fields
-$isResource = has_term(['deep-dives', 'tools'], 'post-format'); ?>
+$isResource = has_term(['deep-dives', 'tools'], 'post-format'); 
+
+// For mark as read functionality 
+$postID = get_the_ID(); 
+$currentUser = get_current_user_id(); ?>
 
 <section class="post-content">
   <div class="container">
@@ -31,7 +35,10 @@ $isResource = has_term(['deep-dives', 'tools'], 'post-format'); ?>
 								echo do_shortcode('[yasr_visitor_votes size="large" show_average="no"]');
 								echo "<style> .yasr-visitor-votes-after-stars-class {display: none;}</style>";
 
-							endif; ?>
+							endif; 
+              
+              // Mark as read 
+              update_user_meta($currentUser, 'read_post_' . $postID, true); ?>
 						
 					<?php else : ?>
 					

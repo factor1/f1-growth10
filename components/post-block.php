@@ -8,6 +8,7 @@
  */
 
 // Post Fields
+$postID = get_the_ID();
 $cat = get_the_category()[0];
 $image = featuredURL('post_grid');
 $type = get_the_terms($post->ID, 'post-format')[0]->slug;
@@ -16,6 +17,11 @@ $size = $image ? 'cover' : 'auto 50%';
 $video = get_field('video_link');
 $audio = get_field('audio_link');
 $worksheet = get_field('worksheet');
+
+// For mark as read functionality 
+$currentUser = get_current_user_id();
+$userHasRead = get_user_meta($currentUser, 'read_post_' . $postID, true);
+$postClass = $userHasRead ? '' : ' unread';
 
 // Images
 if( $image ) :
@@ -29,7 +35,7 @@ else :
   $class = '';
 endif; ?>
 
-<article class="post-block">
+<article class="post-block<?php echo $postClass; ?>">
   <a href="<?php the_permalink(); ?>" class="post-block__img<?php echo $class; ?>" style="background: #0356a4 url('<?php echo $img; ?>') center/<?php echo $size; ?> no-repeat"></a>
 
   <a href="<?php the_permalink(); ?>" class="post-block__info">
