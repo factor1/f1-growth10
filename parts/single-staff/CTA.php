@@ -20,7 +20,7 @@ $bg = wp_get_attachment_image_src(get_field('cta_background_image'), 'home_hero'
         <?php echo $content;
 
         // Optional button
-        if( $email && $cta ) : ?>
+        if( $email || $cta ) : ?>
 
           <div class="text-center">
 
