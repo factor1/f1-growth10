@@ -11,17 +11,18 @@ global $post;
 
 // Default template
 $isDefault = is_page() && !is_page_template();
+$heroType = $isDefault ? get_field('default_hero_type') : false; 
 
 // Check if hero exists
 $bg = wp_get_attachment_image_src(get_field('hero_b_background', $post->ID), 'home_hero');
 
-//Check if template
+// Check if template
 $is_template = is_page_template( 'templates/preview-page.php' );
 
-//check if single
+// check if single
 $is_singular = is_singular('f1_staffgrid_cpt');
 
-$headerClass = ($isDefault && $bg) || ($is_template && $bg) || ($is_singular) ? ' has-hero' : ''; ?>
+$headerClass = ($isDefault && $bg) || ($isDefault && $heroType) || ($is_template && $bg) || ($is_singular) ? ' has-hero' : ''; ?>
 
 <header class="site-header<?php echo $headerClass; ?>">
   <div class="container">

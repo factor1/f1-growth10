@@ -62,3 +62,9 @@
 
 // Plugin Overrides
 @import "plugins/overrides";
+
+.xdebug-error,
+.xe-warning,
+body > br {
+  display: none !important;
+}

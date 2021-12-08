@@ -9,7 +9,17 @@
 
 get_header();
 
-get_template_part('parts/global/hero-b'); ?>
+$heroType = get_field('default_hero_type'); 
+
+if( $heroType ) : 
+
+  get_template_part('parts/global/hero-2col-video');
+
+else : 
+
+  get_temlate_part('parts/global/hero-b'); 
+  
+endif; ?>
 
 <section class="default-content">
   <div class="container">
