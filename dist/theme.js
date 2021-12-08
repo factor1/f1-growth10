@@ -15320,7 +15320,16 @@ _micromodal.default.init(); // Reset modal iframe on close
 
   if (fields.length > 0) {
     fields[1].remove();
-  }
+  } // Flex tabbed content section 
+
+
+  $(".tabbed-content-section__tab").on("click", function () {
+    var id = $(this).attr("data-tab");
+    $(this).parents(".tabbed-content-section").find(".tabbed-content-section__tab").removeClass("active");
+    $(this).addClass("active");
+    $(this).parents(".tabbed-content-section").find(".tabbed-content-section__content section").removeClass("active");
+    $(this).parents(".tabbed-content-section").find(".tabbed-content-section__content section[data-section='section-" + id + "']").addClass("active");
+  });
 });
 },{"Bowser":"../../node_modules/Bowser/es5.js","micromodal":"../../node_modules/micromodal/dist/micromodal.es.js","headroom.js":"../../node_modules/headroom.js/dist/headroom.js","aos":"../../node_modules/aos/dist/aos.js","jquery":"../../node_modules/jquery/dist/jquery.js","slick-carousel":"../../node_modules/slick-carousel/slick/slick.js","./cta-hashed":"cta-hashed.js"}]},{},["theme.js"], null)
 //# sourceMappingURL=theme.js.map

@@ -4516,6 +4516,91 @@ body.masked:after {
     font-size: 2rem; } }
 
 /*
+ * Tabbed Content Section (Global)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.4.0
+ */
+.tabbed-content-section {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .tabbed-content-section .container {
+    padding: 3.125rem 0; }
+  .tabbed-content-section__tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+    border-bottom: 0.25rem solid #e5e5e5; }
+  .tabbed-content-section__tab {
+    margin-bottom: -0.25rem;
+    padding: 1.25rem 1.875rem;
+    border: none;
+    border-bottom: 0.25rem solid transparent;
+    outline: none;
+    background-color: transparent;
+    font: 700 1.125rem/1.11 "Montserrat", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0356a4;
+    -webkit-appearance: none;
+    transition: all .4s ease; }
+    .tabbed-content-section__tab img {
+      width: 4.375rem; }
+    .tabbed-content-section__tab span {
+      display: block;
+      margin-top: 1.25rem; }
+    .tabbed-content-section__tab.active {
+      border-color: #0356a4;
+      pointer-events: none; }
+    .tabbed-content-section__tab:focus, .tabbed-content-section__tab:hover {
+      border-color: #2ab2b0; }
+  .tabbed-content-section__content {
+    padding: 1.875rem 0; }
+    .tabbed-content-section__content section {
+      position: relative;
+      display: none;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding: 1.875rem 0; }
+      .tabbed-content-section__content section.active {
+        display: flex; }
+  .tabbed-content-section__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%; }
+  .tabbed-content-section__text {
+    width: 50%;
+    padding: 2.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
+    z-index: 10; }
+    .tabbed-content-section__text .buttons {
+      margin-top: 1.25rem; }
+
+@media screen and (max-width: 47.9375em) {
+  .tabbed-content-section__tabs {
+    display: none; }
+  .tabbed-content-section__content {
+    padding: 0; }
+    .tabbed-content-section__content section {
+      display: flex; }
+  .tabbed-content-section__image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 60%; }
+  .tabbed-content-section__text {
+    width: 100%;
+    padding: 2.5rem 2.5rem 0.625rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0); } }
+
+/*
  * Hero (home)
  *
  * Template part used on the home template
