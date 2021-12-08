@@ -4486,6 +4486,36 @@ body.masked:after {
       display: inline-block; }
 
 /*
+ * Card Banner (Global)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.4.0
+ */
+.card-banner {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .card-banner .container {
+    padding: 3.125rem 0; }
+  .card-banner__headline {
+    font-size: 3.75rem;
+    color: #fff; }
+  .card-banner__card {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding: 2.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 0.625rem black; }
+  .card-banner__buttons {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem; }
+
+@media screen and (max-width: 47.9375em) {
+  .card-banner__headline {
+    font-size: 2rem; } }
+
+/*
  * Hero (home)
  *
  * Template part used on the home template
