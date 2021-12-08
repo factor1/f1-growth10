@@ -183,6 +183,12 @@
         'classes' => 'preview-small-title',
   			'wrapper' => false,
       ),
+      array(
+        'title' => 'Checklist',
+  			'selector' => 'ul',
+        'classes' => 'checklist',
+  			'wrapper' => true,
+      ),
     );
     // Insert the array, JSON ENCODED, into 'style_formats'
     $init_array['style_formats_merge'] = true;
