@@ -57,22 +57,6 @@ hr {
   position: relative;
   padding: 3px 0;
   text-indent: -12px;
-
-  &:before {
-    content: '\f058';
-    position: relative;
-    left: rem(-20);
-    vertical-align: middle;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Font Awesome 5 Pro';
-    font-weight: 400;
-    font-size: rem(24);
-    color: $blue;
-  }
 }
 
 .checklist li:before {
