@@ -10,6 +10,7 @@
  */
 
 $navigation_toggle = get_field('flexible_navigation_toggle') ? get_field('flexible_navigation_toggle') : false;
+$heroType = get_field('flexible_hero_type'); 
 
 if(!$navigation_toggle){
   get_header();
@@ -17,7 +18,15 @@ if(!$navigation_toggle){
   get_header('landing');  
 }
 
-get_template_part('parts/global/hero-b');
+if( $heroType ) : 
+
+  get_template_part('parts/global/hero-2col-video');
+
+else : 
+
+  get_template_part('parts/global/hero-b');
+
+endif; 
 
 get_template_part('parts/global/page-sections');
 
