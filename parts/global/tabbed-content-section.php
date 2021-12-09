@@ -18,8 +18,8 @@ if( have_rows('tabbed_content') ) :
 
   <section class="tabbed-content-section">
     <div class="container">
-      <div class="row">
-        <div class="col-12">
+      <div class="row row--justify-content-center">
+        <div class="col-10">
           
           <?php echo $intro; ?>
 
