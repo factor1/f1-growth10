@@ -4572,10 +4572,10 @@ body.masked:after {
     -webkit-appearance: none;
     transition: all .4s ease; }
     .tabbed-content-section__tab img {
-      width: 4.375rem; }
+      width: 4.375rem;
+      margin-bottom: 1.25rem; }
     .tabbed-content-section__tab span {
-      display: block;
-      margin-top: 1.25rem; }
+      display: block; }
     .tabbed-content-section__tab.active {
       border-color: #0356a4;
       pointer-events: none; }
