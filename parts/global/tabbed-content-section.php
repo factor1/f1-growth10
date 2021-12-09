@@ -35,9 +35,13 @@ if( have_rows('tabbed_content') ) :
               $active = $i < 1 ? ' active' : ''; ?>
 
               <button class="tabbed-content-section__tab<?php echo $active; ?>" data-tab="<?php echo $i; ?>">
-                <img src="<?php echo $iconImg[0]; ?>" alt="<?php echo $iconAlt; ?>">
+
+                <?php if( $icon ) : ?>
+                  <img src="<?php echo $iconImg[0]; ?>" alt="<?php echo $iconAlt; ?>">
+                <?php endif; ?>
 
                 <span><?php echo $text; ?></span>
+                
               </button>
 
             <?php $i++; endwhile; ?>
