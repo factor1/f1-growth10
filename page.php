@@ -9,7 +9,7 @@
 
 get_header();
 
-get_template_part('parts/global/hero-b'); ?>
+get_temlate_part('parts/global/hero-b'); ?>
 
 <section class="default-content">
   <div class="container">

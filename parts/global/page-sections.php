@@ -51,6 +51,18 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/4-col-content');
 
+  elseif( get_row_layout() == 'text_columns_split' ) :
+
+    get_template_part('parts/global/2-column-video-3_rows');
+
+  elseif( get_row_layout() == 'centered_card_banner' ) :
+
+    get_template_part('parts/global/card-banner');
+
+  elseif( get_row_layout() == 'tabbed_content_section' ) :
+
+    get_template_part('parts/global/tabbed-content-section');
+
   endif;
 
 endwhile; endif; ?>

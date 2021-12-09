@@ -46,3 +46,31 @@ hr {
   font: 400 35px/1.1 'Comfortaa', cursive;
   text-transform: none;
 }
+
+.checklist {
+  margin-bottom: 30px;
+  padding-left: 40px;
+  list-style-type: none;
+}
+
+.checklist li {
+  position: relative;
+  padding: 3px 0;
+  text-indent: -12px;
+}
+
+.checklist li:before {
+  content: '\f058';
+  position: relative;
+  left: -20px;
+  vertical-align: middle;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 400;
+  font-size: 24px;
+  color: #0356a4;
+}

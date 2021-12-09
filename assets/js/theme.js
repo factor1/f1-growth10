@@ -159,5 +159,15 @@ $(document).ready(function($) {
     fields[1].remove();
   }
 
+  // Flex tabbed content section 
+  $(".tabbed-content-section__tab").on("click", function() {
+    var id = $(this).attr("data-tab");
+
+    $(this).parents(".tabbed-content-section").find(".tabbed-content-section__tab").removeClass("active");
+    $(this).addClass("active");
+
+    $(this).parents(".tabbed-content-section").find(".tabbed-content-section__content section").removeClass("active");
+    $(this).parents(".tabbed-content-section").find(".tabbed-content-section__content section[data-section='section-" + id + "']").addClass("active");
+  });
 
 });

@@ -132,6 +132,33 @@ a {
   text-decoration: none;
 }
 
+.checklist { // ul
+  margin-bottom: rem(30);
+  padding-left: rem(40);
+  list-style-type: none;
+
+  li {
+    position: relative;
+    padding: rem(3) 0;
+    text-indent: rem(-12);
+
+    &:before {
+      content: '\f058';
+      position: relative;
+      left: rem(-20);
+      vertical-align: middle;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 400;
+      font-size: rem(24);
+      color: $blue;
+    }
+  }
+}
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
