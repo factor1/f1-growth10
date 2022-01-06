@@ -28,6 +28,12 @@
     }
   }
 
+  &--blue {
+    @include button($blue, $blue, $white, transparent, $blue);
+    padding: rem(12) rem(50);
+    font-weight: 400;
+  }
+
   &--ghost {
     @include button($white, transparent, $white, $white, $scooter);
   }

@@ -47,6 +47,7 @@
 @import "components/workshop";
 @import "components/dashboard-grid";
 @import "components/header";
+@import "components/sidebar";
 @import "components/footer";
 @import "components/modals";
 
@@ -59,6 +60,15 @@
 @import "templates/dashboard";
 @import "templates/404";
 @import "templates/login";
+@import "templates/single-lesson";
 
 // Plugin Overrides
 @import "plugins/overrides";
+
+
+body {
+  > br,
+  > font {
+    display: none;
+  }
+}

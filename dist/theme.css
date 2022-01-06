@@ -2855,6 +2855,26 @@ a {
   .button--teal-block:focus, .button--teal-block:hover {
     border-color: #2ab2b0; }
 
+.button--blue {
+  display: inline-block;
+  padding: 1.25rem 0.875rem;
+  border: 0.25rem solid #0356a4;
+  border-top-left-radius: 0.5625rem;
+  border-bottom-right-radius: 0.5625rem;
+  background-color: #0356a4;
+  font: 700 1.125rem/1.11 "Montserrat", sans-serif;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .4s ease;
+  outline: none;
+  padding: 0.75rem 3.125rem;
+  font-weight: 400; }
+  .button--blue:focus, .button--blue:hover {
+    background-color: transparent;
+    color: #0356a4; }
+
 .button--ghost {
   display: inline-block;
   padding: 1.25rem 0.875rem;
@@ -3883,6 +3903,56 @@ body.masked:after {
   .page-template-default main,
   .single main {
     margin-top: 5.5625rem; } }
+
+/**
+ * Sidebar
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.5.0
+ */
+.sidebar--lesson {
+  padding: 0.3125rem 0.9375rem 0.3125rem 1.25rem;
+  background-color: #e5e5e5; }
+  .sidebar--lesson ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style-type: none; }
+    .sidebar--lesson ul li {
+      position: relative; }
+    .sidebar--lesson ul li.read::before {
+      position: absolute;
+      top: 0.9375rem;
+      left: -1.875rem;
+      content: '\f00c';
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.5625rem;
+      height: 1.5625rem;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 400;
+      border-radius: 0.3125rem;
+      background-color: rgba(112, 112, 112, 0.15);
+      color: #0356a4; }
+    .sidebar--lesson ul a {
+      display: block;
+      width: 100%;
+      padding: 0.9375rem 0;
+      text-decoration: none; }
+      .sidebar--lesson ul a.active {
+        color: #0356a4; }
+    .sidebar--lesson ul ul {
+      display: none;
+      margin: 0.3125rem;
+      padding-left: 2.5rem;
+      border-left: 0.0625rem solid #0F203E; }
+      .sidebar--lesson ul ul.open {
+        display: block; }
 
 /*------------------------------------------------------------------------------
   Footer
@@ -5692,6 +5762,20 @@ section.call-to-action {
   justify-content: center;
   padding: 6.25rem 1.25rem 3.125rem; }
 
+/**
+ * Lesson CPT Archive
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.5.0
+ */
+.lesson-content-section {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .lesson-content-section .container {
+    padding: 3.125rem 0; }
+  .lesson-content-section .col-12 {
+    margin-bottom: 1.875rem; }
+
 /*----------------------------------------------------------------------------
   Plugin Overrides
 ----------------------------------------------------------------------------*/
@@ -5711,6 +5795,10 @@ section.call-to-action {
     padding: 0.3125rem 1.25rem !important; }
     .full-width-field .form-check.as-industry label {
       padding: 0.3125rem 0.3125rem 0; }
+
+body > br,
+body > font {
+  display: none; }
 
 
 /*# sourceMappingURL=theme.css.map */

@@ -410,3 +410,28 @@
     $user_check = wc_memberships_is_user_active_member($user->ID, 2229) || wc_memberships_is_user_active_member($user->ID, 931) || wc_memberships_is_user_active_member($user->ID, 220) || wc_memberships_is_user_active_member($user->ID, 219) ? true : false;
     return $user_check;
   }
+
+  // Mark as read function
+  // function toggle_read() {
+  //   $id = get_the_ID();
+  //   $user = get_current_user_id();
+  //   // $bool = $_POST['is_read'] == "true" ? true : false;
+  //   // if( !empty( $_POST['mark_as_read'] ) ) {
+  //     update_user_meta($user, 'read_post_' . get_the_ID(), true);
+  //   // }
+  //   if( !empty($_POST['next_lesson']) ) {
+  //     wp_redirect( $_POST['next_lesson'] );
+  //     exit;
+  //   }
+  // }
+  // add_action('init', 'toggle_read');
+
+  add_action('admin_head', 'my_custom_fonts');
+  function my_custom_fonts() {
+    echo '<style>
+      body > font,
+      body > br {
+        display: none;
+      } 
+    </style>';
+  }

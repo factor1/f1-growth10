@@ -1,0 +1,19 @@
+/**
+ * Lesson CPT Archive
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.5.0
+ */
+
+.lesson-content-section {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  .col-12 {
+    margin-bottom: rem(30);
+  }
+}
