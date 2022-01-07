@@ -410,3 +410,40 @@
     $user_check = wc_memberships_is_user_active_member($user->ID, 2229) || wc_memberships_is_user_active_member($user->ID, 931) || wc_memberships_is_user_active_member($user->ID, 220) || wc_memberships_is_user_active_member($user->ID, 219) ? true : false;
     return $user_check;
   }
+
+  // Mark as read function
+  function toggle_read() {
+    $id = get_the_ID();
+    $user = get_current_user_id();
+
+    // Check if user is logged in 
+    if( !is_user_logged_in() ) {
+      return;
+    }
+
+    // Grab form data 
+    if( empty($_POST['is_read'] ) ) {
+      return;
+    }
+
+    // Verify nonce
+    if ( !wp_verify_nonce( $_POST['is_read_nonce'], 'toggle_read' ) ) {
+      return;
+    }
+
+    // Update meta
+    // Check for mark incomplete first
+    if( $_POST['mark_incomplete'] == true ) {
+      $bool = false;
+    } else {
+      $bool = $_POST['is_read'] == 'true' ? true : false;
+    }
+    update_user_meta($user, 'read_post_' . get_the_ID(), $bool);
+
+    // Redirect 
+    $link = $_POST['next_lesson'] ? $_POST['next_lesson'] : get_the_permalink();
+
+    wp_redirect($link);
+    exit;
+  }
+  add_action('template_redirect', 'toggle_read');

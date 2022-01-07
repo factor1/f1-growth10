@@ -40,7 +40,7 @@ $headerClass = ($isDefault && $bg) || ($isFlex && $heroType) || ($is_template &&
         <?php if( !is_page( get_option('woocommerce_cart_page_id') ) ) :
           if( is_user_logged_in() ) : ?>
 
-            <button class="menu-icon">
+            <button class="menu-icon menu-icon--main">
               <small class="sm-hide">Navigation</small>
 
               <span></span>
@@ -66,7 +66,7 @@ $headerClass = ($isDefault && $bg) || ($isFlex && $heroType) || ($is_template &&
               )
             ); ?>
 
-            <button class="menu-icon lg-hide"><span></span></button>
+            <button class="menu-icon menu-icon--main lg-hide"><span></span></button>
 
           <?php endif;
         endif; ?>
