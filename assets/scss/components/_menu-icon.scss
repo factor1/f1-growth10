@@ -80,6 +80,23 @@
       transform: rotate(-45deg);
     }
   }
+
+  &--lesson {
+    display: flex;
+    align-items: center;
+    font: inherit;
+    color: $blue;
+
+    span {
+      margin-right: rem(15);
+    }
+
+    span,
+    span:before,
+    span:after {
+      background-color: $blue;
+    }
+  }
 }
 
 // Media Queries

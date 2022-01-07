@@ -3015,6 +3015,17 @@ a {
       top: 0.6875rem;
       left: 0.3125rem;
       transform: rotate(-45deg); }
+  .menu-icon--lesson {
+    display: flex;
+    align-items: center;
+    font: inherit;
+    color: #0356a4; }
+    .menu-icon--lesson span {
+      margin-right: 0.9375rem; }
+    .menu-icon--lesson span,
+    .menu-icon--lesson span:before,
+    .menu-icon--lesson span:after {
+      background-color: #0356a4; }
 
 @media screen and (min-width: 64.0625rem) {
   .menu-icon.lg-hide {
@@ -3914,6 +3925,8 @@ body.masked:after {
 .sidebar--lesson {
   padding: 0.3125rem 0.9375rem 0.3125rem 1.25rem;
   background-color: #e5e5e5; }
+  .sidebar--lesson div {
+    padding-left: 0.625rem; }
   .sidebar--lesson ul {
     margin: 0;
     padding-left: 1.25rem;
@@ -3953,6 +3966,10 @@ body.masked:after {
       border-left: 0.0625rem solid #0F203E; }
       .sidebar--lesson ul ul.open {
         display: block; }
+
+@media screen and (max-width: 47.9375em) {
+  .sidebar--lesson > ul {
+    display: none; } }
 
 /*------------------------------------------------------------------------------
   Footer
@@ -5775,6 +5792,17 @@ section.call-to-action {
     padding: 3.125rem 0; }
   .lesson-content-section .col-12 {
     margin-bottom: 1.875rem; }
+  .lesson-content-section form#toggle_read div {
+    margin-bottom: 1.875rem; }
+  .lesson-content-section form#toggle_read span {
+    position: relative;
+    top: -0.1875rem; }
+
+@media screen and (max-width: 47.9375em) {
+  .lesson-content-section .container {
+    padding: 1.875rem 0; }
+  .lesson-content-section .col-4 {
+    margin-bottom: 1.875rem; } }
 
 /*----------------------------------------------------------------------------
   Plugin Overrides
@@ -5795,10 +5823,6 @@ section.call-to-action {
     padding: 0.3125rem 1.25rem !important; }
     .full-width-field .form-check.as-industry label {
       padding: 0.3125rem 0.3125rem 0; }
-
-body > br,
-body > font {
-  display: none; }
 
 
 /*# sourceMappingURL=theme.css.map */

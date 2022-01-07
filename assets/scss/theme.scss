@@ -64,11 +64,3 @@
 
 // Plugin Overrides
 @import "plugins/overrides";
-
-
-body {
-  > br,
-  > font {
-    display: none;
-  }
-}

@@ -38,7 +38,11 @@ $lessons = new WP_Query($args);
 if( $lessons->have_posts() ) : ?>
 
   <aside class="sidebar--lesson">
-    <ul>
+    <div class="sm-only">
+      <button class="menu-icon menu-icon--lesson"><span></span> Course Menu</button>
+    </div>
+
+    <ul class="sidebar--lesson__menu">
 
       <?php while( $lessons->have_posts() ) : $lessons->the_post(); 
         $id = get_the_ID();
@@ -90,9 +94,11 @@ if( $lessons->have_posts() ) : ?>
             <ul<?php echo $isOpen; ?>>
 
               <?php foreach( $children as $child ) : 
-                $childActive = $currentID == $child->ID ? ' class="active"' : ''; ?>
+                $childActive = $currentID == $child->ID ? ' class="active"' : ''; 
+                $userHasReadChild = get_user_meta($currentUser, 'read_post_' . $child->ID, true);
+                $childLiClass = $userHasReadChild ? ' class="read"' : ''; ?>
 
-                <li<?php echo $liClass; ?>>
+                <li<?php echo $childLiClass; ?>>
                   <a href="<?php the_permalink($child->ID); ?>"<?php echo $childActive; ?>><?php echo $child->post_title; ?></a>
                 </li>
 

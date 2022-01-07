@@ -10,6 +10,10 @@
   padding: rem(5) rem(15) rem(5) rem(20);
   background-color: $lightGray;
 
+  div {
+    padding-left: rem(10);
+  }
+
   ul {
     margin: 0;
     padding-left: rem(20);
@@ -63,5 +67,12 @@
         display: block;
       }
     }
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+  .sidebar--lesson > ul {
+    display: none;
   }
 }

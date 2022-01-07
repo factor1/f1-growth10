@@ -11,30 +11,33 @@ get_header();
 
 if( have_posts() ) : while( have_posts() ) : the_post();
 
-  // Get course information
+  // Get course & lesson info
   $course = get_the_terms(get_the_ID(), 'course')[0];
-
-  // For mark-as-read functionality 
   $id = get_the_ID();
+
+  // User info for mark-as-read functionality 
   $currentUser = get_current_user_id();
   $userHasRead = get_user_meta($currentUser, 'read_post_' . $id, true); 
   
-  // Next post link 
-  $next = get_field('next_lesson');
-  $nextText = $userHasRead ? 'Next Lesson' : 'Mark as Complete &amp; Next Lesson'; 
+  // Next lesson link 
+  $nextField = get_field('next_lesson');
+  $next = $nextField ? $nextField : get_the_permalink();
   
-  function toggle_read() {
-    // $id = get_the_ID();
-    // $user = get_current_user_id();
-    // $bool = $_POST['is_read'] == "true" ? true : false;
-    // if( !empty( $_POST['mark_as_read'] ) ) {
-      update_user_meta($user, 'read_post_' . get_the_ID(), true);
-    // }
-    if( !empty($_POST['next_lesson']) ) {
-      wp_redirect( $_POST['next_lesson'] );
-      exit;
-    }
-  } ?>
+  // if user hasn't read and there's a next lesson
+  if( !$userHasRead && $nextField ) :
+    $nextText = 'Mark as Complete &amp; Next Lesson';
+  // if user has read and there's a next lesson 
+  elseif( $userHasRead && $nextField ) : 
+    $nextText = 'Next Lesson';
+  // if user hasn't read and there's no next lesson 
+  elseif( !$userHasRead && !$nextField ) : 
+    $nextText = 'Finish Course';
+  // if user has read and there's no next lesson 
+  elseif( $userHasRead && !$nextField ) : 
+    $nextText = 'Finish Course';
+  else : 
+    $nextText = 'Next Lesson';
+  endif; ?>
 
   <section class="lesson-content-section">
     <div class="container">
@@ -57,24 +60,24 @@ if( have_posts() ) : while( have_posts() ) : the_post();
 
           <h2><?php the_title(); ?></h2>
 
-          <?php the_content(); ?>
+          <?php the_content(); 
+          
+          // Form for processing mark as read ?>
+          <form name="toggle_read" id="toggle_read" method="POST" action="">
+            <?php if( $userHasRead ) : ?>
+              <div>
+                <label for="mark_incomplete">
+                  <input type="checkbox" name="mark_incomplete" id="mark_incomplete" />
+                  <span>Mark Lesson Incomplete?</span>
+                </label>
+              </div>
+            <?php endif; ?>
 
-          <?php // TODO: Link action to next post ?>
-          <form name="toggle_read" id="toggle_read" method="POST" action="<?php toggle_read(); ?>">
             <input type="hidden" name="is_read" value="true" />
             <input type="hidden" name="next_lesson" value="<?php echo get_permalink($next); ?>" />
             <button type="submit" name="submit" class="button button--blue"><?php echo $nextText; ?></button>
+            <?php wp_nonce_field( 'toggle_read', 'is_read_nonce'); ?>
           </form>
-
-          <!-- <button class="button button--blue" onclick="<?php //mark_as_read($id, $currentUser, true); ?>">Mark Complete &amp; Next Lesson</button> -->
-
-          <!-- <a href="<?php //echo get_permalink($next); ?>" class="button button--blue" onclick="<?php //toggle_read(true); //update_user_meta($currentUser, 'read_post_' . $id, true); ?>"><?php echo $nextText; ?></a> -->
-
-          <?php //update_user_meta($currentUser, 'read_post_' . $id, true);
-          
-          
-          // not quite right here
-          //echo get_next_post_link('%link', 'Mark Complete &amp; Next Lesson', true, '', 'course'); ?>
             
         </div>
       </div>
