@@ -3018,6 +3018,7 @@ a {
   .menu-icon--lesson {
     display: flex;
     align-items: center;
+    width: 100%;
     font: inherit;
     color: #0356a4; }
     .menu-icon--lesson span {
