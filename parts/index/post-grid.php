@@ -49,11 +49,11 @@ if( have_posts() ) : ?>
 
         <?php endif; ?>
 
-        <div class="col-12 sm-text-center">
+        <?php /* <div class="col-12 sm-text-center">
           <h3><?php echo $title; ?></h3>
 
           <?php echo $subtitle; ?>
-        </div>
+        </div> */ ?>
 
         <?php while( have_posts() ) : the_post(); ?>
 

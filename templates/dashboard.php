@@ -16,9 +16,11 @@ get_header();
 
 get_template_part('parts/global/hero');
 
-get_template_part('parts/dashboard/welcome'); ?>
+get_template_part('parts/dashboard/welcome');
 
-<section class="dashboard-main">
+get_template_part('parts/dashboard/grid'); ?>
+
+<?php /* <section class="dashboard-main">
   <div class="container">
     <div class="row">
       <div class="col-6">
@@ -48,6 +50,6 @@ get_template_part('parts/dashboard/welcome'); ?>
       </div>
     </div>
   </div>
-</section>
+</section> */ ?>
 
 <?php get_footer(); ?>

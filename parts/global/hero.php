@@ -15,6 +15,9 @@ $isDash = is_page_template('templates/dashboard.php');
 // Check if category
 $isCat = is_category();
 
+// Check if post format 
+$isFormat = is_tax('post-format');
+
 // Check if search results
 $isSearch = is_search();
 $term = $isSearch && isset($_GET['cat']) ? $_GET['cat'] : '';
@@ -33,6 +36,8 @@ endif;
 // Fields
 if( $isCat ) :
   $title = $cat->name;
+elseif( $isFormat ) : 
+  $title = get_queried_object()->name;
 elseif( $isSearch ) :
   if( $term ) :
     $title = $cat->name;
