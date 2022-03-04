@@ -449,13 +449,13 @@
   add_action('template_redirect', 'toggle_read');
 
 
-  add_action('admin_head', 'my_custom_fonts');
+  // add_action('admin_head', 'my_custom_fonts');
 
-  function my_custom_fonts() {
-    echo '<style>
-      body > font,
-      body > br {
-        display: none !important;
-      }
-    </style>';
-  }
+  // function my_custom_fonts() {
+  //   echo '<style>
+  //     body > font,
+  //     body > br {
+  //       display: none !important;
+  //     }
+  //   </style>';
+  // }
