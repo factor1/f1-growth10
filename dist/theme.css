@@ -2855,6 +2855,26 @@ a {
   .button--teal-block:focus, .button--teal-block:hover {
     border-color: #2ab2b0; }
 
+.button--blue {
+  display: inline-block;
+  padding: 1.25rem 0.875rem;
+  border: 0.25rem solid #0356a4;
+  border-top-left-radius: 0.5625rem;
+  border-bottom-right-radius: 0.5625rem;
+  background-color: #0356a4;
+  font: 700 1.125rem/1.11 "Montserrat", sans-serif;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .4s ease;
+  outline: none;
+  padding: 0.75rem 3.125rem;
+  font-weight: 400; }
+  .button--blue:focus, .button--blue:hover {
+    background-color: transparent;
+    color: #0356a4; }
+
 .button--ghost {
   display: inline-block;
   padding: 1.25rem 0.875rem;
@@ -2995,6 +3015,18 @@ a {
       top: 0.6875rem;
       left: 0.3125rem;
       transform: rotate(-45deg); }
+  .menu-icon--lesson {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font: inherit;
+    color: #0356a4; }
+    .menu-icon--lesson span {
+      margin-right: 0.9375rem; }
+    .menu-icon--lesson span,
+    .menu-icon--lesson span:before,
+    .menu-icon--lesson span:after {
+      background-color: #0356a4; }
 
 @media screen and (min-width: 64.0625rem) {
   .menu-icon.lg-hide {
@@ -3883,6 +3915,62 @@ body.masked:after {
   .page-template-default main,
   .single main {
     margin-top: 5.5625rem; } }
+
+/**
+ * Sidebar
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.5.0
+ */
+.sidebar--lesson {
+  padding: 0.3125rem 0.9375rem 0.3125rem 1.25rem;
+  background-color: #e5e5e5; }
+  .sidebar--lesson div {
+    padding-left: 0.625rem; }
+  .sidebar--lesson ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style-type: none; }
+    .sidebar--lesson ul li {
+      position: relative; }
+    .sidebar--lesson ul li.read::before {
+      position: absolute;
+      top: 0.9375rem;
+      left: -1.875rem;
+      content: '\f00c';
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.5625rem;
+      height: 1.5625rem;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 400;
+      border-radius: 0.3125rem;
+      background-color: rgba(112, 112, 112, 0.15);
+      color: #0356a4; }
+    .sidebar--lesson ul a {
+      display: block;
+      width: 100%;
+      padding: 0.9375rem 0;
+      text-decoration: none; }
+      .sidebar--lesson ul a.active {
+        color: #0356a4; }
+    .sidebar--lesson ul ul {
+      display: none;
+      margin: 0.3125rem;
+      padding-left: 2.5rem;
+      border-left: 0.0625rem solid #0F203E; }
+      .sidebar--lesson ul ul.open {
+        display: block; }
+
+@media screen and (max-width: 47.9375em) {
+  .sidebar--lesson > ul {
+    display: none; } }
 
 /*------------------------------------------------------------------------------
   Footer
@@ -5691,6 +5779,31 @@ section.call-to-action {
   align-items: center;
   justify-content: center;
   padding: 6.25rem 1.25rem 3.125rem; }
+
+/**
+ * Lesson CPT Archive
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.5.0
+ */
+.lesson-content-section {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .lesson-content-section .container {
+    padding: 3.125rem 0; }
+  .lesson-content-section .col-12 {
+    margin-bottom: 1.875rem; }
+  .lesson-content-section form#toggle_read div {
+    margin-bottom: 1.875rem; }
+  .lesson-content-section form#toggle_read span {
+    position: relative;
+    top: -0.1875rem; }
+
+@media screen and (max-width: 47.9375em) {
+  .lesson-content-section .container {
+    padding: 1.875rem 0; }
+  .lesson-content-section .col-4 {
+    margin-bottom: 1.875rem; } }
 
 /*----------------------------------------------------------------------------
   Plugin Overrides

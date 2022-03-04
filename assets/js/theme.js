@@ -69,12 +69,23 @@ $(document).ready(function($) {
   }
 
   // Menu functions
-  $(".menu-icon").on("click", function() {
+  $(".menu-icon--main").on("click", function() {
     $("html").toggleClass("locked");
     $("body").toggleClass("locked masked");
 
-    $(".menu-icon").toggleClass("active");
+    $(".menu-icon--main").toggleClass("active");
     $(".mega-menu").slideToggle();
+  });
+
+  // Close menu on ESC key 
+  $(document).on("keyup", function(e) {
+    if( e.which == 27) {
+      $("html").removeClass("locked");
+      $("body").removeClass("locked masked");
+
+      $(".menu-icon--main").removeClass("active");
+      $(".mega-menu").slideUp();
+    }
   });
 
   // Home testimonials slider
@@ -170,4 +181,19 @@ $(document).ready(function($) {
     $(this).parents(".tabbed-content-section").find(".tabbed-content-section__content section[data-section='section-" + id + "']").addClass("active");
   });
 
+  // Lesson mobile menu 
+  if( $(".lesson-content-section").length ) {
+    $(".menu-icon--lesson").on("click", function() {
+      $(this).toggleClass("active");
+      $(this).parents(".sidebar--lesson").find(".sidebar--lesson__menu").slideToggle();
+    });
+  
+    $(window).on("resize", function() {
+      if( $(window).width() > 767 ) {
+        $(".menu-icon--lesson").removeClass("active");
+        $(".sidebar--lesson__menu").css("display", "");
+      }
+    });
+  }
+  
 });
