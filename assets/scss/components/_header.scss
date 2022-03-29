@@ -54,6 +54,24 @@ body {
     margin-right: rem(10);
   }
 
+  &__utility {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .dashboard-link {
+    padding: rem(20) rem(15) rem(9);
+    font: 400 rem(18)/1 $sans;
+    color: $white;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: $teal;
+    }
+  }
+
   // Headroom styles
   &.headroom--not-top {
     background-color: $blue !important;
@@ -83,8 +101,15 @@ body {
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
-  .site-header__logo {
-    width: rem(120);
+  .site-header {
+    &__logo {
+      width: rem(120);
+    }
+
+    .dashboard-link {
+      padding: rem(15) rem(10) rem(10);
+      font-size: rem(15);
+    }
   }
 
   .page-template-assessment,

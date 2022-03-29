@@ -15,6 +15,7 @@
     margin-right: rem(10);
     font: 400 rem(18)/1 $sans;
     color: $white;
+    transition: all .4s ease;
   }
 
   span {
@@ -49,6 +50,10 @@
   &:active,
   &:focus,
   &:hover {
+    small {
+      color: $teal;
+    }
+
     span,
     span:before,
     span:after {

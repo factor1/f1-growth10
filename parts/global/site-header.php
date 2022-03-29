@@ -38,13 +38,24 @@ $headerClass = ($isDefault && $bg) || ($isFlex && $heroType) || ($is_template &&
         </div>
 
         <?php if( !is_page( get_option('woocommerce_cart_page_id') ) ) :
-          if( is_user_logged_in() ) : ?>
+          if( is_user_logged_in() ) :
+            $dash = get_field('dashboard_link', 'option'); ?>
+            
+            <div class="site-header__utility">
 
-            <button class="menu-icon menu-icon--main">
-              <small class="sm-hide">Navigation</small>
+              <?php if( $dash ) : ?>
+                <a href="<?php echo esc_url($dash['url']); ?>" class="dashboard-link" role="link" title="<?php echo $dash['title']; ?>" target="<?php echo $dash['target']; ?>">
+                  <?php echo $dash['title']; ?>
+                </a>
+              <?php endif; ?>
 
-              <span></span>
-            </button>
+              <button class="menu-icon menu-icon--main">
+                <small class="sm-hide">Navigation</small>
+
+                <span></span>
+              </button>
+
+            </div>
 
           <?php elseif($is_template) :
 
