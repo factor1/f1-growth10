@@ -63,6 +63,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/tabbed-content-section');
 
+  elseif( get_row_layout() == 'timeline' ) :
+
+    get_template_part('parts/global/timeline');
+
   endif;
 
 endwhile; endif; ?>

@@ -195,5 +195,11 @@ $(document).ready(function($) {
       }
     });
   }
+
+  // Timeline
+  $('.timeline__headline').on('click', function () {
+    $(this).toggleClass('open');
+    $(this).siblings('.timeline__content').slideToggle();
+  });
   
 });
