@@ -10,6 +10,7 @@
  */
 
 // Text/Image Split Custom Fields
+$bgColor = get_sub_field('text_image_split_background_color');
 $fullToggle = get_sub_field('text_image_split_full_width_content_toggle');
 $fullContent = get_sub_field('text_image_split_full_width_content');
 $layoutOption = get_sub_field('text_image_split_layout_option'); // img on left or right
@@ -21,9 +22,10 @@ $btnToggle = get_sub_field('text_image_split_button_toggle');
 $btn = get_sub_field('text_image_split_button');
 
 // Conditional classes
+$sectionColor = $bgColor ? $bgColor : '#FFFFFF';
 $rowClass = $layoutOption == 'right' ? ' row--reverse' : ''; ?>
 
-<section class="text-image-split">
+<section class="text-image-split" style="background-color: <?php echo $sectionColor; ?>;">
   <div class="container">
     <div class="row row--justify-content-center<?php echo $rowClass; ?>">
 

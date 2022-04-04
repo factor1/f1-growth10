@@ -33,7 +33,17 @@ $intro = get_sub_field('timeline_intro'); ?>
               $open = $i < 2 ? ' open' : ''; ?>
 
               <div class="timeline__block">
-                <h4 class="timeline__headline <?php echo $open; ?>"> <span class="item-title"> <span class="timeline-icon"><i class="fa-2x <?php echo $icon; ?>"></i></span> <?php echo $headline; ?></span> </h4>
+
+                <h4 class="timeline__headline <?php echo $open; ?>">
+                  <span class="item-title">
+                    <span class="timeline-icon">
+                      <?php if($icon): ?>
+                        <img src="<?php echo $icon; ?>" alt="Icon">
+                      <?php endif; ?>
+                    </span>
+                    <?php echo $headline; ?>
+                  </span>
+                </h4>
 
                 <div class="timeline__content">
                   <?php echo $content; ?>

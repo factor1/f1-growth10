@@ -10,15 +10,22 @@
  */
 
 // Callout Custom Fields
+$slimToggle = get_sub_field('callout_slim_toggle');
 $bg = wp_get_attachment_image_src(get_sub_field('callout_background'), 'home_hero');
+$bgColor = get_sub_field('callout_background_color');
 $colSpan = get_sub_field('callout_column_span');
 $content = get_sub_field('callout_content');
 $btnToggle = get_sub_field('callout_button_toggle');
 $btnAlign = get_sub_field('callout_button_alignment');
 $btnClass = get_sub_field('callout_button_color');
-$btn = get_sub_field('callout_button'); ?>
+$btn = get_sub_field('callout_button');
 
-<section class="callout" style="background: url('<?php echo $bg[0]; ?>') center/cover no-repeat">
+$sectionColor = $bgColor ? $bgColor : '#FFFFFF';
+$slimClass = $slimToggle ? 'slim' : '';
+
+?>
+
+<section class="callout <?php echo $slimClass; ?>" style="background: <?php echo $sectionColor; ?> url('<?php echo $bg[0]; ?>') center/cover no-repeat">
   <div class="container">
     <div class="row row--justify-content-center">
       <div class="col-<?php echo $colSpan; ?>">

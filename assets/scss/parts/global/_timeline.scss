@@ -127,10 +127,11 @@
           left: rem(-60);
           width: rem(80);
           height: rem(80);
-          padding: rem(25);
+          padding: rem(15);
           border-radius: rem(50);
           background-color: $teal;
           color: $white;
+          overflow: hidden;
         }
       }
 
