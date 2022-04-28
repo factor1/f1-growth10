@@ -27,4 +27,5 @@ if( function_exists('prelude_features') ){
   add_image_size( 'tab_icon', 300, 300, false );
   add_image_size( 'tab_image', 1050, 750, array('center', 'center') );
   add_image_size( 'dashboard_grid', 750, 300, true );
+  add_image_size( 'logo_slide', 400, 400, false );
 }

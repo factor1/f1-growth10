@@ -201,5 +201,30 @@ $(document).ready(function($) {
     $(this).toggleClass('open');
     $(this).siblings('.timeline__content').slideToggle();
   });
+
+
+  // Logo Slider 
+  if ($(".logo-slider").length) {
+    $(".logo-slider__slider").slick({
+      autoplay: true,
+      autoplaySpeed: 3000,
+      slidesToShow: 5,
+      pauseOnHover: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  }
   
 });
