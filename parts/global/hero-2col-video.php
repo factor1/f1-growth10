@@ -38,7 +38,7 @@ $video      = get_field('video_hero_file'); ?>
 
           <?php echo $content;
 
-          if( have_rows('home_hero_buttons') ): while( have_rows('home_hero_buttons') ): the_row(); 
+          if( have_rows('video_hero_buttons') ): while( have_rows('video_hero_buttons') ): the_row(); 
             $link = get_sub_field('link'); ?>
 
             <a href="<?php echo $link['url']; ?>" class="button button--teal" target="<?php echo $link['target']; ?>" role="link"><?php echo $link['title']; ?></a>
