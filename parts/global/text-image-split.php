@@ -10,20 +10,24 @@
  */
 
 // Text/Image Split Custom Fields
+$bgColor = get_sub_field('text_image_split_background_color');
 $fullToggle = get_sub_field('text_image_split_full_width_content_toggle');
 $fullContent = get_sub_field('text_image_split_full_width_content');
 $layoutOption = get_sub_field('text_image_split_layout_option'); // img on left or right
 $columns = get_sub_field('text_image_split_columns'); // 4, 5, or 6
 $image = get_sub_field('text_image_split_image');
+$fullImage = get_sub_field('text_image_split_full_image_toggle');
 $img = wp_get_attachment_image_src($image, 'text_image_split');
 $content = get_sub_field('text_image_split_content');
 $btnToggle = get_sub_field('text_image_split_button_toggle');
 $btn = get_sub_field('text_image_split_button');
 
 // Conditional classes
-$rowClass = $layoutOption == 'right' ? ' row--reverse' : ''; ?>
+$sectionColor = $bgColor ? $bgColor : '#FFFFFF';
+$rowClass = $layoutOption == 'right' ? ' row--reverse' : '';
+$imgClass = $fullImage ? 'full-image' : ''; ?>
 
-<section class="text-image-split">
+<section class="text-image-split" style="background-color: <?php echo $sectionColor; ?>;">
   <div class="container">
     <div class="row row--justify-content-center<?php echo $rowClass; ?>">
 
@@ -40,7 +44,7 @@ $rowClass = $layoutOption == 'right' ? ' row--reverse' : ''; ?>
 
       // Image ?>
       <div class="col-<?php echo $columns; ?> stretch text-image-split__img">
-        <div style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat"></div>
+        <div style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat" class="<?php echo $imgClass; ?>"></div>
       </div>
 
       <?php // Text ?>

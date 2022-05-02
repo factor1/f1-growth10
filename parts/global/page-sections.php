@@ -63,6 +63,18 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/tabbed-content-section');
 
+  elseif( get_row_layout() == 'timeline' ) :
+
+    get_template_part('parts/global/timeline');
+
+  elseif( get_row_layout() == 'icon_data' ) :
+
+    get_template_part('parts/global/icon-data');
+
+  elseif( get_row_layout() == 'logo_slider' ) :
+
+    get_template_part('parts/global/logo-slider');
+
   endif;
 
 endwhile; endif; ?>
