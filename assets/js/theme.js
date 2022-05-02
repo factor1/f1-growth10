@@ -91,9 +91,10 @@ $(document).ready(function($) {
   // Home testimonials slider
   $(".home-testimonials__slider").slick({
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     dots: true,
     slidesToShow: 3,
+    autoplaySpeed: 4000,
     infinite: false,
     centerMode: true,
     variableWidth: false,
