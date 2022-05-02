@@ -9,9 +9,9 @@
  * @since 0.0.1
  */
 
-$title = is_home() || is_front_page() ? get_field('testimonial_title') : get_sub_field('testimonial_title') ;
-$testimonials = is_home() || is_front_page() ? get_field('testimonials_posts') : get_sub_field('testimonials_posts');
-$image = is_home() || is_front_page() ? get_field('testimonial_background_image') : get_sub_field('testimonial_background_image');
+$title = get_sub_field('testimonial_title') ;
+$testimonials = get_sub_field('testimonials_posts');
+$image = get_sub_field('testimonial_background_image');
 $img = wp_get_attachment_image_src($image, 'large');
 
 if( $testimonials ) : $i = 1; ?>
