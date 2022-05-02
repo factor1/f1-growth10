@@ -11,46 +11,58 @@
 
 $title = is_home() || is_front_page() ? get_field('testimonial_title') : get_sub_field('testimonial_title') ;
 $testimonials = is_home() || is_front_page() ? get_field('testimonials_posts') : get_sub_field('testimonials_posts');
-if( $testimonials ) :
-  $i = 1; ?>
+$image = is_home() || is_front_page() ? get_field('testimonial_background_image') : get_sub_field('testimonial_background_image');
+$img = wp_get_attachment_image_src($image, 'large');
 
-  <section class="home-testimonials">
-	  <h3 class="text-center"><?php echo $title ?></h3>
-    <div class="container home-testimonials__slider">
+if( $testimonials ) : $i = 1; ?>
 
-    <?php
-      if( $testimonials ): $i = 1;?>
-        <?php foreach( $testimonials as $post ): 
-          setup_postdata($post);
-          // Testimonials Fields
-          $image = get_post_thumbnail_id();
-          $img = wp_get_attachment_image_src($image, 'medium');
-          $content = get_field('testimonial');
-          $citation = get_field('citation');
-          $alt = get_post_meta($image, '_wp_attachment_image_alt', true);
-          $title = $citation ? '<b>'.get_the_title().'</b> — '.$citation : '<b>'.get_the_title().'</b>';
+  <section class="home-testimonials" style="background: url(<?php echo $img[0]; ?>) center/cover;">
+    <div class="container">
+      <div class="row row--full-width">
+        <div class="col-12">
+          <h2 class="text-center"><?php echo $title ?></h2>
+        </div>
+        <div class="col-12 text-center col-no-pad">
 
-          // Conditional classes
-          $rowClass = $i % 2 == 0 ? ' row--reverse' : '';
-          $textClass = $i % 2 == 0 ? ' text-right' : ' text-left'; ?>
+          <div class="home-testimonials__slider">
 
-          <div class="row row--justify-content-center<?php echo $rowClass; ?>">
-            <div class="col-2 sm-col-3 text-center">
-              <img src="<?php echo $img[0]; ?>" alt="<?php echo $alt; ?>">
-            </div>
+            <?php
+              if( $testimonials ): ?>
+                <?php foreach( $testimonials as $post ): 
+                  setup_postdata($post);
+                  // Testimonials Fields
+                  $image = get_post_thumbnail_id();
+                  $img = wp_get_attachment_image_src($image, 'thumbnail');
+                  $content = get_field('testimonial');
+                  $citation = get_field('citation');
+                  $alt = get_post_meta($image, '_wp_attachment_image_alt', true); ?>
+        
+                  <div class="single-testimonial">
+                    <div class="quote">
+                      <?php echo $content; ?>
+                    </div>
+                    <div class="info-combo">
+                      <div class="author-img">
+                        <img src="<?php echo $img[0]; ?>" alt="<?php echo $alt; ?>">
+                      </div>
+                      <div class="author-data">
+                        <?php echo get_the_title(); ?>
+                        <?php if($citation): ?>
+                          <?php echo '<br>'.$citation; ?>
+                        <?php endif; ?>
+                      </div>
+                    </div>
+                  </div>
+        
+                <?php endforeach; ?>
+        
+              <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
 
-            <div class="col-8 sm-col-9 <?php echo $textClass; ?>">
-              <?php echo $content; ?>
-              <h4><?php echo $title; ?></h4>
-            </div>
           </div>
-
-          <div id="plans"><!-- Anchor for the plans button to scroll to --></div>
-        <?php $i++; endforeach; ?>
-
-    <?php wp_reset_postdata(); ?>
-    <?php endif; ?>
-
+          
+        </div>
+      </div>
     </div>
   </section>
 

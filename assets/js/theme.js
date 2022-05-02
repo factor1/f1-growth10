@@ -91,10 +91,27 @@ $(document).ready(function($) {
   // Home testimonials slider
   $(".home-testimonials__slider").slick({
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     dots: true,
-    rows: 2,
-    slidesPerRow: 1,
+    slidesToShow: 3,
+    infinite: false,
+    centerMode: true,
+    variableWidth: false,
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
   // Home plan switching
