@@ -11,6 +11,10 @@
 .callout {
   @include iPhoneX;
 
+  &.slim .container {
+    padding: rem(25) 0 rem(10);
+  }
+
   .container {
     margin: 0;
     padding: rem(90) 0;

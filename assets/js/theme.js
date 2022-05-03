@@ -93,8 +93,26 @@ $(document).ready(function($) {
     arrows: false,
     autoplay: true,
     dots: true,
-    rows: 2,
-    slidesPerRow: 1,
+    slidesToShow: 3,
+    autoplaySpeed: 4000,
+    infinite: false,
+    centerMode: true,
+    variableWidth: false,
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
   // Home plan switching
@@ -193,6 +211,37 @@ $(document).ready(function($) {
         $(".menu-icon--lesson").removeClass("active");
         $(".sidebar--lesson__menu").css("display", "");
       }
+    });
+  }
+
+  // Timeline
+  $('.timeline__headline').on('click', function () {
+    $(this).toggleClass('open');
+    $(this).siblings('.timeline__content').slideToggle();
+  });
+
+
+  // Logo Slider 
+  if ($(".logo-slider").length) {
+    $(".logo-slider__slider").slick({
+      autoplay: true,
+      autoplaySpeed: 3000,
+      slidesToShow: 5,
+      pauseOnHover: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
     });
   }
   

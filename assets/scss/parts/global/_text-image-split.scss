@@ -16,6 +16,11 @@
   }
 
   &__img {
+
+    .full-image {
+      background-size: contain !important;
+    }
+
     min-height: rem(400);
 
     div {
