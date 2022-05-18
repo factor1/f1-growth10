@@ -93,6 +93,7 @@ $(document).ready(function($) {
     arrows: false,
     autoplay: true,
     dots: true,
+    initialSlide: 1,
     slidesToShow: 3,
     autoplaySpeed: 4000,
     infinite: false,
