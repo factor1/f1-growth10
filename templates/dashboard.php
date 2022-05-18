@@ -18,7 +18,9 @@ get_template_part('parts/global/hero');
 
 get_template_part('parts/dashboard/welcome');
 
-get_template_part('parts/dashboard/grid'); ?>
+get_template_part('parts/dashboard/grid'); 
+
+get_template_part('parts/dashboard/partners-grid'); ?>
 
 <?php /* <section class="dashboard-main">
   <div class="container">
