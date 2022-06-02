@@ -75,6 +75,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/logo-slider');
 
+  elseif( get_row_layout() == 'three_column_content' ) :
+
+    get_template_part('parts/global/three-column-content');
+
   endif;
 
 endwhile; endif; ?>
