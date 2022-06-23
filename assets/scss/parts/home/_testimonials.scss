@@ -78,7 +78,7 @@
 
       .info-combo {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-start;
 
         .author-img {
@@ -88,10 +88,11 @@
         }
 
         .author-data {
+          max-height: rem(100);
           padding: rem(20);
           text-align: left;
           font-weight: 700;
-          font-size: rem(20);
+          font-size: rem(15);
         }
       }
     }
@@ -102,5 +103,10 @@
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
-
+  .home-testimonials__slider .single-testimonial .info-combo {
+    flex-direction: column;
+    .author-data {
+      padding: 1.25rem 0;
+    }
+  }
 }
