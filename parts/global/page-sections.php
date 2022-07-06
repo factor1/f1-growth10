@@ -79,6 +79,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/three-column-content');
 
+  elseif( get_row_layout() == 'text_split' ) :
+
+    get_template_part('parts/global/text-split');
+
   endif;
 
 endwhile; endif; ?>
