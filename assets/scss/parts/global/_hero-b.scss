@@ -17,7 +17,7 @@
   }
 
   &.small-hero {
-    min-height: auto;
+    min-height: rem(350);
     .container {
       padding: rem(150) 0 rem(120);
     }
