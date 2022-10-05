@@ -1,0 +1,73 @@
+/*
+ * Testimonial slider (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.testimonial-slider {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(60) 0 rem(110);
+  }
+
+  h2 {
+    font-size: rem(45);
+  }
+
+  .testimonials__slider {
+    img {
+      margin: rem(20) auto;
+    }
+
+    .single-testimonial {
+      max-width: 100%;
+      margin: 0 auto;
+
+      p {
+        color: $white;
+        font-weight: 500;
+        font-size: rem(24);
+        margin: 0;
+
+        &.citation {
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: rem(16);
+          margin-top: rem(20);
+        }
+      }
+    }
+
+    .slick-slide div {
+      text-align: center;
+    }
+
+    .slick-next,
+    .slick-prev {
+      bottom: -50%;
+    }
+
+    .slick-prev {
+      left: calc(50% - 45px);
+    }
+
+    .slick-next {
+      right: calc(50% - 45px);
+    }
+
+    .slick-next:before,
+    .slick-prev:before {
+      color: #ffffff;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+
+  .testimonial-slider .testimonials__slider .slick-next,
+  .testimonial-slider .testimonials__slider .slick-prev {
+    bottom: rem(-80);
+  }
+}
