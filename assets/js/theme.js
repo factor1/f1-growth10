@@ -116,6 +116,16 @@ $(document).ready(function($) {
     ]
   });
 
+  // Slider section
+  if ($(".testimonials__slider").length) {
+    $(".testimonials__slider").slick({
+      autoplay: false,
+      arrows: true,
+      dots: false,
+      slidesToShow: 1
+    });
+  }
+
   // Home plan switching
   if( $(".plans-section").length ) {
     $(".plans-section .switch input[type='checkbox']").on("click", function() {
