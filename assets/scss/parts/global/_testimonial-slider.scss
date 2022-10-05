@@ -45,7 +45,8 @@
 
     .slick-next,
     .slick-prev {
-      bottom: -50%;
+      bottom: rem(-45);
+      top: auto;
     }
 
     .slick-prev {
@@ -59,6 +60,15 @@
     .slick-next:before,
     .slick-prev:before {
       color: #ffffff;
+      font-family: 'Font Awesome 5 Pro';
+    }
+
+    .slick-next:before {
+      content: '\f054';
+    }
+
+    .slick-prev:before {
+      content: '\f053';
     }
   }
 }
