@@ -18,7 +18,7 @@ if( !is_page( get_option('woocommerce_cart_page_id') ) ) : ?>
 
         <div class="col-12">
           <div class="mega-menu__logo">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/logo-color.svg" alt="Growth 10">
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/mentumm-logo.svg" alt="Growth 10">
           </div>
 
           <button class="menu-icon menu-icon--main menu-icon--blue"><span></span></button>
