@@ -33,7 +33,7 @@ $headerClass = ($isDefault && $bg) || ($isFlex && $heroType) || ($is_template &&
       <div class="col-12">
         <div class="site-header__logo">
 	        <a href="<?php echo esc_url(home_url()); ?>">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/logo-white.svg" alt="<?php echo get_bloginfo('name'); ?>">
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/mentumm-logo-white.svg" alt="<?php echo get_bloginfo('name'); ?>">
           </a>
         </div>
 
